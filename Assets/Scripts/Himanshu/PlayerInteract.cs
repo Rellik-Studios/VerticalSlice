@@ -57,16 +57,16 @@ namespace Himanshu
             {
                 if (m_spotted != value)
                 {
-                    if (value)
-                    {
-                        StopCoroutine(m_fillRoutine);
-                        m_fillRoutine = StartCoroutine(FillBar(m_danger, 8f / enemySpotNum));
-                    }
-                    else 
-                    {
-                        StopCoroutine(m_fillRoutine);
-                        m_fillRoutine = StartCoroutine(FillBar(m_danger, 3f, -1));
-                    }
+                    //if (value)
+                    //{
+                    //    StopCoroutine(m_fillRoutine);
+                    //    m_fillRoutine = StartCoroutine(FillBar(m_danger, 8f / enemySpotNum));
+                    //}
+                    //else 
+                    //{
+                    //    StopCoroutine(m_fillRoutine);
+                    //    m_fillRoutine = StartCoroutine(FillBar(m_danger, 3f, -1));
+                    //}
                     m_spotted = value;
                 }
             }
@@ -78,11 +78,11 @@ namespace Himanshu
         public Image m_danger;
 
 
-        public float dangerBarVal
-        {
-            get => m_danger.fillAmount;
-            set => m_danger.fillAmount = value;
-        }
+        //public float dangerBarVal
+        //{
+        //    get => m_danger.fillAmount;
+        //    set => m_danger.fillAmount = value;
+        //}
         public bool interactHold => m_playerInput.interactHold;
 
         private int m_bulletCount = 1;
@@ -222,15 +222,15 @@ namespace Himanshu
                 m_raycastingTesting.ObjectInFront?.GetComponent<IEnemy>()?.Shoot(this);
             }
 
-            if (dangerBarVal == 1f && !LoseScreen.activeInHierarchy)
-            {
-                LoseScreen.SetActive(true);
-                m_enemies.All(t => t.toPatrol = true);
-                dangerBarVal = 0;
-                gameObject.SetActive(false);
-                Cursor.lockState = CursorLockMode.None;
-                //SceneManager.LoadScene(1);
-            }
+            //if (dangerBarVal == 1f && !LoseScreen.activeInHierarchy)
+            //{
+            //    LoseScreen.SetActive(true);
+            //    m_enemies.All(t => t.toPatrol = true);
+            //    dangerBarVal = 0;
+            //    gameObject.SetActive(false);
+            //    Cursor.lockState = CursorLockMode.None;
+            //    //SceneManager.LoadScene(1);
+            //}
             enemySpotNum = m_enemies.Count(_enemy => _enemy.m_spotted);
             
             Debug.Log(m_enemySpotNum);
@@ -238,8 +238,8 @@ namespace Himanshu
             
             
             
-            if (m_hiding && dangerBarVal < 0.1f)
-                dangerBarVal = 0f;
+            //if (m_hiding && dangerBarVal < 0.1f)
+            //    dangerBarVal = 0f;
 
 
         }
@@ -370,7 +370,7 @@ namespace Himanshu
 
         public void UnSpot()
         {
-            dangerBarVal = 0f;
+            //dangerBarVal = 0f;
             foreach (var enemy in m_enemies)
             {
                 enemy.m_spotted = false;
@@ -388,6 +388,29 @@ namespace Himanshu
         public void PlayTimeRewind()
         {
             GetComponent<AudioSource>().PlayOneShot(m_rewindAudio);
+        }
+        public void Death()
+        {
+            if (!LoseScreen.activeInHierarchy)
+            {
+                LoseScreen.SetActive(true);
+                m_enemies.All(t => t.toPatrol = true);
+                //dangerBarVal = 0;
+                gameObject.SetActive(false);
+                Cursor.lockState = CursorLockMode.None;
+            }
+        }
+
+        //Collision 
+        //private void OnCollisionEnter(Collision collision)
+        //{
+        //    if (collision.collider.GetComponent<EnemyController>() != null)
+        //        Death();
+        //}
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponent<EnemyController>() != null)
+                Death();
         }
     }
 }

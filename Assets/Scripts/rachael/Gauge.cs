@@ -15,13 +15,13 @@ public class Gauge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerinteract.dangerBarVal ==0)
-        {
-            gauge.SetActive(false);
-        }
-        else
-        {
-            gauge.SetActive(true);
-        }
+        //if(playerinteract.dangerBarVal ==0)
+        //{
+        //    gauge.SetActive(false);
+        //}
+        //else
+        //{
+        //    gauge.SetActive(true);
+        //}
     }
 }
