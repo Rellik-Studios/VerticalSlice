@@ -16,6 +16,7 @@ public class ChangingMaterial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rend.sharedMaterial = mat[ChanngEnvir.Index];
+        if(ChanngEnvir.Index < mat.Length)
+            rend.sharedMaterial = mat[ChanngEnvir.Index];
     }
 }
