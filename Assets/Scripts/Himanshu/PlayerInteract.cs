@@ -401,7 +401,7 @@ namespace Himanshu
             }
         }
 
-        //Collision 
+        //Collision on the enemy results in death
         //private void OnCollisionEnter(Collision collision)
         //{
         //    if (collision.collider.GetComponent<EnemyController>() != null)
