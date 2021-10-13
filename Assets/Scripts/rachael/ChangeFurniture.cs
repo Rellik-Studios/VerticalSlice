@@ -45,7 +45,7 @@ public class ChangeFurniture : MonoBehaviour
                 other.GetComponentInParent<RespawnManager>().Teleport(LocationPosition.transform);
                 Debug.Log("You have moved to a new location");
             }
-            if (Index <= (LoopObjects.Length - 1))
+            if (Index <= (LoopObjects.Length - 2))
             {
                 //disable the object
                 LoopObjects[Index].SetActive(false);
