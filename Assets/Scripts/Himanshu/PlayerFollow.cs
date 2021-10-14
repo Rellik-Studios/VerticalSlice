@@ -7,7 +7,7 @@ namespace Himanshu
     {
 
         [SerializeField] private Transform m_playerTransform;
-
+        private PlayerMovement m_playerMovement;
 
         private float m_mouseX;
         private float m_mouseY;
@@ -19,13 +19,14 @@ namespace Himanshu
         private Vector2 m_yRange = new Vector2(-30f, 30f);
         void Start()
         {
+            m_playerMovement = m_playerTransform.GetComponent<PlayerMovement>();
             Cursor.lockState = CursorLockMode.Locked;
             ResetMouse(m_playerTransform.rotation.eulerAngles.y, m_playerTransform.rotation.eulerAngles.x);
         }
 
         void Update()
         {
-            transform.position = m_playerTransform.position;
+            transform.position = m_playerMovement.calculatedPosition;
 
             
             m_mouseX += Input.GetAxis("Mouse X");
