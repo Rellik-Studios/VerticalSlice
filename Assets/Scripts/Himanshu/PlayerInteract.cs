@@ -328,24 +328,25 @@ namespace Himanshu
 
         public void SetPositionAndRotation(Transform _transform, float _delay = 0)
         {
-            if(_delay > 0f)
-                StartCoroutine(eSetPositionAndRotation(_transform, _delay));
-            else
-            {
-                transform.rotation = _transform.rotation;
-                GetComponent<CharacterController>().enabled = false;
-                transform.position = _transform.position;
-                m_playerFollow.SetRotation(_transform, new Vector2(-30, 30));
-            }
+            StopAllCoroutines();
+            StartCoroutine(eSetPositionAndRotation(_transform, _delay));
         }
 
         private IEnumerator eSetPositionAndRotation(Transform _transform,float _delay)
         {
-            yield return new WaitForSeconds(_delay);
-            transform.rotation = _transform.rotation;
+            if(_delay > 0f)
+                yield return new WaitForSeconds(_delay);
             GetComponent<CharacterController>().enabled = false;
-            transform.position = _transform.position;
-            m_playerFollow.SetRotation(_transform, new Vector2(-30, 30));
+
+            while (transform.rotation != _transform.rotation || transform.position != _transform.position)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, _transform.rotation, Time.deltaTime);
+
+                transform.position = Vector3.Lerp(transform.position, _transform.position, Time.deltaTime);
+                m_playerFollow.SetRotation(_transform, new Vector2(-30, 30));
+                yield return null;
+            }
+            yield break;
             //GetComponent<CharacterController>().enabled = true;
         }
 
