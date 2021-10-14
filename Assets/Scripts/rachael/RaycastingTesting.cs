@@ -41,13 +41,15 @@ public class RaycastingTesting : MonoBehaviour
         if (hits.Length == 0)
         {
             ObjectInFront = null;
-            m_indication.enabled = false;
+            if(m_indication != null)
+                m_indication.enabled = false;
             return;
         }
 
         //if there is a hit take the first one as a default
         RaycastHit closestHit = hits[0];
-        m_indication.enabled = true;
+        if (m_indication != null)
+            m_indication.enabled = true;
 
         //find the closest hit
         foreach (var hit in hits)
@@ -68,7 +70,8 @@ public class RaycastingTesting : MonoBehaviour
             //if its an item
             if (ObjectInFront.GetComponent<CollectableObject>() != null)
             {
-                m_indication.sprite = Resources.Load<Sprite>("Pickup");
+                if (m_indication != null)
+                    m_indication.sprite = Resources.Load<Sprite>("Pickup");
                 return;
             }
             //if its a hiding spot
@@ -78,13 +81,15 @@ public class RaycastingTesting : MonoBehaviour
                 //if(ObjectInFront.GetComponent<HidingSpot>().infectStared )
                 if(!ObjectInFront.GetComponent<HidingSpot>().isActive)
                 {
-                    m_indication.sprite = Resources.Load<Sprite>("Rewind");
+                    if (m_indication != null)
+                        m_indication.sprite = Resources.Load<Sprite>("Rewind");
                     return;
                 }
                 //non infected
                 else
                 {
-                    m_indication.sprite = Resources.Load<Sprite>("Hide");
+                    if (m_indication != null)
+                        m_indication.sprite = Resources.Load<Sprite>("Hide");
                     return;
                 }
             }
@@ -94,13 +99,15 @@ public class RaycastingTesting : MonoBehaviour
                 //if the gear is within possession
                 if (player.GetComponent<PlayerInteract>().m_placedDown)
                 {
-                    m_indication.sprite = Resources.Load<Sprite>("Place");
+                    if (m_indication != null)
+                        m_indication.sprite = Resources.Load<Sprite>("Place");
                     return;
                 }
                 // no gear
                 else
                 {
-                    m_indication.enabled = false;
+                    if (m_indication != null)
+                        m_indication.enabled = false;
                     return;
                 }
             }
@@ -108,14 +115,15 @@ public class RaycastingTesting : MonoBehaviour
         }
         else if (ObjectInFront.GetComponent<IEnemy>() != null)
         {
-            m_indication.sprite = Resources.Load<Sprite>("Stop");
+            if (m_indication != null)
+                m_indication.sprite = Resources.Load<Sprite>("Stop");
             //show UI
             return;
         }
         else
         {
-            
-            m_indication.enabled = false;
+            if (m_indication != null)
+                m_indication.enabled = false;
             return;
             //show no UI
         }
