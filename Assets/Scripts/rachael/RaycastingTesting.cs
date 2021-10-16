@@ -10,6 +10,8 @@ public class RaycastingTesting : MonoBehaviour
     public GameObject ObjectInFront { get; private set; }
     public GameObject player;
     public Image m_indication;
+    public Image crosshair;
+    private bool doOnce;
 
     void Start()
     {
@@ -41,7 +43,9 @@ public class RaycastingTesting : MonoBehaviour
         if (hits.Length == 0)
         {
             ObjectInFront = null;
-            if(m_indication != null)
+            CrosshairChange(false);
+            doOnce = false;
+            if (m_indication != null)
                 m_indication.enabled = false;
             return;
         }
@@ -120,12 +124,45 @@ public class RaycastingTesting : MonoBehaviour
             //show UI
             return;
         }
+        else if(ObjectInFront.GetComponent<MyDoorAnimator>())
+        {
+            if(!doOnce)
+            {
+                CrosshairChange(true);
+            }
+
+            doOnce = true;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                ObjectInFront.GetComponent<MyDoorAnimator>().PlayAnimation();
+                
+            }
+            return;
+        }
         else
         {
             if (m_indication != null)
+            {
                 m_indication.enabled = false;
+                
+            }
+            CrosshairChange(false);
+            doOnce = false;
             return;
             //show no UI
+        }
+    }
+
+    void CrosshairChange(bool on)
+    {
+        if(on && !doOnce)
+        {
+            crosshair.color = Color.red;
+        }
+        else
+        {
+            crosshair.color = Color.white;
         }
     }
     void ObjectInteraction(LayerMask layer)
