@@ -16,6 +16,12 @@ namespace Himanshu
         [SerializeField] private float m_jumpHeight;
         [SerializeField] private float m_groundDistance = 0.1f;
         private bool m_isGrounded;
+        private bool crouching => m_playerInput.m_crouching;
+        public Vector3 calculatedPosition
+        {
+            get => transform.position + (crouching ? new Vector3(0f, 2f, 0f) : Vector3.zero);
+
+        }
 
         private void Start()
         {
@@ -46,7 +52,7 @@ namespace Himanshu
         private void Movement()
         {
             var movement = m_playerInput.movement.x * transform.right + m_playerInput.movement.z * transform.forward;
-            m_characterController.Move(movement * (m_speed * Time.deltaTime));
+            m_characterController.Move(movement * (m_speed * (m_playerInput.sprint ? 1.5f : 1.0f)  * Time.deltaTime));
             
         }
     }
