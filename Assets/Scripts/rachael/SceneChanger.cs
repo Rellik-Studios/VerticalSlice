@@ -37,12 +37,14 @@ public class SceneChanger : MonoBehaviour
     }
     public void Continue()
     {
-        m_player.SetActive(true);
+        //m_player.SetActive(true);
+        
         Cursor.lockState = CursorLockMode.Locked;
         if (m_player.GetComponent<RespawnManager>() != null)
             m_player.GetComponent<RespawnManager>().Respawn();
         m_player.GetComponent<PlayerInteract>().m_timeRewind.fillAmount = 0;
         m_player.GetComponent<PlayerInteract>().m_timeStop.fillAmount = 0;
+        //m_player.GetComponent<PlayerInteract>().m_hiding = true;
     }
     private void OnTriggerEnter(Collider other)
     {

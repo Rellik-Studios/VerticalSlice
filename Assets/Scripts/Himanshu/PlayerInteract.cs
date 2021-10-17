@@ -395,23 +395,26 @@ namespace Himanshu
             if (!LoseScreen.activeInHierarchy)
             {
                 LoseScreen.SetActive(true);
+                //m_hiding = true;
+                GetComponent<RespawnManager>().Respawn();
                 m_enemies.All(t => t.toPatrol = true);
                 //dangerBarVal = 0;
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
+                GetComponent<RespawnManager>().Respawn();
                 Cursor.lockState = CursorLockMode.None;
             }
         }
 
         //Collision on the enemy results in death
-        //private void OnCollisionEnter(Collision collision)
-        //{
-        //    if (collision.collider.GetComponent<EnemyController>() != null)
-        //        Death();
-        //}
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.GetComponent<EnemyController>() != null)
-                Death();
-        }
+        // private void OnCollisionEnter(Collision collision)
+        // {
+        //     if (collision.collider.GetComponent<EnemyController>() != null)
+        //         Death();
+        // }
+        // private void OnTriggerEnter(Collider other)
+        // {
+        //     if (other.GetComponent<EnemyController>() != null)
+        //         Death();
+        // }
     }
 }
