@@ -49,6 +49,10 @@ public class QTERing : MonoBehaviour
                     Destroy(other.gameObject);
 
             }
+            else
+            {
+                DisplayBox.GetComponent<Text>().text = "Its not in a ring";
+            }
         }
     }
 
