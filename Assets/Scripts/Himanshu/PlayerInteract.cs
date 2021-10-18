@@ -208,6 +208,17 @@ namespace Himanshu
 
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                StopCoroutine(m_fillRoutine);
+                m_fillRoutine = StartCoroutine(m_timeRewind.FillBar(5));
+            }
+
+            if (Input.GetKeyUp(KeyCode.Return))
+            {
+                StopCoroutine(m_fillRoutine);
+                m_fillRoutine = StartCoroutine(m_timeRewind.FillBar(5, -1));
+            }
             if (m_playerInput.interact && !m_hiding)
             {
                 m_raycastingTesting.ObjectInFront?.GetComponent<IInteract>()?.Execute(this);
