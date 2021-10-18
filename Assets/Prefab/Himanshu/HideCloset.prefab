@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 5443076790530642236}
   - component: {fileID: 5443076790530642224}
   - component: {fileID: 5443076790530642239}
+  - component: {fileID: 7179696306941947552}
   m_Layer: 7
   m_Name: HideCloset
   m_TagString: Untagged
@@ -97,6 +98,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7179696306941947552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443076790530642237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466c6c06b3840fa478b25d23960047c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5443076790927899935
 GameObject:
   m_ObjectHideFlags: 0
