@@ -121,15 +121,20 @@ public class QTERing : MonoBehaviour
 
 
     }
+    public void LateRing()
+    {
+        IsDecided = true;
+        numOfFail++;
+    }
 
-        //public bool OuterRing()
-        //{
-        //    return (playerRing.rectTransform.sizeDelta.x >= 1350.0f && playerRing.rectTransform.sizeDelta.y >= 1350.0f);
+    //public bool OuterRing()
+    //{
+    //    return (playerRing.rectTransform.sizeDelta.x >= 1350.0f && playerRing.rectTransform.sizeDelta.y >= 1350.0f);
 
-        //}
-        //public bool InnerRing()
-        //{
-        //    return (playerRing.rectTransform.sizeDelta.x <= 1550.0f && playerRing.rectTransform.sizeDelta.y <= 1550.0f);
+    //}
+    //public bool InnerRing()
+    //{
+    //    return (playerRing.rectTransform.sizeDelta.x <= 1550.0f && playerRing.rectTransform.sizeDelta.y <= 1550.0f);
 
-        //}
+    //}
 }

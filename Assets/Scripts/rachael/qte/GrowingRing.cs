@@ -44,6 +44,7 @@ public class GrowingRing : MonoBehaviour
         }
         if(playerRing.rectTransform.sizeDelta.x >= 2000.0f || playerRing.rectTransform.sizeDelta.y >= 2000.0f)
         {
+            GameRing.GetComponent<QTERing>().LateRing();
             Destroy(gameObject);
         }
     }
