@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39222687fa24337439d437b002206d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChanngEnvir: {fileID: 1772136350}
+  ChangeEnvir: {fileID: 1772136354}
   mat:
   - {fileID: 2100002, guid: efe9381559c516743bd05cef82f39ebb, type: 3}
   - {fileID: 2100000, guid: e3646b26a10cdd14d88064f65826a2da, type: 2}
