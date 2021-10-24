@@ -7,6 +7,8 @@ public class GrowingRing : MonoBehaviour
 {
     Image playerRing;
 
+    GameObject GameRing;
+
     bool isInRing = false;
 
     public float speed = 1.0f;
@@ -14,10 +16,18 @@ public class GrowingRing : MonoBehaviour
     public float lowestRing = 1350.0f;
     public float highestRing = 1550.0f;
 
+    float RingSize;
+
+    float betweenValues; 
+
     // Start is called before the first frame update
     void Start()
     {
         playerRing = GetComponent<Image>();
+        if(FindObjectOfType<QTERing>() != null)
+            GameRing = FindObjectOfType<QTERing>().gameObject;
+        betweenValues = highestRing - lowestRing;
+        RingSize = GameRing.GetComponent<Image>().rectTransform.sizeDelta.x;
     }
 
     // Update is called once per frame
@@ -34,6 +44,7 @@ public class GrowingRing : MonoBehaviour
         }
         if(playerRing.rectTransform.sizeDelta.x >= 2000.0f || playerRing.rectTransform.sizeDelta.y >= 2000.0f)
         {
+            GameRing.GetComponent<QTERing>().LateRing();
             Destroy(gameObject);
         }
     }
@@ -41,14 +52,25 @@ public class GrowingRing : MonoBehaviour
     {
         return isInRing;
     }
+    //public bool OuterRing()
+    //{
+    //    return (playerRing.rectTransform.sizeDelta.x >= lowestRing && playerRing.rectTransform.sizeDelta.y >= lowestRing);
+
+    //}
+    //public bool InnerRing()
+    //{
+    //    return (playerRing.rectTransform.sizeDelta.x <= highestRing && playerRing.rectTransform.sizeDelta.y <= highestRing);
+
+    //}
+
     public bool OuterRing()
     {
-        return (playerRing.rectTransform.sizeDelta.x >= lowestRing && playerRing.rectTransform.sizeDelta.y >= lowestRing);
+        return (playerRing.rectTransform.sizeDelta.x >= (RingSize -betweenValues) && playerRing.rectTransform.sizeDelta.y >= (RingSize - betweenValues));
 
     }
     public bool InnerRing()
     {
-        return (playerRing.rectTransform.sizeDelta.x <= highestRing && playerRing.rectTransform.sizeDelta.y <= highestRing);
+        return (playerRing.rectTransform.sizeDelta.x <= (RingSize + betweenValues) && playerRing.rectTransform.sizeDelta.y <= (RingSize + betweenValues));
 
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangingMaterial : MonoBehaviour
 {
-    public ChangEnviroment ChanngEnvir;
+    public ChangeFurniture ChangeEnvir;
     public Material[] mat;
     Renderer rend;
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class ChangingMaterial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ChanngEnvir.Index < mat.Length)
-            rend.sharedMaterial = mat[ChanngEnvir.Index];
+        if(ChangeEnvir.Index < mat.Length)
+            rend.sharedMaterial = mat[ChangeEnvir.Index];
     }
 }
