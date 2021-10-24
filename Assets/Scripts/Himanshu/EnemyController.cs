@@ -120,6 +120,8 @@ namespace Himanshu
                 m_attackTimer = m_defaultAttackTimer;
             }
             
+            GameObject.FindObjectOfType<PlayerInteract>().Death();
+            
 
            
             m_spotted = true;
