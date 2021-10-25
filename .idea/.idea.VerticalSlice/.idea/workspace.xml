@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Ink/story.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Ink/story.ink" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Ink/story.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Ink/story.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +46,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/PlayGames.cs" />
+      <option value="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -68,10 +76,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="27748">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="27748" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -90,6 +98,7 @@
       <workItem from="1633865019814" duration="4492000" />
       <workItem from="1634170447709" duration="2790000" />
       <workItem from="1634352666331" duration="3872000" />
+      <workItem from="1635161166189" duration="3537000" />
     </task>
     <servers />
   </component>
