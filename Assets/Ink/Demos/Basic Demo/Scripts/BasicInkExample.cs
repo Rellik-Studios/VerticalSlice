@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System;
 using Ink.Runtime;
 
@@ -38,23 +39,24 @@ public class BasicInkExample : MonoBehaviour {
 		}
 
 		// Display all the choices, if there are any!
-		if(story.currentChoices.Count > 0) {
-			for (int i = 0; i < story.currentChoices.Count; i++) {
-				Choice choice = story.currentChoices [i];
-				Button button = CreateChoiceView (choice.text.Trim ());
-				// Tell the button what to do when we press it
-				button.onClick.AddListener (delegate {
-					OnClickChoiceButton (choice);
-				});
-			}
-		}
+		//if(story.currentChoices.Count > 0) {
+		//	for (int i = 0; i < story.currentChoices.Count; i++) {
+		//		Choice choice = story.currentChoices [i];
+		//		Button button = CreateChoiceView (choice.text.Trim ());
+		//		// Tell the button what to do when we press it
+		//		button.onClick.AddListener (delegate {
+		//			OnClickChoiceButton (choice);
+		//		});
+		//	}
+		//}
+
 		// If we've read all the content and there's no choices, the story is finished!
-		else {
-			Button choice = CreateChoiceView("End of story.\nRestart?");
-			choice.onClick.AddListener(delegate{
-				StartStory();
-			});
-		}
+		//Button choice = CreateChoiceView("End of story.\nRestart?");
+		//choice.onClick.AddListener(delegate {
+		//	StartStory();
+		//});
+
+
 	}
 
 	// When we click the choice button, tell the story to choose that choice!
@@ -65,26 +67,11 @@ public class BasicInkExample : MonoBehaviour {
 
 	// Creates a textbox showing the the line of text
 	void CreateContentView (string text) {
-		Text storyText = Instantiate (textPrefab) as Text;
-		storyText.text = text;
-		storyText.transform.SetParent (canvas.transform, false);
-	}
+		//Text storyText = Instantiate (textPrefab) as Text;
+		//storyText.text = text;
+		//storyText.transform.SetParent (canvas.transform, false);
 
-	// Creates a button showing the choice text
-	Button CreateChoiceView (string text) {
-		// Creates the button from a prefab
-		Button choice = Instantiate (buttonPrefab) as Button;
-		choice.transform.SetParent (canvas.transform, false);
-		
-		// Gets the text from the button prefab
-		Text choiceText = choice.GetComponentInChildren<Text> ();
-		choiceText.text = text;
-
-		// Make the button expand to fit the text
-		HorizontalLayoutGroup layoutGroup = choice.GetComponent <HorizontalLayoutGroup> ();
-		layoutGroup.childForceExpandHeight = false;
-
-		return choice;
+		narratorText.SetText(text);
 	}
 
 	// Destroys all the children of this gameobject (all the UI)
@@ -107,4 +94,6 @@ public class BasicInkExample : MonoBehaviour {
 	private Text textPrefab = null;
 	[SerializeField]
 	private Button buttonPrefab = null;
+
+	[SerializeField] TMP_Text narratorText;
 }
