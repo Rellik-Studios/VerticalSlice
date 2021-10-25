@@ -38,26 +38,21 @@ public class BasicInkExample : MonoBehaviour {
 			CreateContentView(text);
 		}
 
-		// Display all the choices, if there are any!
-		//if(story.currentChoices.Count > 0) {
-		//	for (int i = 0; i < story.currentChoices.Count; i++) {
-		//		Choice choice = story.currentChoices [i];
-		//		Button button = CreateChoiceView (choice.text.Trim ());
-		//		// Tell the button what to do when we press it
-		//		button.onClick.AddListener (delegate {
-		//			OnClickChoiceButton (choice);
-		//		});
-		//	}
-		//}
-
-		// If we've read all the content and there's no choices, the story is finished!
-		//Button choice = CreateChoiceView("End of story.\nRestart?");
-		//choice.onClick.AddListener(delegate {
-		//	StartStory();
-		//});
+        // Display all the choices, if there are any!
+        //if(story.currentChoices.Count > 0) {
+        //	for (int i = 0; i < story.currentChoices.Count; i++) {
+        //		Choice choice = story.currentChoices [i];
+        //		Button button = CreateChoiceView (choice.text.Trim ());
+        //		// Tell the button what to do when we press it
+        //		button.onClick.AddListener (delegate {
+        //			OnClickChoiceButton (choice);
+        //		});
+        //	}
+        //}
 
 
-	}
+
+    }
 
 	// When we click the choice button, tell the story to choose that choice!
 	void OnClickChoiceButton (Choice choice) {
@@ -81,6 +76,11 @@ public class BasicInkExample : MonoBehaviour {
 			GameObject.Destroy (canvas.transform.GetChild (i).gameObject);
 		}
 	}
+
+	void TestFunction()
+    {
+		//story.EvaluateExpression(
+    }
 
 	[SerializeField]
 	private TextAsset inkJSONAsset = null;

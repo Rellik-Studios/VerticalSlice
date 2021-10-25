@@ -2,9 +2,13 @@ VAR know_about_wager = false
 
 { know_about_wager:
 	"But surely you are not serious?" I demanded.
+	->london
+	
 - else:
+->astonished
  "But there must be a reason for this trip," I observed.
 }
+
 
 === london ===
 Monsieur Phileas Fogg returned home early from the Reform Club, and in a new-fangled steam-carriage, besides!  
@@ -29,3 +33,5 @@ I nodded curtly, not believing a word of it.
 
 
 -> END
+=== function know_of_wager(x) ===
+    hello world
