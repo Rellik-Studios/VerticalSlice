@@ -158,11 +158,11 @@ public class RaycastingTesting : MonoBehaviour
     {
         if(on && !doOnce)
         {
-            //crosshair.color = Color.red;
+            crosshair.color = Color.red;
         }
         else
         {
-            //crosshair.color = Color.white;
+            crosshair.color = Color.white;
         }
     }
     void ObjectInteraction(LayerMask layer)
