@@ -9,6 +9,7 @@ public class FadingTransition : MonoBehaviour
     [SerializeField] GameObject wall;
 
     private bool fadeOut = false;
+    private bool fadeIn = false;
     public float fadeSpeed = 1.0f;
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class FadingTransition : MonoBehaviour
         wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, 0.0f);
 
         wall.GetComponent<Renderer>().material.color = wallColor;
+        //wall.SetActive(false);
 
     }
 
@@ -35,7 +37,7 @@ public class FadingTransition : MonoBehaviour
             Color wallColor = this.wall.GetComponent<Renderer>().material.color;
 
             float fadeOutAmount = outDoorColor.a - (fadeSpeed * Time.deltaTime);
-            float fadeInAmount = outDoorColor.a + (fadeSpeed * Time.deltaTime);
+            float fadeInAmount = wallColor.a + (fadeSpeed * Time.deltaTime);
 
             outDoorColor = new Color(outDoorColor.r, outDoorColor.g, outDoorColor.b, fadeOutAmount);
             inDoorColor = new Color(inDoorColor.r, inDoorColor.g, inDoorColor.b, fadeOutAmount);
