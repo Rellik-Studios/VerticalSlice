@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Ink/story.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Ink/story.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Ink/story.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Ink/story.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Narrator.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Narrator.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/05/9de8e052/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FD824CFB-5500-4855-B9E6-D51B008C90E4/3f/bdb00cc8/List`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -42,12 +42,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SceneChanger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/PlayGames.cs" />
       <option value="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -98,7 +100,7 @@
       <workItem from="1633865019814" duration="4492000" />
       <workItem from="1634170447709" duration="2790000" />
       <workItem from="1634352666331" duration="3872000" />
-      <workItem from="1635161166189" duration="3537000" />
+      <workItem from="1635161166189" duration="14298000" />
     </task>
     <servers />
   </component>
