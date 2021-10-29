@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +30,15 @@ namespace Himanshu
                 _fillImage.fillAmount += _dir * Time.deltaTime / _time;
                 yield return null;
             }
+        }
+
+        
+        public static T Random<T>(this List<T> _this)
+        {
+            int rand = UnityEngine.Random.Range(0, _this.Count);
+            Debug.Log(_this.Count);
+
+            return _this[rand];
         }
     }
 }
