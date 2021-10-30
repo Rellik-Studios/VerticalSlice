@@ -22,7 +22,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //press key number 0
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SavePlayer();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            LoadPlayer();
+        }
     }
 
     void SavePlayer()
@@ -33,11 +41,16 @@ public class Player : MonoBehaviour
     void LoadPlayer()
     {
 
-        GetComponent<CharacterController>().enabled = false;
-
         PlayerData data = SaveSystem.LoadPlayer();
 
         Cursor.lockState = CursorLockMode.Locked;
+        GetComponent<CharacterController>().enabled = false;
+
+        gameObject.transform.position = new Vector3(PlayerPrefs.GetFloat("Player_X"), PlayerPrefs.GetFloat("Player_Y"), PlayerPrefs.GetFloat("Player_Z"));
+
+        player.m_numOfPieces = PlayerPrefs.GetInt("pieces");
+
+        eraChanging.SavingTimeEra();
 
         Vector3 position = new Vector3(0,0,0);
         position.x = data.position[0];
@@ -49,6 +62,7 @@ public class Player : MonoBehaviour
 
         GetComponent<RespawnManager>().SetPosition(playerTransform);
         GetComponent<RespawnManager>().Respawn();
+
 
         GetComponent<CharacterController>().enabled = true;
     }
