@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
         {
             SavePlayer();
         }
+        //press key number 9
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
             LoadPlayer();
@@ -43,27 +44,28 @@ public class Player : MonoBehaviour
 
         PlayerData data = SaveSystem.LoadPlayer();
 
-        Cursor.lockState = CursorLockMode.Locked;
-        GetComponent<CharacterController>().enabled = false;
+        if (data != null)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            GetComponent<CharacterController>().enabled = false;
 
-        gameObject.transform.position = new Vector3(PlayerPrefs.GetFloat("Player_X"), PlayerPrefs.GetFloat("Player_Y"), PlayerPrefs.GetFloat("Player_Z"));
+            numOfPieces = data.numOfPieces;
+            Index = data.Index;
+            Death = data.Death;
 
-        player.m_numOfPieces = PlayerPrefs.GetInt("pieces");
+            Vector3 position = new Vector3(0, 0, 0);
+            position.x = data.position[0];
+            position.y = data.position[1];
+            position.z = data.position[2];
 
-        eraChanging.SavingTimeEra();
+            Transform playerTransform = gameObject.transform;
+            playerTransform.position = new Vector3(position.x, position.y, position.z);
 
-        Vector3 position = new Vector3(0,0,0);
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-
-        Transform playerTransform = gameObject.transform;
-        playerTransform.position = new Vector3(position.x, position.y, position.z);
-
-        GetComponent<RespawnManager>().SetPosition(playerTransform);
-        GetComponent<RespawnManager>().Respawn();
+            GetComponent<RespawnManager>().SetPosition(playerTransform);
+            GetComponent<RespawnManager>().Respawn();
 
 
-        GetComponent<CharacterController>().enabled = true;
+            GetComponent<CharacterController>().enabled = true;
+        }
     }
 }
