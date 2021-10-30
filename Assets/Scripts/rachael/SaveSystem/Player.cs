@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public ChangeFurniture eraChanging;
     public RespawnManager respawnManager;
     public PlayerInteract player;
+    public SavingGame saveFile;
+
 
     public int numOfPieces; //number of clock pieces
     public int Index; //the number which index for each time era (for change furniture)
@@ -34,12 +36,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    void SavePlayer()
+    public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
+        //saveFile.SavePoint();
     }
 
-    void LoadPlayer()
+    public void LoadPlayer()
     {
 
         PlayerData data = SaveSystem.LoadPlayer();
@@ -65,11 +68,9 @@ public class Player : MonoBehaviour
             GetComponent<RespawnManager>().Respawn();
 
 
+
             GetComponent<CharacterController>().enabled = true;
         }
     }
-    void DeleteFile()
-    {
-        PlayerPrefs.DeleteAll();
-    }
+ 
 }

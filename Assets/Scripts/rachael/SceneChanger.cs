@@ -35,10 +35,14 @@ public class SceneChanger : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(2);
     }
+    public void DeleteFile()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     public void Continue()
     {
         //m_player.SetActive(true);
-        
+        //MIGHT NEED TO REDO
         Cursor.lockState = CursorLockMode.Locked;
         if (m_player.GetComponent<RespawnManager>() != null)
             m_player.GetComponent<RespawnManager>().Respawn();
@@ -53,5 +57,10 @@ public class SceneChanger : MonoBehaviour
             Ending();
         }
         
+    }
+
+    public void DisableCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 }

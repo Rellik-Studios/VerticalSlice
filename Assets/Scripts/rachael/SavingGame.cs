@@ -52,6 +52,7 @@ public class SavingGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.None;
         }
         if(Input.GetKeyDown(KeyCode.Q))
         {
@@ -60,7 +61,7 @@ public class SavingGame : MonoBehaviour
         }
     }
 
-    void SavePoint()
+    public void SavePoint()
     {
         PlayerPrefs.SetFloat("Player_X", gameObject.transform.position.x);
         PlayerPrefs.SetFloat("Player_Y", gameObject.transform.position.y);
