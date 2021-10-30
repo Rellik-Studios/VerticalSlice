@@ -620,11 +620,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392050552}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &426399809 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3058760317011374554, guid: 2f20d88d2f2c81e4d84f96c17fbf1c3a, type: 3}
-  m_PrefabInstance: {fileID: 3058760317437503899}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &492902897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2350,7 +2345,7 @@ GameObject:
   - component: {fileID: 1135203795}
   - component: {fileID: 1135203796}
   - component: {fileID: 1135203797}
-  - component: {fileID: 1135203798}
+  - component: {fileID: 1135203799}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2458,24 +2453,21 @@ MonoBehaviour:
   PlayerObject: {fileID: 1135203791}
   m_playerTransform: {fileID: 392050553}
   cam: {fileID: 0}
---- !u!114 &1135203798
+--- !u!114 &1135203799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135203791}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bd7f76d283e92b41a29a1184032479e, type: 3}
+  m_Script: {fileID: 11500000, guid: b669eaad264370849844fd6727a71b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplayBox: {fileID: 1431362868}
-  PassBox: {fileID: 426399809}
-  QTEGen: 0
-  WaitingForKey: 0
-  CorrectKey: 0
-  CountingDown: 0
+  eraChanging: {fileID: 1772136354}
+  respawnManager: {fileID: 1135203797}
+  player: {fileID: 0}
 --- !u!1 &1189859483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3122,11 +3114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dbd9e625940e148861d4375b5532f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1431362868 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3058760316008314031, guid: 2f20d88d2f2c81e4d84f96c17fbf1c3a, type: 3}
-  m_PrefabInstance: {fileID: 3058760317437503899}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1442260540
 GameObject:
   m_ObjectHideFlags: 0
