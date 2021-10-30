@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(Application.persistentDataPath);
     }
 
     // Update is called once per frame
@@ -67,5 +67,9 @@ public class Player : MonoBehaviour
 
             GetComponent<CharacterController>().enabled = true;
         }
+    }
+    void DeleteFile()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

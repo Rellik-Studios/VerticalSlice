@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PlayerData : MonoBehaviour
+public class PlayerData
 {
     public int numOfPieces; //number of clock pieces
     public int Index; //the number which index for each time era (for change furniture)
