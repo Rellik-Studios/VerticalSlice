@@ -81,4 +81,32 @@ public class GrandfatherClock : MonoBehaviour, IInteract
         }
         
     }
+
+    public void TimePiece(PlayerInteract _player)
+    {
+        switch (_player.m_numOfPieces)
+        {
+            case 1:
+                Gears.SetActive(true);
+                break;
+            case 2:
+                Gears.SetActive(true);
+                Face.SetActive(true);
+                break;
+            case 3:
+                Gears.SetActive(true);
+                Face.SetActive(true);
+                Gong.SetActive(true);
+                break;
+            case 4:
+                Gears.SetActive(true);
+                Face.SetActive(true);
+                Gong.SetActive(true);
+                Hands.SetActive(true);
+                break;
+            default:
+                print("Incorrect intelligence level.");
+                break;
+        }
+    }
 }
