@@ -244,7 +244,7 @@ namespace Himanshu
             //}
             enemySpotNum = m_enemies.Count(_enemy => _enemy.m_spotted);
             
-            Debug.Log(m_enemySpotNum);
+//            Debug.Log(m_enemySpotNum);
 
             
             
@@ -263,9 +263,8 @@ namespace Himanshu
             }
             else
             {
-                
                 GetComponent<CharacterController>().enabled = true;
-                GetComponent<CharacterController>().Move(m_playerFollow.transform.forward * 3f);
+                //GetComponent<CharacterController>().Move(m_playerFollow.transform.forward * 3f);
                 m_playerFollow.ResetRotationLock();
                 m_hidingSpot.Disable();
                 m_hiding = false;
