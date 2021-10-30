@@ -55,14 +55,6 @@ public class SavingGame : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            //PlayerPrefs.DeleteKey("Player_X");
-            //PlayerPrefs.DeleteKey("Player_Y");
-            //PlayerPrefs.DeleteKey("Player_Z");
-
-
-            //PlayerPrefs.DeleteKey("pieces");
-
-            //PlayerPrefs.DeleteKey("Index");
 
             PlayerPrefs.DeleteAll();
         }
