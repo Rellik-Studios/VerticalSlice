@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 namespace Himanshu
 {
-    public class HidingSpot : MonoBehaviour, IInteract
+    public class HidingSpot : MonoBehaviour
     {
-        private List<Transform> m_hidingSpots;
-        private int m_hidingIndex;
+        private List<HidingLocation> m_hidingSpots;
+        private HidingLocation m_hidingIndex;
         private PlayerInteract m_player;
         public bool m_cupboard;
 
@@ -16,6 +16,9 @@ namespace Himanshu
         private Animator m_animator;
 
         private Renderer m_cubeRenderer;
+
+        #region Properties
+
         private bool aInfect
         {
             get => m_animator.GetBool("infect");
@@ -45,6 +48,9 @@ namespace Himanshu
             set => m_animator.SetBool("close", value);
         }
 
+        #endregion
+        
+
         [SerializeField] private float m_distortionValue;
         public float distortionValue
         {
@@ -67,18 +73,34 @@ namespace Himanshu
         
         public int hidingIndex
         {
-            get => m_hidingIndex;
+            get
+            {
+                var index = 0;
+                foreach (var hidingSpot in m_hidingSpots)
+                {
+                    if (hidingSpot == m_hidingIndex)
+                        break;
+                    index++;
+                }
+
+                return index;
+            }
             set
             {
+                m_hidingIndex.TurnOff();
+               
                 if(m_hidingSpots.Count < 4)
-                    m_hidingIndex = value < 0 ? 0 : value > m_hidingSpots.Count - 1 ? m_hidingSpots.Count - 1 : value;
+                    m_hidingIndex = m_hidingSpots[value < 0 ? 0 : value > m_hidingSpots.Count - 1 ? m_hidingSpots.Count - 1 : value];
                 else
-                    m_hidingIndex = value < 0 ? m_hidingSpots.Count - 1 : value > m_hidingSpots.Count - 1 ? 0 : value;
+                    m_hidingIndex = m_hidingSpots[value < 0 ? m_hidingSpots.Count - 1 : value > m_hidingSpots.Count - 1 ? 0 : value];
+
+                m_hidingIndex.TurnOn();
 
                 if (m_player != null)
                 {
-                    m_player.SetPositionAndRotation(m_hidingSpots[m_hidingIndex]);
-                    
+                    //m_player.SetPositionAndRotation(m_hidingSpots[m_hidingIndex]);
+                    m_player.transform.position = new Vector3((m_hidingIndex.transform.forward * 3f).x, m_player.transform.position.y, (m_hidingIndex.transform.forward * 3f).z);
+                    m_player.transform.rotation = m_hidingIndex.transform.rotation;
                     m_player.GetComponent<CharacterController>().enabled = false;
                 }
             }
@@ -90,7 +112,7 @@ namespace Himanshu
         {
             m_animator = GetComponent<Animator>();
             isActive = true;
-            m_hidingSpots = new List<Transform>();
+            m_hidingSpots = new List<HidingLocation>();
 
             if (transform.Find("Cube") != null)
             {
@@ -99,37 +121,13 @@ namespace Himanshu
             }
             else
             {
-                transform.Find("GFX").Find("Cube").GetComponent<Renderer>().material = new Material(m_shader);
-                m_cubeRenderer = transform.Find("GFX").Find("Cube").GetComponent<Renderer>();
+                // transform.Find("GFX").Find("Cube").GetComponent<Renderer>().material = new Material(m_shader);
+                // m_cubeRenderer = transform.Find("GFX").Find("Cube").GetComponent<Renderer>();
             }
-            var hidingSpots = transform.Find("HidingSpots");
-            for (int i = 0; i < hidingSpots.childCount; i++)
+            for (int i = 0; i < transform.childCount; i++)
             {
-                if(hidingSpots.GetChild(i).gameObject.activeInHierarchy)
-                    m_hidingSpots.Add(hidingSpots.GetChild(i));
-            }
-        }
-
-        public void Execute(PlayerInteract _player)
-        {
-            if (isActive)
-            {
-                m_player = _player;
-                m_player.SetPositionAndRotation(m_hidingSpots[hidingIndex], m_cupboard ? 1.0f : 0f);
-                _player.Hide(this);
-            }
-
-            else
-            {
-                if (_player.timeReverse)
-                {
-                    _player.timeReverse = false;
-                    this.Invoke(() => { _player.timeReverse = true;}, 5f);
-                    StartCoroutine(_player.m_timeRewind.FillBar(2f));
-                    StartCoroutine(_player.m_timeRewind.FillBar(3f, -1, 2f));
-                    _player.PlayTimeRewind();
-                    DisInfect(2f);
-                }
+                if(transform.GetChild(i).gameObject.activeInHierarchy && transform.GetChild(i).GetComponent<HidingLocation>() != null)
+                    m_hidingSpots.Add(transform.GetChild(i).GetComponent<HidingLocation>());
             }
         }
 
@@ -149,6 +147,7 @@ namespace Himanshu
         public void Disable()
         {
             m_player = null;
+            m_hidingIndex.TurnOff();
         }
 
         private void Update()
@@ -159,6 +158,7 @@ namespace Himanshu
                 //transform.Find("Cube").GetComponent<Renderer>().material.SetFloat("DistortionLevel", 0.02f);
                 distortionValue = m_distortionValue;
             }
+            
             if (m_player !=  null)
             {
                 if (!isActive)
@@ -167,6 +167,7 @@ namespace Himanshu
                     m_player = null;
                     return;
                 }
+                
                 StartCoroutine(IndexHandler());
             }
         }
@@ -218,6 +219,22 @@ namespace Himanshu
                     _renderer.material.color = _state? Color.white : Color.red;
             }
             
+        }
+
+        public void BeginHide(HidingLocation _hidingLocation, PlayerInteract _player)
+        {
+            m_player = _player;
+            m_player.Hide(this);
+            //m_player.m_hiding = true;
+            m_hidingIndex = _hidingLocation;
+            var index = 0;
+            foreach (var hidingSpot in m_hidingSpots)
+            {
+                if (hidingSpot == m_hidingIndex)
+                    break;
+                index++;
+            }
+            hidingIndex = index;
         }
     }
 }

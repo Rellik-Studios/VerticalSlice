@@ -28,6 +28,8 @@ public class ChangeFurniture : MonoBehaviour
             LoopObjects[0].SetActive(true);
         }
 
+        SavingTimeEra();
+
     }
 
     // Update is called once per frame
@@ -70,5 +72,26 @@ public class ChangeFurniture : MonoBehaviour
     {
         roomMain.SetActive(true);
         roomNoDoor.SetActive(false);
+    }
+
+    public void SavingTimeEra()
+    {
+        //for the saving purposes---------------
+        if (PlayerPrefs.HasKey("Index") == true)
+        {
+            Index = PlayerPrefs.GetInt("Index");
+            if (Index <= (LoopObjects.Length - 2))
+            {
+
+                LoopObjects[0].SetActive(false);
+                LoopObjects[Index].SetActive(true);
+
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Index", Index);
+        }
+        //---------------------------------------
     }
 }
