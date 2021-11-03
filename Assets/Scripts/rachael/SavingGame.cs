@@ -16,6 +16,7 @@ public class SavingGame : MonoBehaviour
     {
         player = GetComponent<PlayerInteract>();
         //for the saving purposes---------------
+        
         if (!PlayerPrefs.HasKey("Player_X"))
         {
             PlayerPrefs.SetFloat("Player_X", gameObject.transform.position.x);
