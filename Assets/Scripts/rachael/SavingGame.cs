@@ -10,36 +10,40 @@ public class SavingGame : MonoBehaviour
     public RespawnManager respawnManager;
     public PlayerInteract player;
 
+    [SerializeField] bool testing_Mode = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<PlayerInteract>();
         //for the saving purposes---------------
-        
-        if (!PlayerPrefs.HasKey("Player_X"))
+
+        if (testing_Mode)
         {
-            PlayerPrefs.SetFloat("Player_X", gameObject.transform.position.x);
-            PlayerPrefs.SetFloat("Player_Y", gameObject.transform.position.y);
-            PlayerPrefs.SetFloat("Player_Z", gameObject.transform.position.z);
+            if (!PlayerPrefs.HasKey("Player_X"))
+            {
+                PlayerPrefs.SetFloat("Player_X", gameObject.transform.position.x);
+                PlayerPrefs.SetFloat("Player_Y", gameObject.transform.position.y);
+                PlayerPrefs.SetFloat("Player_Z", gameObject.transform.position.z);
 
-  
-            PlayerPrefs.SetInt("pieces", player.m_numOfPieces);
-            
-            PlayerPrefs.SetInt("Index", eraChanging.Index);
 
-            PlayerPrefs.SetInt("NumLine", 0);
+                PlayerPrefs.SetInt("pieces", player.m_numOfPieces);
 
-            PlayerPrefs.SetString("TimeEra", "Place");
+                PlayerPrefs.SetInt("Index", eraChanging.Index);
 
-            PlayerPrefs.SetInt("Death", 0);
+                PlayerPrefs.SetInt("NumLine", 0);
 
-            //PlayerPrefs.Save();
+                PlayerPrefs.SetString("TimeEra", "Place");
 
-        }
-        else
-        {
-            LoadPoint();
+                PlayerPrefs.SetInt("Death", 0);
+
+                //PlayerPrefs.Save();
+
+            }
+            else
+            {
+                LoadPoint();
+            }
         }
     }
 
