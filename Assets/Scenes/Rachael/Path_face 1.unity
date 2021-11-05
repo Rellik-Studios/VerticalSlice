@@ -1299,6 +1299,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2592019251865832029, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4657717501785331283, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1794,10 +1798,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d617743c592d2745aaa8bde4246096b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eraChanging: {fileID: 0}
+  eraChanging: {fileID: 2050008731}
   respawnManager: {fileID: 230517577}
   player: {fileID: 230517578}
-  saveFile: {fileID: 0}
+  saveFile: {fileID: 230517576}
   numOfPieces: 0
   Index: 0
   Death: 0
@@ -1813,7 +1817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b669eaad264370849844fd6727a71b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eraChanging: {fileID: 0}
+  eraChanging: {fileID: 2050008731}
   respawnManager: {fileID: 230517577}
   player: {fileID: 0}
   testing_Mode: 1
@@ -1845,11 +1849,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoseScreen: {fileID: 0}
-  m_timeRewind: {fileID: 0}
-  m_timeStop: {fileID: 0}
-  m_danger: {fileID: 0}
+  m_sceneManager: {fileID: 0}
+  m_timeRewind: {fileID: 690071840}
+  m_timeStop: {fileID: 1288709572}
   m_hiding: 0
   m_numOfPieces: 0
+  m_deathCount: 0
   m_placedDown: 0
   m_rewindAudio: {fileID: 0}
   m_timeStopAudio: {fileID: 0}
@@ -5483,6 +5488,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7917189660878513084, guid: 2acd7f1999887164e8c478d999582ca9, type: 3}
+--- !u!114 &690071840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 155955643262502038, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+  m_PrefabInstance: {fileID: 192358314}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &694262900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6772078095400747811, guid: e724984723caa644aaf54c1d5689d39b, type: 3}
@@ -8909,6 +8925,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7917189660878513084, guid: 2acd7f1999887164e8c478d999582ca9, type: 3}
+--- !u!114 &1288709572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2592019251865832029, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+  m_PrefabInstance: {fileID: 192358314}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1292087700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7394245659069535198, guid: e724984723caa644aaf54c1d5689d39b, type: 3}
