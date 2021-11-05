@@ -43,6 +43,11 @@ public class SavingGame : MonoBehaviour
             else
             {
                 LoadPoint();
+
+                //if(GetComponent<SavingGame>() != null)
+                //{
+                //    GetComponent<Player>().LoadPlayer();
+                //}
             }
         }
     }
