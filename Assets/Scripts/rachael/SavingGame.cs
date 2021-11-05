@@ -18,7 +18,7 @@ public class SavingGame : MonoBehaviour
         player = GetComponent<PlayerInteract>();
         //for the saving purposes---------------
 
-        if (testing_Mode)
+        if (!testing_Mode)
         {
             if (!PlayerPrefs.HasKey("Player_X"))
             {
@@ -31,11 +31,11 @@ public class SavingGame : MonoBehaviour
 
                 PlayerPrefs.SetInt("Index", eraChanging.Index);
 
-                PlayerPrefs.SetInt("NumLine", 0);
+                //PlayerPrefs.SetInt("NumLine", 0);
 
-                PlayerPrefs.SetString("TimeEra", "Place");
+                //PlayerPrefs.SetString("TimeEra", "Place");
 
-                PlayerPrefs.SetInt("Death", 0);
+                PlayerPrefs.SetInt("Death", player.m_deathCount);
 
                 //PlayerPrefs.Save();
 
@@ -76,6 +76,9 @@ public class SavingGame : MonoBehaviour
         PlayerPrefs.SetInt("pieces", player.m_numOfPieces);
 
         PlayerPrefs.SetInt("Index", eraChanging.Index);
+
+
+        PlayerPrefs.SetInt("Death", player.m_deathCount);
     }
     void LoadPoint()
     {
@@ -87,6 +90,8 @@ public class SavingGame : MonoBehaviour
         player.m_numOfPieces = PlayerPrefs.GetInt("pieces");
 
         eraChanging.SavingTimeEra();
+
+        player.m_deathCount = PlayerPrefs.GetInt("Death");
 
 
         GetComponent<RespawnManager>().SetPosition(gameObject.transform);

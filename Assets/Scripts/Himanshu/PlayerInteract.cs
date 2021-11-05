@@ -16,6 +16,7 @@ namespace Himanshu
     {
         private bool m_spotted;
         public GameObject LoseScreen;
+        public SceneChanger m_sceneManager;
 
         private List<EnemyController> m_enemies;
         public  IEnumerator FillBar(Image _fillImage, float _time, int _dir = 1, float _waitTime = 0f)
@@ -75,7 +76,7 @@ namespace Himanshu
         [Header("Images")] 
         public Image m_timeRewind;
         public Image m_timeStop;
-        public Image m_danger;
+        //public Image m_danger;
 
 
         //public float dangerBarVal
@@ -177,6 +178,7 @@ namespace Himanshu
         [Header("General")]
         public bool m_hiding;
         public int m_numOfPieces = 0;
+        public int m_deathCount = 0;
         public bool m_placedDown = false;
 
         [Header("Audio")]
@@ -402,17 +404,20 @@ namespace Himanshu
         }
         public void Death()
         {
-            if (!LoseScreen.activeInHierarchy)
-            {
-                LoseScreen.SetActive(true);
-                //m_hiding = true;
-                GetComponent<RespawnManager>().Respawn();
-                m_enemies.All(t => t.toPatrol = true);
-                //dangerBarVal = 0;
-                //gameObject.SetActive(false);
-                GetComponent<RespawnManager>().Respawn();
-                Cursor.lockState = CursorLockMode.None;
-            }
+            m_deathCount++;
+            m_sceneManager.loseScreen();
+            //MUST REDO
+            //if (!LoseScreen.activeInHierarchy)
+            //{
+            //    LoseScreen.SetActive(true);
+            //    //m_hiding = true;
+            //    GetComponent<RespawnManager>().Respawn();
+            //    m_enemies.All(t => t.toPatrol = true);
+            //    //dangerBarVal = 0;
+            //    //gameObject.SetActive(false);
+            //    GetComponent<RespawnManager>().Respawn();
+            //    Cursor.lockState = CursorLockMode.None;
+            //}
         }
 
         //Collision on the enemy results in death
