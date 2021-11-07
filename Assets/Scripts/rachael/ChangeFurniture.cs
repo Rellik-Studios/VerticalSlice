@@ -45,6 +45,7 @@ public class ChangeFurniture : MonoBehaviour
             if (other.GetComponentInParent<RespawnManager>() != null)
             {
                 other.GetComponentInParent<RespawnManager>().Teleport(LocationPosition.transform);
+                
                 Debug.Log("You have moved to a new location");
             }
             if (Index <= (LoopObjects.Length - 2))
@@ -63,6 +64,11 @@ public class ChangeFurniture : MonoBehaviour
                 roomNoDoor.SetActive(true);
                 roomMain.SetActive(false);
 
+            }
+            if(other.GetComponentInParent<Player>() != null)
+            {
+                //saves the player data into the system
+                other.GetComponentInParent<Player>().SavePlayer();
             }
 
             Debug.Log("Time Era has changed");
