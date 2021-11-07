@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
+﻿[System.Serializable]
 public class PlayerData
 {
     public int numOfPieces; //number of clock pieces
@@ -15,6 +11,7 @@ public class PlayerData
     {
         Index = player.Index;
         Death = player.Death;
+        numOfPieces = player.numOfPieces;
 
         position = new float[3];
 

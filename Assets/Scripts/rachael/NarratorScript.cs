@@ -21,9 +21,9 @@ public class NarratorScript : MonoBehaviour
         {
             string cat;
             int hour = DateTime.Now.Hour;
-            cat = hour >= 6 && hour < 12 ? "Morning" :
-                hour < 18 && hour >= 12 ? "Afternoon" :
-                hour >= 18 && hour < 21 ? "Evening" : "Night";
+            cat = hour >= 6 && hour < 12 ? "morning" :
+                hour < 18 && hour >= 12 ? "afternoon" :
+                hour >= 18 && hour < 21 ? "evening" : "night";
            
             return cat;
         }
