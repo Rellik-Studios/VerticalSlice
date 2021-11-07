@@ -1,55 +1,170 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Himanshu
 {
     public class Narrator : MonoBehaviour
     {
+        #region Text
+
         
         [SerializeField] private TMP_Text m_textBox;
         
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_idleRoom;
         
+        public bool idleRoom
+        {
+            set => Play(m_idleRoom);
+        }
+
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_ballRoom;
+        
+        public bool ballRoom
+        {
+            set => Play(m_ballRoom);
+        }
         
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_cafeteria;
         
+        public bool cafeteria
+        {
+            set => Play(m_cafeteria);
+        }
+        
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_maze;
+        
+        public bool maze
+        {
+            set => Play(m_maze);
+        }
         
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_bathroom;
         
+        public bool bathroom
+        {
+            set => Play(m_bathroom);
+        }
+        
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_mirrorShatter;
+        
+        public bool mirrorShatter
+        {
+            set => Play(m_mirrorShatter);
+        }
         
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_hospital1950;
         
+        public bool hospital1950
+        {
+            set => Play(m_hospital1950);
+        }
+        
+        [TextArea(4, 6)]
+        [SerializeField] private List<string> m_hospitalIdle;
+        
+        public bool hospitalIdle
+        {
+            set => Play(m_hospitalIdle);
+        }
+        
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_hospital1870;
+        
+        public bool hospital1870
+        {
+            set => Play(m_hospital1870);
+        }
         
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_hospitalFuturistic;
         
+        
+        public bool hospitalFuturistic
+        {
+            set => Play(m_hospitalFuturistic);
+        }
+        
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_hospitalPresent;
 
+        
+        
+        public bool hospitalPresent
+        {
+            set => Play(m_hospitalPresent);
+        }
+        
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_hub1;
+        
+        
+        public bool hub1
+        {
+            set => Play(m_hub1);
+        }
         
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_hub2;
         
+        
+        public bool hub2
+        {
+            set => Play(m_hub2);
+        }
+        
         [TextArea(4, 6)]
         [SerializeField] private List<string> m_finish1;
 
+        
+        public bool finish1
+        {
+            set => Play(m_finish1);
+        }
+        
+        #endregion
+
+        public float m_idleTimer;
+        
+        private Coroutine m_waitPlay;
         private bool m_settingText = false;
+        
+        private void Start()
+        {
+            m_waitPlay = StartCoroutine("");
+            m_idleTimer = Random.Range(90f, 120f);
+        }
+
+
+        private void Update()
+        {
+            if (m_idleTimer < 0f)
+            {
+                m_idleTimer = 4f;
+                //Play(m_idleRoom);
+            }
+            else
+            {
+                m_idleTimer -= Time.deltaTime;
+            }
+        }
+
+        //Call this function when a door dissapears.
+        public void ResetTimer()
+        {
+            m_idleTimer = Random.Range(90f, 120f);
+        }
+
         public void Play(List<string> _toPlay)
         {
             if (_toPlay.Count > 1 && !m_settingText)
@@ -62,6 +177,18 @@ namespace Himanshu
             {
                 StartCoroutine(SetText(_toPlay[0], m_textBox));
             }
+
+            else
+            {
+                //StopCoroutine(m_waitPlay);
+                m_waitPlay = StartCoroutine(WaitAndPlay(_toPlay));
+            }
+        }
+
+        private IEnumerator WaitAndPlay(List<string> _toPlay)
+        {
+            yield return new WaitWhile(() => m_settingText);
+            Play(_toPlay);
         }
 
         IEnumerator SetText(string _text, TMP_Text _textBox, bool additive = false)
@@ -80,8 +207,8 @@ namespace Himanshu
                 pos++;
                 if (letter == '#')
                 {
-                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-                    StartCoroutine(SetText(_text.Substring(pos + 1), _textBox));
+                    yield return new WaitForSeconds(2f);
+                    yield return StartCoroutine(SetText(_text.Substring(pos + 1), _textBox));
                     yield break;
                 }
 
@@ -153,7 +280,7 @@ namespace Himanshu
                     yield return null;
                 }
             }
-
+            this.Invoke(()=> m_textBox.SetText(""), 3f);
             m_settingText = false;
         }
 
@@ -176,10 +303,8 @@ namespace Himanshu
             }
             return "";
         }
+        
+        
 
-        public void PlayHub()
-        {
-            Play(m_idleRoom);
-        }
     }
 }
