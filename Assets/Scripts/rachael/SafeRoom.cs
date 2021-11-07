@@ -17,6 +17,12 @@ public class SafeRoom : MonoBehaviour
             {
                 other.GetComponentInParent<RespawnManager>().SetPosition(this.transform);
                 Debug.Log("You have entered the safe room");
+
+            }
+            if (other.GetComponentInParent<Player>() != null)
+            {
+                //saves the player data into the system
+                other.GetComponentInParent<Player>().SavePlayer();
             }
         }
     }

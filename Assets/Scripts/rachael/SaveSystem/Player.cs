@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
     }
     public void LoadingValues()
     {
+        //making a transfer of data from the file to the scripts in gameplay
         eraChanging.SaveIndex(Index);
         player.m_numOfPieces = numOfPieces;
         player.m_deathCount = Death;
