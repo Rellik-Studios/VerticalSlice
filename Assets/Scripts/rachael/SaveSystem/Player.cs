@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public ChangeFurniture eraChanging;
     public RespawnManager respawnManager;
     public PlayerInteract player;
-    public SavingGame saveFile;
+    //public SavingGame saveFile;
 
 
     public int numOfPieces; //number of clock pieces
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
     public void SavePlayer()
     {
-        saveFile.SavePoint();
+        //saveFile.SavePoint();
 
         Index = eraChanging.Index;
         numOfPieces = player.m_numOfPieces;

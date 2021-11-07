@@ -55,20 +55,20 @@ public class SavingGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z))
-        {
-            SavePoint();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            SceneManager.LoadScene(0);
-            Cursor.lockState = CursorLockMode.None;
-        }
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-
-            PlayerPrefs.DeleteAll();
-        }
+        // if(Input.GetKeyDown(KeyCode.Z))
+        // {
+        //     SavePoint();
+        // }
+        // if (Input.GetKeyDown(KeyCode.X))
+        // {
+        //     SceneManager.LoadScene(0);
+        //     Cursor.lockState = CursorLockMode.None;
+        // }
+        // if(Input.GetKeyDown(KeyCode.Q))
+        // {
+        //
+        //     PlayerPrefs.DeleteAll();
+        // }
     }
 
     public void SavePoint()
