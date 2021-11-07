@@ -41,14 +41,25 @@ public class Player : MonoBehaviour
     {
         //saveFile.SavePoint();
 
-        Index = eraChanging.Index;
-        numOfPieces = player.m_numOfPieces;
-        Death = player.m_deathCount;
+        SavingValues();
 
         SaveSystem.SavePlayer(this);
         
     }
 
+
+    public void SavingValues()
+    {
+        Index = eraChanging.Index;
+        numOfPieces = player.m_numOfPieces;
+        Death = player.m_deathCount;
+    }
+    public void LoadingValues()
+    {
+        eraChanging.SaveIndex(Index);
+        player.m_numOfPieces = numOfPieces;
+        player.m_deathCount = Death;
+    }
     public void LoadPlayer()
     {
 
@@ -62,6 +73,10 @@ public class Player : MonoBehaviour
             numOfPieces = data.numOfPieces;
             Index = data.Index;
             Death = data.Death;
+
+            LoadingValues();
+
+            eraChanging.LoadTimeEra();
 
             Vector3 position = new Vector3(0, 0, 0);
             position.x = data.position[0];

@@ -11,6 +11,7 @@ public class PlayerData
     {
         Index = player.Index;
         Death = player.Death;
+        numOfPieces = player.numOfPieces;
 
         position = new float[3];
 

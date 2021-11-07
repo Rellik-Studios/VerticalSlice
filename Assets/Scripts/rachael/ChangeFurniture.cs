@@ -28,7 +28,7 @@ public class ChangeFurniture : MonoBehaviour
             LoopObjects[0].SetActive(true);
         }
 
-        SavingTimeEra();
+        //SavingTimeEra();
 
     }
 
@@ -74,6 +74,7 @@ public class ChangeFurniture : MonoBehaviour
         roomNoDoor.SetActive(false);
     }
 
+    //ONLY FOR PLAYER PREF
     public void SavingTimeEra()
     {
         //for the saving purposes---------------
@@ -83,7 +84,10 @@ public class ChangeFurniture : MonoBehaviour
             if (Index <= (LoopObjects.Length - 2))
             {
 
-                LoopObjects[0].SetActive(false);
+                foreach (GameObject obj in LoopObjects)
+                {
+                    obj.SetActive(false);
+                }
                 LoopObjects[Index].SetActive(true);
 
             }
@@ -94,4 +98,25 @@ public class ChangeFurniture : MonoBehaviour
         }
         //---------------------------------------
     }
+
+
+    public void SaveIndex(int num)
+    {
+        Index = num;
+    }
+    public void LoadTimeEra()
+    {
+        if (Index <= (LoopObjects.Length - 2))
+        {
+
+            foreach (GameObject obj in LoopObjects)
+            {
+                obj.SetActive(false);
+            }
+
+            LoopObjects[Index].SetActive(true);
+
+        }
+    }
+
 }
