@@ -28,7 +28,7 @@ public class ChangeFurniture : MonoBehaviour
             LoopObjects[0].SetActive(true);
         }
 
-        SavingTimeEra();
+        //SavingTimeEra();
 
     }
 
@@ -45,6 +45,7 @@ public class ChangeFurniture : MonoBehaviour
             if (other.GetComponentInParent<RespawnManager>() != null)
             {
                 other.GetComponentInParent<RespawnManager>().Teleport(LocationPosition.transform);
+                
                 Debug.Log("You have moved to a new location");
             }
             if (Index <= (LoopObjects.Length - 2))
@@ -64,6 +65,11 @@ public class ChangeFurniture : MonoBehaviour
                 roomMain.SetActive(false);
 
             }
+            if(other.GetComponentInParent<Player>() != null)
+            {
+                //saves the player data into the system
+                other.GetComponentInParent<Player>().SavePlayer();
+            }
 
             Debug.Log("Time Era has changed");
         }
@@ -74,6 +80,7 @@ public class ChangeFurniture : MonoBehaviour
         roomNoDoor.SetActive(false);
     }
 
+    //ONLY FOR PLAYER PREF
     public void SavingTimeEra()
     {
         //for the saving purposes---------------
@@ -83,7 +90,10 @@ public class ChangeFurniture : MonoBehaviour
             if (Index <= (LoopObjects.Length - 2))
             {
 
-                LoopObjects[0].SetActive(false);
+                foreach (GameObject obj in LoopObjects)
+                {
+                    obj.SetActive(false);
+                }
                 LoopObjects[Index].SetActive(true);
 
             }
@@ -94,4 +104,25 @@ public class ChangeFurniture : MonoBehaviour
         }
         //---------------------------------------
     }
+
+
+    public void SaveIndex(int num)
+    {
+        Index = num;
+    }
+    public void LoadTimeEra()
+    {
+        if (Index <= (LoopObjects.Length - 2))
+        {
+
+            foreach (GameObject obj in LoopObjects)
+            {
+                obj.SetActive(false);
+            }
+
+            LoopObjects[Index].SetActive(true);
+
+        }
+    }
+
 }
