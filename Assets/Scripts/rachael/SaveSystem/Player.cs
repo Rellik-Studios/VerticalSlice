@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         Debug.Log(Application.persistentDataPath);
+
     }
 
     // Update is called once per frame
@@ -38,8 +39,14 @@ public class Player : MonoBehaviour
 
     public void SavePlayer()
     {
+        saveFile.SavePoint();
+
+        Index = eraChanging.Index;
+        numOfPieces = player.m_numOfPieces;
+        Death = player.m_deathCount;
+
         SaveSystem.SavePlayer(this);
-        //saveFile.SavePoint();
+        
     }
 
     public void LoadPlayer()

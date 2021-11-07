@@ -50,6 +50,13 @@ public class SceneChanger : MonoBehaviour
         m_player.GetComponent<PlayerInteract>().m_timeStop.fillAmount = 0;
         //m_player.GetComponent<PlayerInteract>().m_hiding = true;
     }
+
+    public void loseScreen()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene(3);
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
