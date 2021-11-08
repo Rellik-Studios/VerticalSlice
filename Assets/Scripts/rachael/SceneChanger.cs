@@ -5,17 +5,38 @@ using UnityEngine.SceneManagement;
 using Himanshu;
 public class SceneChanger : MonoBehaviour
 {
-    public GameObject m_player;
+    //public GameObject m_player;
+    public GameObject ContinueBlock;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(ContinueBlock != null)
+        {
+            if (!PlayerPrefs.HasKey("SaveFile"))
+            {
+                ContinueBlock.SetActive(false);
+
+            }
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ButtonPresent()
+    {
+        if (PlayerPrefs.GetInt("SaveFile") == 0)
+        {
+            ContinueBlock.SetActive(false);
+        }
+        else
+        {
+            ContinueBlock.SetActive(true);
+        }
     }
     public void MainScene()
     {
@@ -39,17 +60,17 @@ public class SceneChanger : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
     }
-    public void Continue()
-    {
-        //m_player.SetActive(true);
-        //MIGHT NEED TO REDO
-        Cursor.lockState = CursorLockMode.Locked;
-        if (m_player.GetComponent<RespawnManager>() != null)
-            m_player.GetComponent<RespawnManager>().Respawn();
-        m_player.GetComponent<PlayerInteract>().m_timeRewind.fillAmount = 0;
-        m_player.GetComponent<PlayerInteract>().m_timeStop.fillAmount = 0;
-        //m_player.GetComponent<PlayerInteract>().m_hiding = true;
-    }
+    //public void Continue()
+    //{
+    //    //m_player.SetActive(true);
+    //    //MIGHT NEED TO REDO
+    //    Cursor.lockState = CursorLockMode.Locked;
+    //    if (m_player.GetComponent<RespawnManager>() != null)
+    //        m_player.GetComponent<RespawnManager>().Respawn();
+    //    m_player.GetComponent<PlayerInteract>().m_timeRewind.fillAmount = 0;
+    //    m_player.GetComponent<PlayerInteract>().m_timeStop.fillAmount = 0;
+    //    //m_player.GetComponent<PlayerInteract>().m_hiding = true;
+    //}
 
     public void loseScreen()
     {

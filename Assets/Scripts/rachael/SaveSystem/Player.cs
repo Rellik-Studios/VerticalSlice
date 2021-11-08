@@ -19,7 +19,15 @@ public class Player : MonoBehaviour
     void Start()
     {
         Debug.Log(Application.persistentDataPath);
-
+        if(PlayerPrefs.HasKey("SaveFile"))
+        {
+            LoadPlayer();
+        }
+        else
+        {
+            SavePlayer();
+            PlayerPrefs.SetInt("SaveFile", 1);
+        }
     }
 
     // Update is called once per frame
