@@ -13,7 +13,7 @@ public class ChoosingPath : MonoBehaviour
 
     [SerializeField] private int route;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
       
         if (PlayerPrefs.HasKey(assignedName))

@@ -8,9 +8,9 @@ namespace Himanshu
         public void Execute(PlayerInteract _player)
         {
             Debug.Log("Collect");
-            GetComponent<AudioSource>().Play();
+            //GetComponent<AudioSource>()?.Play();
             _player.Collect();
-            GetComponent<MeshCollider>().enabled = false;
+            //GetComponent<MeshCollider>().enabled = false;
             
             this.Invoke(()=> { Destroy(this.gameObject); }, 0.1f);
         }

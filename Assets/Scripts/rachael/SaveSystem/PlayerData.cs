@@ -5,6 +5,8 @@ public class PlayerData
     public int Index; //the number which index for each time era (for change furniture)
     public int Death;
 
+    public bool hasPiece;
+
     public float[] position;
     //public string[] Loopnames;
 
@@ -13,6 +15,8 @@ public class PlayerData
         Index = player.Index;
         Death = player.Death;
         numOfPieces = player.numOfPieces;
+
+        hasPiece = player.hasPiece;
 
         position = new float[3];
 
