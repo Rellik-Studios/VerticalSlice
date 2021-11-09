@@ -6,8 +6,11 @@ using UnityEngine.Serialization;
 
 public class GrandfatherClock : MonoBehaviour, IInteract
 {
-    [SerializeField] GameObject m_triggerDoor;
-    [SerializeField] GameObject m_goalDoor;
+    //[SerializeField] GameObject m_triggerDoor;
+    //[SerializeField] GameObject m_goalDoor;
+
+    [SerializeField] ChangeFurniture changingManager;
+    [SerializeField] PlayerInteract playerInteract;
 
     [SerializeField] GameObject Gears;
     [SerializeField] GameObject Face;
@@ -22,7 +25,33 @@ public class GrandfatherClock : MonoBehaviour, IInteract
     // Start is called before the first frame update
     void Start()
     {
-        
+        //foreach (GameObject obj in changingManager.Rooms)
+        //{
+        //    DefineRoom()
+        //}
+
+        if (!playerInteract.m_placedDown)
+        {
+
+            for (int i = 0; i < playerInteract.m_numOfPieces; i++)
+            {
+                if (changingManager.Rooms[i] != null)
+                {
+
+                    DefineRoom(changingManager.Rooms[i].name);
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < playerInteract.m_numOfPieces-1; i++)
+            {
+                if (changingManager.Rooms[i] != null)
+                {
+                    DefineRoom(changingManager.Rooms[i].name);
+                }
+            }
+        }
     }
 
     // Update is called once per frame
@@ -30,17 +59,17 @@ public class GrandfatherClock : MonoBehaviour, IInteract
     {
         
     }
-    void EnableTriggerDoor()
-    {
-        //if a peace is placed on clock
-        m_triggerDoor.SetActive(true);
-    }
+    //void EnableTriggerDoor()
+    //{
+    //    //if a peace is placed on clock
+    //    m_triggerDoor.SetActive(true);
+    //}
 
-    void OpenTheDoor()
-    {
-        //once all the piece are put in place then the door opens
-        m_goalDoor.GetComponent<DoorScript>().DoorOpening();
-    }
+    //void OpenTheDoor()
+    //{
+    //    //once all the piece are put in place then the door opens
+    //    m_goalDoor.GetComponent<DoorScript>().DoorOpening();
+    //}
     //when the piece of the clock is being placed
     public void Execute(PlayerInteract _player)
     {
@@ -50,37 +79,59 @@ public class GrandfatherClock : MonoBehaviour, IInteract
         
         GetComponent<AudioSource>()?.PlayOneShot(m_pickUp);
 
-        switch (_player.m_numOfPieces)
+
+        DefineRoom(changingManager.Rooms[_player.m_numOfPieces-1].name);
+        _player.m_placedDown = false;
+        //switch (_player.m_numOfPieces)
+        //{
+        //    case 1:
+        //       Gears.SetActive(true);
+        //       GetComponent<AudioSource>().Play(); 
+        //       m_triggerDoor.GetComponent<DoorScript>().DoorOpening();
+        //        _player.m_placedDown = false;
+        //        break;
+        //    case 2:
+        //        Face.SetActive(true);
+        //        m_triggerDoor.GetComponent<DoorScript>().DoorOpening();
+        //        _player.m_placedDown = false;
+        //        break;
+        //    case 3:
+        //        GetComponent<AudioSource>().clip = clip;
+        //        GetComponent<AudioSource>().Play();
+        //        Gong.SetActive(true);
+        //        m_triggerDoor.GetComponent<DoorScript>().DoorOpening();
+        //        _player.m_placedDown = false;
+        //        break;
+        //    case 4:
+        //        Hands.SetActive(true);
+        //        _player.m_placedDown = false;
+        //        OpenTheDoor();
+        //        break;
+        //    default:
+        //        print("Incorrect intelligence level.");
+        //        break;
+        //}
+
+    }
+    public void DefineRoom(string roomName)
+    {
+        switch(roomName)
         {
-            case 1:
-               Gears.SetActive(true);
-               GetComponent<AudioSource>().Play(); 
-               m_triggerDoor.GetComponent<DoorScript>().DoorOpening();
-                _player.m_placedDown = false;
+            case "Loop_gear":
+                Gears.SetActive(true);
                 break;
-            case 2:
+            case "Loop_face":
                 Face.SetActive(true);
-                m_triggerDoor.GetComponent<DoorScript>().DoorOpening();
-                _player.m_placedDown = false;
                 break;
-            case 3:
-                GetComponent<AudioSource>().clip = clip;
-                GetComponent<AudioSource>().Play();
+            case "Loop_mouth":
                 Gong.SetActive(true);
-                m_triggerDoor.GetComponent<DoorScript>().DoorOpening();
-                _player.m_placedDown = false;
                 break;
-            case 4:
+            case "Loop_hand":
                 Hands.SetActive(true);
-                _player.m_placedDown = false;
-                OpenTheDoor();
-                break;
-            default:
-                print("Incorrect intelligence level.");
                 break;
         }
-        
     }
+
 
     public void TimePiece(PlayerInteract _player)
     {
