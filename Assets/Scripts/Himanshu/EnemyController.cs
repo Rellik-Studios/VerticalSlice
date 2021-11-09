@@ -15,6 +15,7 @@ namespace Himanshu
     {
         [SerializeField] private GameObject m_distortion;
 
+        [SerializeField] private float m_hearingRadius = 5f;
         private float distortionValue
         {
             get => m_distortion.GetComponent<Renderer>().material.GetFloat("DistortionSpeed");
@@ -219,8 +220,15 @@ namespace Himanshu
             {
                 if (m_hits[i].collider != null && m_hits[i].collider.gameObject.CompareTag("Player") && m_hits[i].collider.GetComponentInParent<CharacterController>().enabled && !m_hits[i].collider.GetComponentInParent<PlayerInteract>().m_hiding)
                 {
-                    return true;
+                    //return true;
                 }
+            }
+
+            var player = FindObjectOfType<PlayerMovement>();
+            var colliders = Physics.OverlapSphere(transform.position, m_hearingRadius * (player.crouching ? 0.5f : 1f));
+            if (colliders.Any(t => t.CompareTag("Player")))
+            {
+                return true;
             }
             return false;
         }
