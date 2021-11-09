@@ -6,7 +6,8 @@ public class PlayerData
     public int Death;
 
     public float[] position;
-    
+    //public string[] Loopnames;
+
     public PlayerData(Player player)
     {
         Index = player.Index;

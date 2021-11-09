@@ -43,6 +43,11 @@ public class Player : MonoBehaviour
         {
             LoadPlayer();
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+
     }
 
     public void SavePlayer()
