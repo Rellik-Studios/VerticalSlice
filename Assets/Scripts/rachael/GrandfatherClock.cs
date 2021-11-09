@@ -30,17 +30,26 @@ public class GrandfatherClock : MonoBehaviour, IInteract
         //    DefineRoom()
         //}
 
-        if (PlayerPrefs.HasKey("SaveFile"))
+        if (!playerInteract.m_placedDown)
         {
 
-        }
-
-
-        for ( int i=0; i< playerInteract.m_numOfPieces; i++)
-        {
-            if(changingManager.Rooms[i] != null && !playerInteract.m_placedDown)
+            for (int i = 0; i < playerInteract.m_numOfPieces; i++)
             {
-                DefineRoom(changingManager.Rooms[i].name);
+                if (changingManager.Rooms[i] != null)
+                {
+
+                    DefineRoom(changingManager.Rooms[i].name);
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < playerInteract.m_numOfPieces-1; i++)
+            {
+                if (changingManager.Rooms[i] != null)
+                {
+                    DefineRoom(changingManager.Rooms[i].name);
+                }
             }
         }
     }
