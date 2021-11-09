@@ -4203,7 +4203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &457260753
 Transform:
   m_ObjectHideFlags: 0
@@ -4212,7 +4212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457260752}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 5.39, y: 0, z: 11.18}
+  m_LocalPosition: {x: 17.3, y: 0, z: 181.7}
   m_LocalScale: {x: 1.6600981, y: 1.6600981, z: 1.6600981}
   m_Children: []
   m_Father: {fileID: 1952161813}
@@ -4227,7 +4227,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 457260752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c5eb1941fe24a4181b9cdbee8d3e58, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e212274f5a24ca18b00ffa599cd78f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &457260755
@@ -4238,7 +4238,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457260752}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4561,7 +4561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 230517574}
-  assignRoom: {fileID: 1406116610}
+  assignRoom: {fileID: 309379260}
   assignDoor: {fileID: 2012259403}
   eraChanging: {fileID: 2050008731}
   assignedName: Loop_Mouth
@@ -8297,7 +8297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 230517574}
-  assignRoom: {fileID: 1406116610}
+  assignRoom: {fileID: 1324421992}
   assignDoor: {fileID: 2012259403}
   eraChanging: {fileID: 2050008731}
   assignedName: Loop_Face
@@ -18014,7 +18014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 230517574}
-  assignRoom: {fileID: 1406116610}
+  assignRoom: {fileID: 1648521056}
   assignDoor: {fileID: 2012259403}
   eraChanging: {fileID: 2050008731}
   assignedName: Loop_Hand
