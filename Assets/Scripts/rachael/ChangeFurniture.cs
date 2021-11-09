@@ -20,14 +20,14 @@ public class ChangeFurniture : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //foreach (GameObject obj in LoopObjects)
-        //{
-        //    obj.SetActive(false);
-        //}
-        //if (LoopObjects.Length != 0)
-        //{
-        //    LoopObjects[0].SetActive(true);
-        //}
+        foreach (GameObject obj in LoopObjects)
+        {
+            obj.SetActive(false);
+        }
+        if (LoopObjects.Length != 0)
+        {
+            LoopObjects[0].SetActive(true);
+        }
 
         //SavingTimeEra();
 
