@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChangeFurniture : MonoBehaviour
 {
     public GameObject[] LoopObjects;
+    public GameObject[] Rooms;
     public GameObject roomMain;
     public GameObject roomNoDoor;
     public GameObject LocationPosition;
@@ -19,14 +20,14 @@ public class ChangeFurniture : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject obj in LoopObjects)
-        {
-            obj.SetActive(false);
-        }
-        if (LoopObjects.Length != 0)
-        {
-            LoopObjects[0].SetActive(true);
-        }
+        //foreach (GameObject obj in LoopObjects)
+        //{
+        //    obj.SetActive(false);
+        //}
+        //if (LoopObjects.Length != 0)
+        //{
+        //    LoopObjects[0].SetActive(true);
+        //}
 
         //SavingTimeEra();
 
@@ -60,9 +61,9 @@ public class ChangeFurniture : MonoBehaviour
                 //after raising the index by one
                 LoopObjects[Index].SetActive(true);
 
-                //making the player appear in a room with no door
-                roomNoDoor.SetActive(true);
-                roomMain.SetActive(false);
+                ////making the player appear in a room with no door
+                //roomNoDoor.SetActive(true);
+                //roomMain.SetActive(false);
 
             }
             if(other.GetComponentInParent<Player>() != null)
