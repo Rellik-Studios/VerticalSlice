@@ -16,13 +16,22 @@ public class MyDoorAnimator : MonoBehaviour
     {
         if(!doorOpen)
         {
-            doorAnim.SetBool("IsOpening", true);
-            doorOpen = true;
+            OpenTheDoor();
         }
         else
         {
-            doorAnim.SetBool("IsOpening", false);
-            doorOpen = false;
+            CloseTheDoor();
         }
+    }
+    public void CloseTheDoor()
+    {
+        doorAnim.SetBool("IsOpening", false);
+        doorOpen = false;
+    }
+
+    public void OpenTheDoor()
+    {
+        doorAnim.SetBool("IsOpening", true);
+        doorOpen = true;
     }
 }

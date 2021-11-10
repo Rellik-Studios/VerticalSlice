@@ -47,7 +47,16 @@ public class DoorToWall : MonoBehaviour
     //{
     //    fadeOut = true;
     //}
-
+    public void TransformDoorToWall()
+    {
+        door.SetActive(false);
+        wall.SetActive(true);
+    }
+    public void TransformWallToDoor()
+    {
+        door.SetActive(true);
+        wall.SetActive(false);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

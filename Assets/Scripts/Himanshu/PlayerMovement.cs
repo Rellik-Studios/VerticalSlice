@@ -16,11 +16,10 @@ namespace Himanshu
         [SerializeField] private float m_jumpHeight;
         [SerializeField] private float m_groundDistance = 0.1f;
         private bool m_isGrounded;
-        private bool crouching => m_playerInput.m_crouching;
+        public bool crouching => m_playerInput.m_crouching;
         public Vector3 calculatedPosition
         {
-            get => transform.position + (crouching ? new Vector3(0f, 2f, 0f) : Vector3.zero);
-
+            get => transform.position + (crouching ?  new Vector3(0f, 2f, 0f) : new Vector3(0f, 4f, 0f));
         }
 
         private void Start()
@@ -34,14 +33,12 @@ namespace Himanshu
         private void Update()
         {
             m_isGrounded = Physics.Raycast(transform.position, -Vector3.up, m_groundDistance);
-
             Movement();
             Jump();
         }
 
         private void Jump()
         {
-
             m_playerVelocity.y -= m_gravity;
             if (m_isGrounded) m_playerVelocity.y = 0f;
             if (m_playerInput.jump && m_isGrounded) 
@@ -52,8 +49,7 @@ namespace Himanshu
         private void Movement()
         {
             var movement = m_playerInput.movement.x * transform.right + m_playerInput.movement.z * transform.forward;
-            m_characterController.Move(movement * (m_speed * (m_playerInput.sprint ? 1.5f : 1.0f)  * Time.deltaTime));
-            
+            m_characterController.Move(movement * (m_speed * (crouching ? 0.5f : 1f) * (m_playerInput.sprint ? 1.5f : 1.0f)  * Time.deltaTime));
         }
     }
 }
