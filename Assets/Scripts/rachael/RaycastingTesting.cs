@@ -133,7 +133,7 @@ public class RaycastingTesting : MonoBehaviour
 
             doOnce = true;
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !player.GetComponent<PlayerInteract>().m_placedDown)
             {
                 ObjectInFront.GetComponent<MyDoorAnimator>().PlayAnimation();
                 
