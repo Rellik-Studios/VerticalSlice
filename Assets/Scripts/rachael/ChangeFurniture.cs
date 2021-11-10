@@ -26,13 +26,39 @@ public class ChangeFurniture : MonoBehaviour
         }
         if (LoopObjects.Length != 0)
         {
-            LoopObjects[0].SetActive(true);
+            LoopObjects[Index].SetActive(true);
         }
 
         //SavingTimeEra();
 
     }
 
+    public void EndofTimeEra(Collider other)
+    {
+        if (other.GetComponentInParent<RespawnManager>() != null)
+        {
+            other.GetComponentInParent<RespawnManager>().Teleport(LocationPosition.transform);
+
+            Debug.Log("You have moved to a new location");
+        }
+        if (Index <= (LoopObjects.Length - 2))
+        {
+            //disable the object
+            LoopObjects[Index].SetActive(false);
+
+            Index++;
+
+            LoopObjects[Index].SetActive(true);
+
+        }
+        if (other.GetComponentInParent<Player>() != null)
+        {
+            //saves the player data into the system
+            other.GetComponentInParent<Player>().SavePlayer();
+        }
+
+        Debug.Log("Player has finished this time era");
+    }
     // Update is called once per frame
     void Update()
     {
