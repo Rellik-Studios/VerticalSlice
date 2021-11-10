@@ -58,6 +58,7 @@ public class ChangeFurniture : MonoBehaviour
             other.GetComponentInParent<Player>().SavePlayer();
         }
 
+        //closing the doors in the gameplay after each loop
         foreach (GameObject door in HUB_Doors)
         {
 
