@@ -6,6 +6,7 @@ public class ChangeFurniture : MonoBehaviour
 {
     public GameObject[] LoopObjects;
     public GameObject[] Rooms;
+    public GameObject[] HUB_Doors;
     public GameObject roomMain;
     public GameObject roomNoDoor;
     public GameObject LocationPosition;
@@ -55,6 +56,12 @@ public class ChangeFurniture : MonoBehaviour
         {
             //saves the player data into the system
             other.GetComponentInParent<Player>().SavePlayer();
+        }
+
+        foreach (GameObject door in HUB_Doors)
+        {
+
+            door.GetComponent<MyDoorAnimator>().CloseTheDoor();
         }
 
         Debug.Log("Player has finished this time era");
