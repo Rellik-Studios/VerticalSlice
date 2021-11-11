@@ -8,10 +8,16 @@ public class GrandfatherClock : MonoBehaviour, IInteract
 {
     //[SerializeField] GameObject m_triggerDoor;
     //[SerializeField] GameObject m_goalDoor;
-
+    
     [SerializeField] ChangeFurniture changingManager;
     [SerializeField] PlayerInteract playerInteract;
 
+    [Header("Images")]
+    [SerializeField] GameObject LoopRoom;
+    [SerializeField] GameObject wall;
+    [SerializeField] GameObject FinalRoom;
+
+    [Header("Clock pieces")]
     [SerializeField] GameObject Gears;
     [SerializeField] GameObject Face;
     [SerializeField] GameObject Gong;
@@ -40,6 +46,12 @@ public class GrandfatherClock : MonoBehaviour, IInteract
 
                     DefineRoom(changingManager.Rooms[i].name);
                 }
+            }
+            if(playerInteract.m_numOfPieces == 4)
+            {
+                LoopRoom.SetActive(false);
+                FinalRoom.SetActive(true);
+                wall.SetActive(false);
             }
         }
         else
@@ -82,6 +94,14 @@ public class GrandfatherClock : MonoBehaviour, IInteract
 
         DefineRoom(changingManager.Rooms[_player.m_numOfPieces-1].name);
         _player.m_placedDown = false;
+
+
+        if (playerInteract.m_numOfPieces == 4)
+        {
+            LoopRoom.SetActive(false);
+            FinalRoom.SetActive(true);
+            wall.SetActive(false);
+        }
         //switch (_player.m_numOfPieces)
         //{
         //    case 1:

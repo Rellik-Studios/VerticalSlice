@@ -103,6 +103,16 @@ public class Player : MonoBehaviour
 
             Transform playerTransform = gameObject.transform;
             playerTransform.position = new Vector3(position.x, position.y, position.z);
+            
+            
+            Vector3 rotation = new Vector3(0, 0, 0);
+            rotation.x = data.rotation[0];
+            rotation.y = data.rotation[1];
+            rotation.z = data.rotation[2];
+
+            Quaternion newrot = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
+
+            playerTransform.rotation = new Quaternion(newrot.x, newrot.y, newrot.z, newrot.w);
 
             GetComponent<RespawnManager>().SetPosition(playerTransform);
             GetComponent<RespawnManager>().Respawn();

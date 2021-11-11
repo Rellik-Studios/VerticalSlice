@@ -38,7 +38,9 @@ public class ChangeFurniture : MonoBehaviour
     {
         if (other.GetComponentInParent<RespawnManager>() != null)
         {
+            
             other.GetComponentInParent<RespawnManager>().Teleport(LocationPosition.transform);
+
 
             Debug.Log("You have moved to a new location");
         }
@@ -52,12 +54,8 @@ public class ChangeFurniture : MonoBehaviour
             LoopObjects[Index].SetActive(true);
 
         }
-        if (other.GetComponentInParent<Player>() != null)
-        {
-            //saves the player data into the system
-            other.GetComponentInParent<Player>().SavePlayer();
-        }
 
+        StartCoroutine(SavingProgress(other));
         //closing the doors in the gameplay after each loop
         foreach (GameObject door in HUB_Doors)
         {
@@ -66,6 +64,18 @@ public class ChangeFurniture : MonoBehaviour
         }
 
         Debug.Log("Player has finished this time era");
+    }
+
+    //to allow the saving of the rotation and position more properly in the
+    IEnumerator SavingProgress(Collider other)
+    {
+        yield return new WaitForEndOfFrame();
+        if (other.GetComponentInParent<Player>() != null)
+        {
+            //saves the player data into the system
+            other.GetComponentInParent<Player>().SavePlayer();
+        }
+        yield return null;
     }
     // Update is called once per frame
     void Update()
