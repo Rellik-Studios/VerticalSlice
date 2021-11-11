@@ -130,7 +130,9 @@ public class RaycastingTesting : MonoBehaviour
             {
                 CrosshairChange(true);
             }
-
+            //temp until UI for the opening/closing door
+            m_indication.enabled = false;
+            //--------------------------
             doOnce = true;
 
             if (Input.GetMouseButtonDown(0) && !player.GetComponent<PlayerInteract>().m_placedDown)
