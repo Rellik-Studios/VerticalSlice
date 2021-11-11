@@ -8,22 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 0
-    path: Assets/Scenes/Himanshu/LoseScene.unity
-    guid: f874742710e52d54aa5df1ff23b93b8e
   - enabled: 1
     path: Assets/Scenes/Rachael/MainMenu.unity
     guid: 0cccbc87607f05f4680e2d6210814232
   - enabled: 1
-    path: Assets/Scenes/Rachael/Path_face 1.unity
-    guid: dea0d74fd86c2ab42935bb4cac0774cc
-  - enabled: 1
+    path: Assets/Scenes/Rachael/Path_face 3.unity
+    guid: 4b69e0d995373814e94cb9c8a588e0f6
+  - enabled: 0
     path: Assets/Scenes/Nick/Nicks_Scene.unity
     guid: bb3afdac809e088498551f5492339460
-  - enabled: 0
-    path: Assets/Scenes/Rachael/raycast.unity
-    guid: a30a1beb46f7e16408c87a168e4da45e
   - enabled: 1
     path: Assets/Scenes/Rachael/WiningScreen.unity
     guid: 1dc89deacd1951846b375d3274e7e2d1
+  - enabled: 1
+    path: Assets/Scenes/Himanshu/LoseScene.unity
+    guid: f874742710e52d54aa5df1ff23b93b8e
   m_configObjects: {}
