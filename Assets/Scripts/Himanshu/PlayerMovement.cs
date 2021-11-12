@@ -19,9 +19,12 @@ namespace Himanshu
         private bool m_isGrounded;
         public bool crouching => m_playerInput.m_crouching;
 
+        [SerializeField] private AudioClip m_breathingClip;
         [SerializeField] private float m_maxSprintTimer;
         private float m_sprintTimer;
         [SerializeField] private Image m_sprintImage;
+
+        private AudioSource m_audioSource;
 
         private float sprintTimer
         {
