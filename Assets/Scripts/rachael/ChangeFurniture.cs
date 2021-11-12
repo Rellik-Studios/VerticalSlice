@@ -70,10 +70,10 @@ public class ChangeFurniture : MonoBehaviour
     IEnumerator SavingProgress(Collider other)
     {
         yield return new WaitForEndOfFrame();
-        if (other.GetComponentInParent<Player>() != null)
+        if (other.GetComponentInParent<PlayerSave>() != null)
         {
             //saves the player data into the system
-            other.GetComponentInParent<Player>().SavePlayer();
+            other.GetComponentInParent<PlayerSave>().SavePlayer();
         }
         yield return null;
     }
@@ -110,10 +110,10 @@ public class ChangeFurniture : MonoBehaviour
                 //roomMain.SetActive(false);
 
             }
-            if(other.GetComponentInParent<Player>() != null)
+            if(other.GetComponentInParent<PlayerSave>() != null)
             {
                 //saves the player data into the system
-                other.GetComponentInParent<Player>().SavePlayer();
+                other.GetComponentInParent<PlayerSave>().SavePlayer();
             }
 
             Debug.Log("Time Era has changed");

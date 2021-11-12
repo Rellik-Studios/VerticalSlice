@@ -4,6 +4,7 @@ namespace Himanshu
 {
     public class CollectableObject : MonoBehaviour, IInteract
     {
+        public string m_pathName;
         
         public void Execute(PlayerInteract _player)
         {

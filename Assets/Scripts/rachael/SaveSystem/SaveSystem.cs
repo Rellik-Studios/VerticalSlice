@@ -6,10 +6,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-    public static void SavePlayer(Player player)
+    public static void SavePlayer(PlayerSave player, bool _isSafeRoom = false)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.fun";
+        string path = "";
+        if (!_isSafeRoom)
+            path = Application.persistentDataPath + "/player.default";
+        else
+            path = Application.persistentDataPath + "/player.safeRoom";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(player);
@@ -17,10 +21,13 @@ public static class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
     }
-    public static PlayerData LoadPlayer()
+    
+
+    
+    public static PlayerData LoadPlayer(bool _isSafeRoom = false)
     {
         
-        string path = Application.persistentDataPath + "/player.fun";
+        string path = Application.persistentDataPath + (_isSafeRoom ? "/player.safeRoom" : "/player.default");
 
         if(File.Exists(path))
         {
@@ -38,6 +45,5 @@ public static class SaveSystem
             Debug.LogError("Save File not found in " + path);
             return null;
         }
-
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Himanshu;
 
-public class Player : MonoBehaviour
+public class PlayerSave : MonoBehaviour
 {
     public ChangeFurniture eraChanging;
     public RespawnManager respawnManager;
@@ -20,9 +20,14 @@ public class Player : MonoBehaviour
     void Awake()
     {
         Debug.Log(Application.persistentDataPath);
-        if(PlayerPrefs.HasKey("SaveFile"))
+        if (PlayerPrefs.HasKey("SaveFile") && !gameManager.Instance.m_isSafeRoom)
         {
             LoadPlayer();
+        }
+        else if (PlayerPrefs.HasKey("SaveFile"))
+        {
+            LoadPlayer(true);
+            gameManager.Instance.m_isSafeRoom = false;
         }
         else
         {
@@ -51,14 +56,11 @@ public class Player : MonoBehaviour
 
     }
 
-    public void SavePlayer()
+    public void SavePlayer(bool _isSafeRoom = false)
     {
         //saveFile.SavePoint();
-
         SavingValues();
-
-        SaveSystem.SavePlayer(this);
-        
+        SaveSystem.SavePlayer(this, _isSafeRoom);
     }
 
 
@@ -77,10 +79,10 @@ public class Player : MonoBehaviour
         player.m_deathCount = Death;
         player.m_placedDown = hasPiece;
     }
-    public void LoadPlayer()
+    public void LoadPlayer(bool _isSafeRoom = false)
     {
 
-        PlayerData data = SaveSystem.LoadPlayer();
+        PlayerData data = SaveSystem.LoadPlayer(_isSafeRoom);
 
         if (data != null)
         {
