@@ -26,6 +26,7 @@ namespace Himanshu
 
         void Update()
         {
+            if(Time.timeScale == 0) return;
             transform.position = m_playerMovement.calculatedPosition;
 
             
