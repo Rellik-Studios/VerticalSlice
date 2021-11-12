@@ -1851,6 +1851,10 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 2327872399771895028, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2592019251865832029, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
       propertyPath: m_FillAmount
       value: 0
@@ -2166,6 +2170,8 @@ MonoBehaviour:
   m_gravity: 0.98
   m_jumpHeight: 50
   m_groundDistance: 1.08
+  m_maxSprintTimer: 3
+  m_sprintImage: {fileID: 2069114144}
 --- !u!143 &230517581
 CharacterController:
   m_ObjectHideFlags: 0
@@ -12936,6 +12942,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055829136}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2069114144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5087696269803089995, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+  m_PrefabInstance: {fileID: 192358314}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2091505710
 GameObject:
   m_ObjectHideFlags: 0

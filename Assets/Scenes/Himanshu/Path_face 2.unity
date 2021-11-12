@@ -1331,6 +1331,10 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 2327872399771895028, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2592019251865832029, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
       propertyPath: m_FillAmount
       value: 0
@@ -1849,6 +1853,7 @@ MonoBehaviour:
   numOfPieces: 0
   Index: 0
   Death: 0
+  hasPiece: 0
 --- !u!114 &230517577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1916,6 +1921,8 @@ MonoBehaviour:
   m_gravity: 0.98
   m_jumpHeight: 50
   m_groundDistance: 1.08
+  m_maxSprintTimer: 3
+  m_sprintImage: {fileID: 361750722}
 --- !u!143 &230517581
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2777,6 +2784,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7917189660878513084, guid: 2acd7f1999887164e8c478d999582ca9, type: 3}
+--- !u!114 &361750722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5087696269803089995, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+  m_PrefabInstance: {fileID: 192358314}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &362020838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4039134066542155588, guid: e724984723caa644aaf54c1d5689d39b, type: 3}
@@ -14169,7 +14187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594278909840571020, guid: d00b0f9d914f17449b07cd1bc13086e9, type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 6594278909840571020, guid: d00b0f9d914f17449b07cd1bc13086e9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14824,7 +14842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3134560032853012486, guid: 78e9dc9bfed756a44a8708b7390f0089, type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 3134560032853012486, guid: 78e9dc9bfed756a44a8708b7390f0089, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15904,9 +15922,9 @@ Transform:
   - {fileID: 230517582}
   - {fileID: 11553727}
   - {fileID: 192358315}
+  - {fileID: 2050008733}
   - {fileID: 1756941737}
   - {fileID: 1839722812}
-  - {fileID: 2050008733}
   - {fileID: 1952161813}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -16758,6 +16776,7 @@ MonoBehaviour:
   - {fileID: 309379260}
   - {fileID: 1648521056}
   Rooms: []
+  HUB_Doors: []
   roomMain: {fileID: 446110684}
   roomNoDoor: {fileID: 1983008175}
   LocationPosition: {fileID: 1983008175}
@@ -16797,7 +16816,7 @@ Transform:
   m_LocalScale: {x: 6.1657, y: 6.1657, z: 6.1657}
   m_Children: []
   m_Father: {fileID: 1963712917}
-  m_RootOrder: 53
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2055829136
 GameObject:
