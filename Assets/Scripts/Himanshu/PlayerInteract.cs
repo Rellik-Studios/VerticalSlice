@@ -406,6 +406,8 @@ namespace Himanshu
         {
             m_deathCount++;
             m_sceneManager.loseScreen();
+            gameManager.Instance.m_isSafeRoom = true;
+            
             //MUST REDO
             //if (!LoseScreen.activeInHierarchy)
             //{

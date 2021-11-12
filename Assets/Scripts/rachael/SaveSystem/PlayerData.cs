@@ -12,7 +12,7 @@ public class PlayerData
     public float[] rotation;
     //public string[] Loopnames;
 
-    public PlayerData(Player player)
+    public PlayerData(PlayerSave player)
     {
         Index = player.Index;
         Death = player.Death;

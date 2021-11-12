@@ -31,6 +31,7 @@ public class GrandfatherClock : MonoBehaviour, IInteract
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("ClockIndex", 0);
         //foreach (GameObject obj in changingManager.Rooms)
         //{
         //    DefineRoom()
@@ -45,6 +46,7 @@ public class GrandfatherClock : MonoBehaviour, IInteract
                 {
 
                     DefineRoom(changingManager.Rooms[i].name);
+                    
                 }
             }
             if(playerInteract.m_numOfPieces == 4)
@@ -95,6 +97,8 @@ public class GrandfatherClock : MonoBehaviour, IInteract
         DefineRoom(changingManager.Rooms[_player.m_numOfPieces-1].name);
         _player.m_placedDown = false;
 
+        FindObjectOfType<PlayerSave>().SavePlayer();
+
 
         if (playerInteract.m_numOfPieces == 4)
         {
@@ -135,19 +139,31 @@ public class GrandfatherClock : MonoBehaviour, IInteract
     }
     public void DefineRoom(string roomName)
     {
+        if (PlayerPrefs.HasKey("ClockIndex"))
+        {
+            PlayerPrefs.SetInt("ClockIndex", PlayerPrefs.GetInt("ClockIndex") + 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("ClockIndex", 1);
+        }
         switch(roomName)
         {
             case "Loop_gear":
                 Gears.SetActive(true);
+                PlayerPrefs.SetInt("Loop_Gear", PlayerPrefs.GetInt("ClockIndex") - 1);
                 break;
             case "Loop_face":
                 Face.SetActive(true);
+                PlayerPrefs.SetInt("Loop_Face", PlayerPrefs.GetInt("ClockIndex") - 1);
                 break;
             case "Loop_mouth":
                 Gong.SetActive(true);
+                PlayerPrefs.SetInt("Loop_Mouth", PlayerPrefs.GetInt("ClockIndex") - 1);
                 break;
             case "Loop_hand":
                 Hands.SetActive(true);
+                PlayerPrefs.SetInt("Loop_Hand", PlayerPrefs.GetInt("ClockIndex") - 1);
                 break;
         }
     }

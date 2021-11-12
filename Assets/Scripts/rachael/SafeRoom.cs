@@ -19,10 +19,10 @@ public class SafeRoom : MonoBehaviour
                 Debug.Log("You have entered the safe room");
 
             }
-            if (other.GetComponentInParent<Player>() != null)
+            if (other.GetComponentInParent<PlayerSave>() != null)
             {
                 //saves the player data into the system
-                other.GetComponentInParent<Player>().SavePlayer();
+                other.GetComponentInParent<PlayerSave>().SavePlayer(true);
             }
         }
     }
