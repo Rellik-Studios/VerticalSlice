@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="" />
+    <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/QTE.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/QTE.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +37,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerFollow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SceneChanger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" />
@@ -56,8 +62,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerSave.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/ChoosingPath.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/ChangeFurniture.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerFollow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/QTE.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -115,7 +125,7 @@
       <workItem from="1636273857741" duration="6662000" />
       <workItem from="1636293032426" duration="3091000" />
       <workItem from="1636443804470" duration="3625000" />
-      <workItem from="1636675654273" duration="5371000" />
+      <workItem from="1636675654273" duration="9782000" />
     </task>
     <servers />
   </component>
