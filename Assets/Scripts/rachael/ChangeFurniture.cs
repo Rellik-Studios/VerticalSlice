@@ -113,7 +113,7 @@ public class ChangeFurniture : MonoBehaviour
             if(other.GetComponentInParent<PlayerSave>() != null)
             {
                 //saves the player data into the system
-                other.GetComponentInParent<PlayerSave>().SavePlayer();
+                //other.GetComponentInParent<PlayerSave>().SavePlayer();
             }
 
             Debug.Log("Time Era has changed");
