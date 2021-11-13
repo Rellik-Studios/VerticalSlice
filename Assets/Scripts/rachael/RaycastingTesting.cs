@@ -115,6 +115,11 @@ public class RaycastingTesting : MonoBehaviour
                     return;
                 }
             }
+            //if its interacting with a book to save
+            if (ObjectInFront.GetComponent<BookEntry>() != null)
+            {
+                
+            }
 
         }
         else if (ObjectInFront.GetComponent<IEnemy>() != null)
