@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,12 +37,12 @@ public class QTERing : MonoBehaviour
         if(IsDecided)
         {
 
-            if(numOfPass ==3)
+            if(numOfPass == 1)
             {
                 Debug.Log("You get second chance");
                 Canvas.SetActive(false);
             }
-            else if(numOfFail ==3)
+            else if(numOfFail == 1)
             {
                 Debug.Log("You dont get second chance");
                 Canvas.SetActive(false);
@@ -86,6 +87,8 @@ public class QTERing : MonoBehaviour
                     //Give the player a chance
                     Destroy(other.gameObject);
                     IsDecided = true;
+                    Pass();
+
                 }
 
             }
@@ -99,9 +102,20 @@ public class QTERing : MonoBehaviour
                     Destroy(other.gameObject);
 
                     IsDecided = true;
+                    Fail();
                 }
             }
         }
+    }
+
+    private void Pass()
+    {
+        
+    }
+
+    private void Fail()
+    {
+        
     }
 
     void SetOrigin()

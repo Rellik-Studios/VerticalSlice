@@ -8,9 +8,11 @@ public class PlayerData
     public bool hasPiece;
 
     public float[] position;
+
+    public float[] rotation;
     //public string[] Loopnames;
 
-    public PlayerData(Player player)
+    public PlayerData(PlayerSave player)
     {
         Index = player.Index;
         Death = player.Death;
@@ -19,9 +21,15 @@ public class PlayerData
         hasPiece = player.hasPiece;
 
         position = new float[3];
+        rotation = new float[3];
 
         position[0] = player.transform.position.x;
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;
+
+
+        rotation[0] = player.transform.rotation.eulerAngles.x;
+        rotation[1] = player.transform.rotation.eulerAngles.y;
+        rotation[2] = player.transform.rotation.eulerAngles.z;
     }
 }

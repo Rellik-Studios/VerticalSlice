@@ -18,6 +18,8 @@ public class ChoosingPath : MonoBehaviour
       
         if (PlayerPrefs.HasKey(assignedName))
         {
+            //
+            //PlayerPrefs.SetInt(assignedName, 1);
             route = PlayerPrefs.GetInt(assignedName);
             eraChanging.Rooms[route] = assignRoom;
             assignDoor.GetComponent<DoorToWall>().TransformDoorToWall();
@@ -42,7 +44,7 @@ public class ChoosingPath : MonoBehaviour
             {
                 route = eraChanging.Index;
                 eraChanging.Rooms[route] = assignRoom;
-                PlayerPrefs.SetInt(assignedName, route);
+                //PlayerPrefs.SetInt(assignedName, route);
                 assignDoor.GetComponent<DoorToWall>().TransformDoorToWall();
                 Destroy(this);
             }
