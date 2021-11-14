@@ -219,6 +219,12 @@ namespace Himanshu
                     yield break;
                 }
 
+                if (letter == '%')
+                {
+                    skip = true;
+                    continue;
+                }
+
                 //conditionStart = true;
                 if (conditionStart)
                 {
@@ -248,7 +254,7 @@ namespace Himanshu
                     {
                         if (letter == '$')
                         {
-                            yield return StartCoroutine(SetText(conditions[ConditionCheck(condition).Result], _textBox, false));
+                            yield return StartCoroutine(SetText(conditions[ConditionCheck(condition).Result], _textBox, true));
                             conditionStart = false;
                             conditionEnd = false;
                             continue;
@@ -289,8 +295,7 @@ namespace Himanshu
 
                 if (choiceEnd)
                 {
-                    StartCoroutine(SetText(choices.Random(), _textBox, true));
-                    yield return new WaitWhile(() => m_settingText);
+                    yield return StartCoroutine(SetText("%" + choices.Random(), _textBox, true));
                     m_settingText = true;
                     choiceEnd = false;
                     continue;
@@ -312,8 +317,7 @@ namespace Himanshu
                 {
                     if (letter == ' ' || letter == '?' || letter == ',')
                     {
-                        StartCoroutine(SetText(EvaluateCommand(command), _textBox, true));
-                        yield return new WaitWhile(() => m_settingText);
+                        yield return StartCoroutine(SetText(EvaluateCommand(command), _textBox, true));
                         m_settingText = true;
                         //_textBox.text += EvaluateCommand(command);
                         commandStart = false;
@@ -338,14 +342,15 @@ namespace Himanshu
                 else
                 {
                     _textBox.text += letter;
-                    yield return null;
+                    yield return new WaitForSeconds(0.0167f);
                 }
             }
 
-            if(!additive)
+            if(!skip)
                 yield return new WaitForSeconds(3f);
             
-            m_textBox.SetText("");
+            if(!skip)
+                m_textBox.SetText("");
             
             m_settingText = false;
         }
@@ -355,15 +360,15 @@ namespace Himanshu
             switch (_command)
             {
                 case "userName":
-                    return NarratorScript.m_userName;
+                    return "%" + NarratorScript.m_userName;
                 case "timeCategory":
-                    return NarratorScript.timeCategory;
+                    return "%" + NarratorScript.timeCategory;
                 case "day":
-                    return NarratorScript.m_weekDay;
+                    return "%" + NarratorScript.m_weekDay;
                 case "time":
-                    return NarratorScript.m_time;
+                    return "%" + NarratorScript.m_time;
                 case "activity":
-                    return NarratorScript.activity;
+                    return "%" + NarratorScript.activity;
                 default:
                     return "Not Set Yet";
             }
