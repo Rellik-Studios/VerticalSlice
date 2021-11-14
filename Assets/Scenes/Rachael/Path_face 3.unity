@@ -11903,7 +11903,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 786388709}
         m_TargetAssemblyTypeName: Himanshu.Narrator, Assembly-CSharp
-        m_MethodName: set_cafeteria
+        m_MethodName: set_idleRoom
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

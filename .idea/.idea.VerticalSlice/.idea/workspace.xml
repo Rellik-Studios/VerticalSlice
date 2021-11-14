@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,26 +167,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs</url>
-          <line>250</line>
+          <line>256</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\Narrator.cs" initialLine="248" containingFunctionPresentation="method 'SetText'">
             <startOffsets>
-              <option value="6532" />
+              <option value="6670" />
             </startOffsets>
             <endOffsets>
-              <option value="6619" />
+              <option value="6766" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs</url>
-          <line>374</line>
+          <line>381</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\Narrator.cs" initialLine="371" containingFunctionPresentation="method 'ConditionCheck'">
             <startOffsets>
-              <option value="10555" />
+              <option value="10742" />
             </startOffsets>
             <endOffsets>
-              <option value="10574" />
+              <option value="10761" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
