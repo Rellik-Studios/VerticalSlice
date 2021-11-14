@@ -3,7 +3,7 @@ public class PlayerData
 {
     public int numOfPieces; //number of clock pieces
     public int Index; //the number which index for each time era (for change furniture)
-    public int Death;
+    //public int Death;
 
     public bool hasPiece;
 
@@ -15,7 +15,7 @@ public class PlayerData
     public PlayerData(PlayerSave player)
     {
         Index = player.Index;
-        Death = player.Death;
+        //Death = player.Death;
         numOfPieces = player.numOfPieces;
 
         hasPiece = player.hasPiece;

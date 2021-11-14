@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Himanshu;
 public class SceneChanger : MonoBehaviour
@@ -24,7 +25,7 @@ public class SceneChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ButtonPresent()
@@ -46,6 +47,10 @@ public class SceneChanger : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+    public void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("Death", 0);
     }
     public void Play()
     {
