@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6167,6 +6167,10 @@ PrefabInstance:
       value: Don't you have anything better to do.
       objectReference: {fileID: 0}
     - target: {fileID: 655182173056029650, guid: e90a2241f17af0b47806af1f1900e2c2, type: 3}
+      propertyPath: m_cafeteria.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 655182173056029650, guid: e90a2241f17af0b47806af1f1900e2c2, type: 3}
       propertyPath: m_ballRoom.Array.data[0]
       value: Don't you have anything better to do.
       objectReference: {fileID: 0}
@@ -6183,6 +6187,13 @@ PrefabInstance:
     - target: {fileID: 655182173056029650, guid: e90a2241f17af0b47806af1f1900e2c2, type: 3}
       propertyPath: m_cafeteria.Array.data[0]
       value: Don't you have anything better to do.
+      objectReference: {fileID: 0}
+    - target: {fileID: 655182173056029650, guid: e90a2241f17af0b47806af1f1900e2c2, type: 3}
+      propertyPath: m_cafeteria.Array.data[4]
+      value: '*cond|This is a test, to see if it fckin works1|2|3$$#
+
+        See
+        it works'
       objectReference: {fileID: 0}
     - target: {fileID: 655182173056029650, guid: e90a2241f17af0b47806af1f1900e2c2, type: 3}
       propertyPath: m_hospitalIdle.Array.size
@@ -11868,7 +11879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000881479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 306}
+  m_LocalPosition: {x: 0, y: 0, z: 204.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 762247934}
@@ -11891,7 +11902,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 786388709}
         m_TargetAssemblyTypeName: Himanshu.Narrator, Assembly-CSharp
-        m_MethodName: set_cafeteria
+        m_MethodName: set_idleRoom
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
