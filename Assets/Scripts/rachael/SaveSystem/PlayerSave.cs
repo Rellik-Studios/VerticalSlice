@@ -13,7 +13,7 @@ public class PlayerSave : MonoBehaviour
 
     public int numOfPieces; //number of clock pieces
     public int Index; //the number which index for each time era (for change furniture)
-    public int Death;
+    //public int Death;
     public bool hasPiece;
 
     // Start is called before the first frame update
@@ -32,6 +32,7 @@ public class PlayerSave : MonoBehaviour
         else
         {
             SavePlayer();
+            PlayerPrefs.SetInt("Death", 0);
             PlayerPrefs.SetInt("SaveFile", 1);
         }
     }
@@ -53,6 +54,10 @@ public class PlayerSave : MonoBehaviour
         {
             PlayerPrefs.DeleteAll();
         }
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            player.Death();
+        }
 
     }
 
@@ -68,7 +73,7 @@ public class PlayerSave : MonoBehaviour
     {
         Index = eraChanging.Index;
         numOfPieces = player.m_numOfPieces;
-        Death = player.m_deathCount;
+        //Death = player.m_deathCount;
         hasPiece= player.m_placedDown;
     }
     public void LoadingValues()
@@ -76,8 +81,10 @@ public class PlayerSave : MonoBehaviour
         //making a transfer of data from the file to the scripts in gameplay
         eraChanging.SaveIndex(Index);
         player.m_numOfPieces = numOfPieces;
-        player.m_deathCount = Death;
+        player.m_deathCount = PlayerPrefs.GetInt("Death");
         player.m_placedDown = hasPiece;
+
+
     }
     public void LoadPlayer(bool _isSafeRoom = false)
     {
@@ -91,7 +98,7 @@ public class PlayerSave : MonoBehaviour
 
             numOfPieces = data.numOfPieces;
             Index = data.Index;
-            Death = data.Death;
+            //Death = data.Death;
             hasPiece = data.hasPiece;
 
             LoadingValues();

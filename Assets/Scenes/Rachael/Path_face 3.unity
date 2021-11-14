@@ -2205,7 +2205,6 @@ MonoBehaviour:
   player: {fileID: 230517578}
   numOfPieces: 0
   Index: 0
-  Death: 0
   hasPiece: 0
 --- !u!82 &230517576
 AudioSource:
@@ -2331,7 +2330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoseScreen: {fileID: 0}
-  m_sceneManager: {fileID: 0}
+  m_sceneManager: {fileID: 1151144272}
   m_timeRewind: {fileID: 690071840}
   m_timeStop: {fileID: 1288709572}
   m_hiding: 0
@@ -8862,7 +8861,7 @@ GameObject:
   - component: {fileID: 1151144268}
   - component: {fileID: 1151144272}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
