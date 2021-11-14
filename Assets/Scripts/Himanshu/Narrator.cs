@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -196,12 +197,18 @@ namespace Himanshu
             m_settingText = true;
             if(!additive) _textBox.text = "";
             bool commandStart = false;
+            bool conditionStart = false;
+            bool conditionEnd = false;
             bool choiceStart = false;
             bool choiceEnd = false;
             string command = "";
+            string condition = "";
             int pos = 0;
             List<string> choices = new List<string>();
+            List<string> conditions = new List<string>();
             string currentChoice = "";
+            string currentCondition = "";
+            bool skip = false;
             foreach (var letter in _text)
             {
                 pos++;
@@ -210,6 +217,53 @@ namespace Himanshu
                     yield return new WaitForSeconds(2f);
                     yield return StartCoroutine(SetText(_text.Substring(pos + 1), _textBox));
                     yield break;
+                }
+
+                //conditionStart = true;
+                if (conditionStart)
+                {
+
+                    if (conditionEnd)
+                    {
+                        if (letter == '|')
+                        {
+                            conditions.Add(currentCondition);
+                            currentCondition = "";
+                            continue;
+                        }
+                        else if (letter == '$')
+                        {
+                            conditionEnd = false;
+                            continue;
+                        }
+                        else
+                        {
+                            currentCondition += letter;
+                            continue;
+                        }
+
+                        
+                    }
+                    else
+                    {
+                        if (letter == '$')
+                        {
+                            yield return StartCoroutine(SetText(conditions[ConditionCheck(condition).Result], _textBox, false));
+                            conditionStart = false;
+                            conditionEnd = false;
+                            continue;
+                        }
+                        else if (letter != '|')
+                        {
+                            condition += letter;
+                            continue;
+                        }
+                        else if (letter == '|')
+                        {
+                            conditionEnd = true;
+                            continue;
+                        }
+                    }
                 }
 
                 if (choiceStart)
@@ -247,6 +301,13 @@ namespace Himanshu
                     choiceStart = true;
                     continue;
                 }
+
+                if (letter == '*')
+                {
+                    conditionStart = true;
+                    continue;
+                }
+                
                 if (commandStart)
                 {
                     if (letter == ' ' || letter == '?' || letter == ',')
@@ -280,7 +341,12 @@ namespace Himanshu
                     yield return null;
                 }
             }
-            this.Invoke(()=> m_textBox.SetText(""), 3f);
+
+            if(!additive)
+                yield return new WaitForSeconds(3f);
+            
+            m_textBox.SetText("");
+            
             m_settingText = false;
         }
 
@@ -303,7 +369,17 @@ namespace Himanshu
             }
             return "";
         }
-        
+
+        private async Task<int>  ConditionCheck(string _condition)
+        {
+            
+            switch (_condition)
+            {
+                   
+            }
+
+            return 0;
+        }
         
 
     }
