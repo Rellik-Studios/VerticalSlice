@@ -405,6 +405,8 @@ namespace Himanshu
         public void Death()
         {
             m_deathCount++;
+            PlayerPrefs.SetInt("Death", m_deathCount);
+
             m_sceneManager.loseScreen();
             gameManager.Instance.m_isSafeRoom = true;
             
