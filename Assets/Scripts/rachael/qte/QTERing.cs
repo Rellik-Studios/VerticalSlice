@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Himanshu;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class QTERing : MonoBehaviour
 {
@@ -16,35 +19,72 @@ public class QTERing : MonoBehaviour
 
     int numOfPass = 0;
     int numOfFail = 0;
+    public bool m_result;
+    private GameObject m_ring;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-    private void OnEnable()
-    {
+        Time.timeScale = 0;
         numOfPass = 0;
         numOfFail = 0;
         IsSpawn = true;
         IsDecided = false;
         SetOrigin();
     }
+    
+
+    private void Update()
+    {
+        if (m_ring == null)
+            return;
+
+        if (m_ring.GetComponent<GrowingRing>().IsRingInisde()) 
+        {
+            DisplayBox.GetComponent<Text>().text = "Its in a ring";
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                numOfPass++;
+                //Give the player a chance
+                Destroy(m_ring.gameObject);
+                IsDecided = true;
+                Pass();
+            }
+
+        }
+        else
+        {
+            DisplayBox.GetComponent<Text>().text = "Its not in a ring";
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                numOfFail++;
+                //don't give them a chance
+                Destroy(m_ring);
+
+                IsDecided = true;
+                Fail();
+            }
+        }
+    }
 
     // Update is called once per frame
-    void Update()
+   
+    void LateUpdate()
     {
         if(IsDecided)
         {
-
-            if(numOfPass == 1)
+            if(numOfPass >= 1)
             {
                 Debug.Log("You get second chance");
+                Time.timeScale = 1f;
+                m_result = true;
                 Canvas.SetActive(false);
             }
-            else if(numOfFail == 1)
+            else if(numOfFail >= 1)
             {
+                m_result = false;
                 Debug.Log("You dont get second chance");
+                Time.timeScale = 1f;
                 Canvas.SetActive(false);
             }
             else
@@ -67,46 +107,14 @@ public class QTERing : MonoBehaviour
     IEnumerator SpawnRing()
     {
         IsSpawn = false;
-        yield return new WaitForSeconds(3.0f);
-        GameObject temp = Instantiate(playerRing, Canvas.transform);
+        float counter = 0f;
+        yield return (StartCoroutine(Utility.WaitForRealSeconds(3f)));
+        m_ring = Instantiate(playerRing, Canvas.transform);
 
-        temp.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(GetComponent<Image>().rectTransform.anchoredPosition.x, GetComponent<Image>().rectTransform.anchoredPosition.y);
+        m_ring.GetComponent<Image>().rectTransform.anchoredPosition = new Vector2(GetComponent<Image>().rectTransform.anchoredPosition.x, GetComponent<Image>().rectTransform.anchoredPosition.y);
     }
+    
 
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.GetComponent<GrowingRing>() !=null)
-        {
-            if(other.GetComponent<GrowingRing>().IsRingInisde())
-            {
-                DisplayBox.GetComponent<Text>().text = "Its in a ring";
-                if (Input.GetKeyDown(KeyCode.P))
-                {
-
-                    numOfPass++;
-                    //Give the player a chance
-                    Destroy(other.gameObject);
-                    IsDecided = true;
-                    Pass();
-
-                }
-
-            }
-            else
-            {
-                DisplayBox.GetComponent<Text>().text = "Its not in a ring";
-                if (Input.GetKeyDown(KeyCode.P))
-                {
-                    numOfFail++;
-                    //don't give them a chance
-                    Destroy(other.gameObject);
-
-                    IsDecided = true;
-                    Fail();
-                }
-            }
-        }
-    }
 
     private void Pass()
     {
