@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -189,8 +190,8 @@ namespace Himanshu
         private HidingSpot m_hidingSpot;
         private PlayerFollow m_playerFollow;
         private Coroutine m_kickRoutine;
-
-
+        public bool m_canQTEHide = true;
+        public bool m_hasAmulet = true;
         private void OnEnable()
         {
             m_enemies = GameObject.FindObjectsOfType<EnemyController>().ToList();
@@ -225,7 +226,7 @@ namespace Himanshu
             {
                 m_raycastingTesting.ObjectInFront?.GetComponent<IInteract>()?.Execute(this);
             }
-            else if(m_playerInput.interact)
+            else if(m_playerInput.interact && Time.timeScale > 0)
             {
                 Unhide();
             }
@@ -375,7 +376,6 @@ namespace Himanshu
             m_bulletCount -= 1;
                         
             this.Invoke(() => { bulletCount = 1; }, 6f);
-           
             
             StartCoroutine(m_timeStop.FillBar(0.1f));
             StartCoroutine(m_timeStop.FillBar(6f, -1));
@@ -392,7 +392,7 @@ namespace Himanshu
 
         public void Kick()
         {
-            cloudedVision = true;
+            //cloudedVision = true;
             this.Invoke(() => { cloudedVision = false; }, 2f);
             this.Invoke(() => { Unhide(); }, 3f);
 
