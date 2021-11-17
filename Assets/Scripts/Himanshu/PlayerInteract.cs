@@ -232,7 +232,7 @@ namespace Himanshu
 
             if (m_playerInput.interact)
             {
-                m_raycastingTesting.ObjectInFront?.GetComponent<IEnemy>()?.Shoot(this);
+                //m_raycastingTesting.ObjectInFront?.GetComponent<IEnemy>()?.Shoot(this);
             }
 
             //if (dangerBarVal == 1f && !LoseScreen.activeInHierarchy)

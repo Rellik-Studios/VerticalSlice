@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Bolt;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -14,15 +16,39 @@ namespace Himanshu
     public class EnemyController : MonoBehaviour, IEnemy
     {
         [SerializeField] private GameObject m_distortion;
-
+      
         [SerializeField] private float m_hearingRadius = 5f;
-        private float distortionValue
-        {
-            get => m_distortion.GetComponent<Renderer>().material.GetFloat("DistortionSpeed");
-            set => m_distortion.GetComponent<Renderer>().material.SetFloat("DistortionSpeed", value);
-
-        }
+        // private float distortionValue
+        // {
+        //     get => m_distortion.GetComponent<Renderer>().material.GetFloat("DistortionSpeed");
+        //     set => m_distortion.GetComponent<Renderer>().material.SetFloat("DistortionSpeed", value);
+        //
+        // }
         private bool m_toPatrol;
+
+        private float aSpeed
+        {
+            get => m_animator.GetFloat("speed");
+            set => m_animator.SetFloat("speed", value);
+        }
+
+        [SerializeField] private Transform m_headBone;
+        [SerializeField] private Transform m_neck1Bone;
+        [SerializeField] private Transform m_neck2Bone;
+        public float lookAngle
+        {
+            get => m_lookAngle;
+            set
+            {
+                m_lookAngle = value;
+                
+                
+                //m_headBone.gameObject.SetActive(false);
+                m_headBone.transform.localRotation = Quaternion.Euler(value/ 2f, m_headBone.transform.localRotation.eulerAngles.y, m_headBone.transform.localRotation.eulerAngles.z);
+                m_neck1Bone.transform.localRotation = Quaternion.Euler(value/ 4f, m_neck1Bone.transform.localRotation.eulerAngles.y,m_neck1Bone.transform.localRotation.eulerAngles.z);
+                m_neck2Bone.transform.localRotation = Quaternion.Euler(value/ 4f, m_neck2Bone.transform.localRotation.eulerAngles.y,m_neck2Bone.transform.localRotation.eulerAngles.z);
+            }
+        }
         public bool toPatrol
         {
             get => m_toPatrol;
@@ -63,7 +89,9 @@ namespace Himanshu
         
         
         private RaycastHit[] m_hits = new RaycastHit[3];
-        
+        private float m_lookAngle;
+        private Animator m_animator;
+
         private int index
         {
             get => m_index;
@@ -80,6 +108,7 @@ namespace Himanshu
         }
         private void Start()
         {
+            m_animator = transform.Find("GFX").GetComponent<Animator>();
             m_agent = GetComponent<NavMeshAgent>();
             m_defaultAttackTimer = m_attackTimer;
             
@@ -128,6 +157,11 @@ namespace Himanshu
             m_spotted = true;
         }
 
+        private void Update()
+        {
+            aSpeed = m_agent.velocity.magnitude;
+        }
+
         //Called through the Visual Script
         public void ResetAttack()
         {
@@ -153,19 +187,7 @@ namespace Himanshu
         }
 
         
-        //Interface Requirement
-        public void Shoot(PlayerInteract _player)
-        {
-            if (_player.bulletCount > 0)
-            {
-                distortionValue = 0f;
-                
-                this.Invoke(() => { distortionValue = -0.2f;}, 6f);
-                m_frozen = true;
-                _player.Shoot();
-                StartCoroutine(UnFreeze());
-            }
-        }
+        
 
         public void PatrolStart()
         {
@@ -200,11 +222,12 @@ namespace Himanshu
             yield return new WaitForSeconds(m_defaultPatrolWaitTime);
             
             if(m_patrolPoints.Count > 0 && m_patrolPoints.Count < 5)
+            {
                 if (m_agent.remainingDistance < 0.1f)
                     m_agent.SetDestination(m_patrolPoints[index++].position);
-                else
-                    Debug.Log("");
-            
+            }
+        
+        
             else if(m_patrolPoints.Count >= 5)
                     if (m_agent.remainingDistance < 0.1f)
                         m_agent.SetDestination(m_patrolPoints[Random.Range(0, m_patrolPoints.Count - 1)].position);
@@ -220,7 +243,7 @@ namespace Himanshu
             {
                 if (m_hits[i].collider != null && m_hits[i].collider.gameObject.CompareTag("Player") && m_hits[i].collider.GetComponentInParent<CharacterController>().enabled && !m_hits[i].collider.GetComponentInParent<PlayerInteract>().m_hiding)
                 {
-                    //return true;
+                    return true;
                 }
             }
 
@@ -261,6 +284,34 @@ namespace Himanshu
             return !m_hidingSpotToInfect.isActive;
         }
 
+        public void ChaseEnter()
+        {
+
+            StartCoroutine(eChaseEnter());
+            
+            //this.Invoke(()=>lookAngle = 0, 2f);
+        }
+
+        IEnumerator eChaseEnter()
+        {
+
+            var angle = Vector3.SignedAngle( transform.position, FindObjectOfType<PlayerInteract>().transform.position, Vector3.up);
+
+            //angle -= 180f;
+            while ( Mathf.Abs(lookAngle - angle) > 0.1f)
+            {
+                //m_agent.SetDestination(transform.position);    
+                // dir = transform.position - FindObjectOfType<PlayerMovement>().transform.position;
+                // angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                Debug.Log(Mathf.Abs(lookAngle - angle));
+                lookAngle = Mathf.Lerp(lookAngle, angle, Time.deltaTime * 3);
+                yield return null;
+            }
+
+            //m_agent.enabled = true;
+
+
+        }
         public void InfectUpdate()
         {
             m_agent.stoppingDistance = 4;
