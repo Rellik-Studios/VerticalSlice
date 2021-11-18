@@ -8,6 +8,17 @@ namespace Himanshu
 {
     public static class Utility
     {
+
+        public static IEnumerator WaitForRealSeconds(float wait)
+        {
+            float counter = 0f;
+            while (counter < wait)
+            {
+                counter += Time.unscaledDeltaTime;
+                yield return null;
+            }
+        }
+        
         public static void Invoke(this MonoBehaviour _monoBehaviour, Action _action, float _delay)
         {
             _monoBehaviour.StartCoroutine(InvokeRoutine(_action, _delay));
