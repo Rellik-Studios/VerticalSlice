@@ -2,6 +2,6 @@
 {
     public interface IEnemy
     {
-        public void Shoot(PlayerInteract _player);
+        //public void Shoot(PlayerInteract _player);
     }
 }

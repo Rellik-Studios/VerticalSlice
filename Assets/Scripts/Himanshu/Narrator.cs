@@ -142,7 +142,7 @@ namespace Himanshu
         
         private void Start()
         {
-            m_waitPlay = StartCoroutine("");
+            m_waitPlay = StartCoroutine(SetText("", m_textBox));
             m_idleTimer = Random.Range(90f, 120f);
         }
 

@@ -16,11 +16,10 @@ namespace Himanshu
 
         [SerializeField] private int m_maxPass = 3;
         [SerializeField] private int m_maxFail = 1;
-        
+
+        public bool m_result;
         private IEnumerator Start()
         {
-            
-            yield return new WaitForSeconds(2f);
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -85,13 +84,16 @@ namespace Himanshu
             if (m_passCounter == m_maxPass)
             {
                 Debug.Log("QTE Successful");
+                m_result = true;
                 Time.timeScale = 1f;
                 gameObject.SetActive(false);
             }
 
             if (m_failCounter >= m_maxFail)
             {
+                m_result = false;
                 Debug.Log("QTE Fail");
+                Time.timeScale = 1f;
                 gameObject.SetActive(false);
             }
         }

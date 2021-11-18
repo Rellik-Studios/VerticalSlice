@@ -98,8 +98,9 @@ namespace Himanshu
 
                 if (m_player != null)
                 {
+                    Debug.Log("Hide");
                     //m_player.SetPositionAndRotation(m_hidingSpots[m_hidingIndex]);
-                    m_player.transform.position = new Vector3((m_hidingIndex.transform.forward * 3f).x, m_player.transform.position.y, (m_hidingIndex.transform.forward * 3f).z);
+                    m_player.transform.position = new Vector3((m_hidingIndex.transform.position + m_hidingIndex.transform.forward * 3f).x, m_player.transform.position.y, (m_hidingIndex.transform.position + m_hidingIndex.transform.forward * 3f).z);
                     m_player.transform.rotation = m_hidingIndex.transform.rotation;
                     m_player.GetComponent<CharacterController>().enabled = false;
                 }
@@ -225,7 +226,6 @@ namespace Himanshu
         {
             m_player = _player;
             m_player.Hide(this);
-            //m_player.m_hiding = true;
             m_hidingIndex = _hidingLocation;
             var index = 0;
             foreach (var hidingSpot in m_hidingSpots)
