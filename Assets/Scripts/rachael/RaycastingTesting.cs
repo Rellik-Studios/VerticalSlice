@@ -97,6 +97,12 @@ public class RaycastingTesting : MonoBehaviour
                     return;
                 }
             }
+            if (ObjectInFront.GetComponent<HidingLocation>() != null)
+            {
+                if (m_indication != null)
+                    m_indication.sprite = Resources.Load<Sprite>("Hide");
+                return;
+            }
             //if its a placing an item on clock
             if (ObjectInFront.GetComponent<GrandfatherClock>() != null)
             {
@@ -125,7 +131,7 @@ public class RaycastingTesting : MonoBehaviour
         else if (ObjectInFront.GetComponent<IEnemy>() != null)
         {
             if (m_indication != null)
-                m_indication.sprite = Resources.Load<Sprite>("Stop");
+                m_indication.enabled = false; //m_indication.sprite = Resources.Load<Sprite>("Stop");
             //show UI
             return;
         }
