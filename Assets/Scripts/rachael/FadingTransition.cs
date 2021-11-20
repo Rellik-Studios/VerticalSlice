@@ -52,7 +52,7 @@ public class FadingTransition : MonoBehaviour
             {
                 fadeOut = false;
                 door.SetActive(false);
-                Destroy(gameObject);
+                Destroy(this);
             }
         }
     }
