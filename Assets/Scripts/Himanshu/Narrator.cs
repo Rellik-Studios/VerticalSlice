@@ -8,15 +8,17 @@ using Random = UnityEngine.Random;
 
 namespace Himanshu
 {
+        
     public class Narrator : MonoBehaviour
     {
+        public NarratorDialogue m_narratorDialogue;
         #region Text
 
         
         [SerializeField] private TMP_Text m_textBox;
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_idleRoom;
+        [SerializeField] public List<string> m_idleRoom;
         
         public bool idleRoom
         {
@@ -24,7 +26,7 @@ namespace Himanshu
         }
 
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_ballRoom;
+        [SerializeField] public List<string> m_ballRoom;
         
         public bool ballRoom
         {
@@ -32,7 +34,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_cafeteria;
+        [SerializeField] public List<string> m_cafeteria;
         
         public bool cafeteria
         {
@@ -40,7 +42,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_maze;
+        [SerializeField] public List<string> m_maze;
         
         public bool maze
         {
@@ -48,7 +50,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_bathroom;
+        [SerializeField] public List<string> m_bathroom;
         
         public bool bathroom
         {
@@ -56,7 +58,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_mirrorShatter;
+        [SerializeField] public List<string> m_mirrorShatter;
         
         public bool mirrorShatter
         {
@@ -64,7 +66,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_hospital1950;
+        [SerializeField] public List<string> m_hospital1950;
         
         public bool hospital1950
         {
@@ -72,7 +74,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_hospitalIdle;
+        [SerializeField] public List<string> m_hospitalIdle;
         
         public bool hospitalIdle
         {
@@ -80,7 +82,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_hospital1870;
+        [SerializeField] public List<string> m_hospital1870;
         
         public bool hospital1870
         {
@@ -88,7 +90,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_hospitalFuturistic;
+        [SerializeField] public List<string> m_hospitalFuturistic;
         
         
         public bool hospitalFuturistic
@@ -97,7 +99,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_hospitalPresent;
+        [SerializeField] public List<string> m_hospitalPresent;
 
         
         
@@ -107,7 +109,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_hub1;
+        [SerializeField] public List<string> m_hub1;
         
         
         public bool hub1
@@ -116,7 +118,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_hub2;
+        [SerializeField] public List<string> m_hub2;
         
         
         public bool hub2
@@ -125,7 +127,7 @@ namespace Himanshu
         }
         
         [TextArea(4, 6)]
-        [SerializeField] private List<string> m_finish1;
+        [SerializeField] public List<string> m_finish1;
 
         
         public bool finish1
@@ -142,6 +144,10 @@ namespace Himanshu
         
         private void Start()
         {
+            var tempNarr = SaveSystem.LoadNarrator();
+
+            m_narratorDialogue = tempNarr ?? new NarratorDialogue();
+            
             m_waitPlay = StartCoroutine(SetText("", m_textBox));
             m_idleTimer = Random.Range(90f, 120f);
         }
@@ -158,6 +164,11 @@ namespace Himanshu
             {
                 m_idleTimer -= Time.deltaTime;
             }
+            
+            #if UNITY_EDITOR
+            if(Input.GetKeyDown(KeyCode.Alpha0))
+                SaveSystem.DeleteNarrator();
+#endif
         }
 
         //Call this function when a door dissapears.
@@ -184,6 +195,8 @@ namespace Himanshu
                 //StopCoroutine(m_waitPlay);
                 m_waitPlay = StartCoroutine(WaitAndPlay(_toPlay));
             }
+            
+            SaveSystem.SaveNarrator();
         }
 
         private IEnumerator WaitAndPlay(List<string> _toPlay)

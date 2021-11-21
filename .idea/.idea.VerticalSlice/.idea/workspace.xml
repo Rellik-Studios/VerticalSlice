@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Himanshu/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Himanshu/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Rachael/PlayerRing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Rachael/PlayerRing.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_AnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_AnimController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_Kill.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_Kill.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_Rigged_Scaled.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_Rigged_Scaled.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_Walk.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_Walk.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rine/enemy/enemy_model_v2.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rine/enemy/enemy_model_v2.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Himanshu/New Hiding.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Himanshu/New Hiding.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Himanshu/Path_face 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Himanshu/Path_face 2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/QTE.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/QTE.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/StateMachine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/StateMachine.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/gameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/gameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,10 +53,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SafeRoom.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerSave.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/ChoosingPath.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" />
@@ -80,7 +63,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerFollow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/IEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyHeadTurn.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/gameManager.cs" />
@@ -89,6 +71,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -117,10 +103,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18060">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18060" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -152,6 +138,8 @@
       <workItem from="1637015589750" duration="3224000" />
       <workItem from="1637027046287" duration="9928000" />
       <workItem from="1637111826533" duration="20119000" />
+      <workItem from="1637300164567" duration="2000" />
+      <workItem from="1637464867444" duration="5781000" />
     </task>
     <servers />
   </component>
@@ -180,26 +168,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs</url>
-          <line>256</line>
+          <line>269</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\Narrator.cs" initialLine="248" containingFunctionPresentation="method 'SetText'">
             <startOffsets>
-              <option value="6690" />
+              <option value="7069" />
             </startOffsets>
             <endOffsets>
-              <option value="6786" />
+              <option value="7165" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs</url>
-          <line>380</line>
+          <line>393</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\Narrator.cs" initialLine="371" containingFunctionPresentation="method 'ConditionCheck'">
             <startOffsets>
-              <option value="10725" />
+              <option value="11104" />
             </startOffsets>
             <endOffsets>
-              <option value="10744" />
+              <option value="11123" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

@@ -30,7 +30,7 @@ namespace Himanshu
 
         private void OnTriggerEnter(Collider _collider)
         {
-            m_waitTimer = Random.Range(25f, 40f);
+            //m_waitTimer = Random.Range(25f, 40f);
         }
 
         private void OnTriggerStay(Collider _collider)
@@ -47,13 +47,12 @@ namespace Himanshu
                 {
                     m_waitTimer = Random.Range(5f, 10f);
                     if (!m_isHospital)
-                        if (Random.Range(1, 10) < 7) m_event?.Invoke();
-                        else m_idleEvent?.Invoke();
+                        m_idleEvent?.Invoke();
                     else
                     {
                         var rand = Random.Range(1, 11);
                         Debug.Log(rand);
-                        if (rand < 5) m_event?.Invoke(); else if (rand < 8) m_hospitalIdle?.Invoke(); else m_idleEvent?.Invoke();
+                        if  (rand < 6) m_hospitalIdle?.Invoke(); else m_idleEvent?.Invoke();
                     }
                 }
             }
