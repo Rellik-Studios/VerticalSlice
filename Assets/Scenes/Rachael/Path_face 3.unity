@@ -471,6 +471,7 @@ MonoBehaviour:
   doorframe: {fileID: 1250465150}
   door: {fileID: 1346838099}
   wall: {fileID: 355765901}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &52679405 stripped
 GameObject:
@@ -2739,9 +2740,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5826958bf779e0045a87c59c969a73f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorframe: {fileID: 1324840613}
-  door: {fileID: 1247485719}
+  doorframe: {fileID: 1247485719}
+  door: {fileID: 1324840613}
   wall: {fileID: 2052481033}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &498791605 stripped
 GameObject:
@@ -2872,6 +2874,7 @@ MonoBehaviour:
   doorframe: {fileID: 462525420}
   door: {fileID: 1330977316}
   wall: {fileID: 693311834}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &557683165 stripped
 GameObject:
@@ -3454,6 +3457,7 @@ MonoBehaviour:
   doorframe: {fileID: 557683165}
   door: {fileID: 1217344637}
   wall: {fileID: 793290040}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &760185264 stripped
 GameObject:
@@ -4033,6 +4037,7 @@ MonoBehaviour:
   doorframe: {fileID: 2104659995}
   door: {fileID: 1765498276}
   wall: {fileID: 798271222}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &877057924
 GameObject:
@@ -4395,6 +4400,7 @@ MonoBehaviour:
   doorframe: {fileID: 1206503238}
   door: {fileID: 972859159}
   wall: {fileID: 1382370685}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &957878112
 GameObject:
@@ -4623,6 +4629,7 @@ MonoBehaviour:
   doorframe: {fileID: 198481355}
   door: {fileID: 996704493}
   wall: {fileID: 1133685488}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &972859159 stripped
 GameObject:
@@ -4886,9 +4893,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5826958bf779e0045a87c59c969a73f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorframe: {fileID: 760185264}
-  door: {fileID: 1060377678}
+  doorframe: {fileID: 1060377678}
+  door: {fileID: 760185264}
   wall: {fileID: 2099224745}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1022006596
 GameObject:
@@ -5014,6 +5022,7 @@ MonoBehaviour:
   doorframe: {fileID: 1405519399}
   door: {fileID: 1369298339}
   wall: {fileID: 2067127932}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1035000293
 GameObject:
@@ -5139,6 +5148,7 @@ MonoBehaviour:
   doorframe: {fileID: 1960265705}
   door: {fileID: 1561868145}
   wall: {fileID: 1803350945}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1045567584 stripped
 GameObject:
@@ -5925,6 +5935,7 @@ MonoBehaviour:
   doorframe: {fileID: 301160131}
   door: {fileID: 1045567584}
   wall: {fileID: 498791605}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1217047309
 GameObject:
@@ -6050,6 +6061,7 @@ MonoBehaviour:
   doorframe: {fileID: 1646359151}
   door: {fileID: 1234802453}
   wall: {fileID: 824179975}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1217344637 stripped
 GameObject:
@@ -6206,9 +6218,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5826958bf779e0045a87c59c969a73f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorframe: {fileID: 1837242995}
-  door: {fileID: 453371945}
+  doorframe: {fileID: 453371945}
+  door: {fileID: 1837242995}
   wall: {fileID: 1697996458}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1231865970
 GameObject:
@@ -6534,6 +6547,7 @@ MonoBehaviour:
   doorframe: {fileID: 797517788}
   door: {fileID: 617034045}
   wall: {fileID: 762892162}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1264464736 stripped
 GameObject:
@@ -6699,6 +6713,7 @@ MonoBehaviour:
   doorframe: {fileID: 242368946}
   door: {fileID: 1159038560}
   wall: {fileID: 231501809}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1320197319
 GameObject:
@@ -7653,6 +7668,7 @@ MonoBehaviour:
   doorframe: {fileID: 246491867}
   door: {fileID: 1885226526}
   wall: {fileID: 238854703}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1506453528
 GameObject:
@@ -7881,6 +7897,7 @@ MonoBehaviour:
   doorframe: {fileID: 256471582}
   door: {fileID: 366611701}
   wall: {fileID: 1536744158}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &1536744158 stripped
 GameObject:
@@ -9808,6 +9825,7 @@ MonoBehaviour:
   doorframe: {fileID: 1728939765}
   door: {fileID: 1637044229}
   wall: {fileID: 1264464736}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &2040379054
 GameObject:
@@ -9933,6 +9951,7 @@ MonoBehaviour:
   doorframe: {fileID: 1229202599}
   door: {fileID: 52679405}
   wall: {fileID: 2079912593}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &2044961111
 GameObject:
@@ -10467,9 +10486,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5826958bf779e0045a87c59c969a73f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorframe: {fileID: 72583954}
-  door: {fileID: 1783347351}
+  doorframe: {fileID: 1783347351}
+  door: {fileID: 72583954}
   wall: {fileID: 846088062}
+  materialDoor: {fileID: 2100000, guid: 0aee965907031fe4194d1e0a73384f82, type: 2}
   fadeSpeed: 1
 --- !u!1 &2099224745 stripped
 GameObject:
