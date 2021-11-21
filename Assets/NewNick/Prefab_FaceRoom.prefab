@@ -11563,6 +11563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (8)
@@ -11642,6 +11646,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (10)
@@ -11804,6 +11812,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (9)
@@ -12025,6 +12037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 804bfa79cc5378a4a881145ea5300c55, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ccd4af53f856c846a8626bacf0a2ff6, type: 2}
     - target: {fileID: 919132149155446097, guid: 804bfa79cc5378a4a881145ea5300c55, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_Stalls_open
@@ -12258,6 +12274,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4228a606b978c4d498ed88a7c766a77e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0479e5b91fddc9e4aa8610bbddf2eb7a, type: 2}
     - target: {fileID: 919132149155446097, guid: 4228a606b978c4d498ed88a7c766a77e, type: 3}
       propertyPath: m_Name
       value: SM_Side_Table
@@ -12337,6 +12357,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror
@@ -12416,6 +12440,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42bb70548d4aa524c982cee19283aaca, type: 2}
     - target: {fileID: 919132149155446097, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
       propertyPath: m_Name
       value: SM_Toilet (5)
@@ -13465,6 +13493,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (3)
@@ -13544,6 +13576,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (5)
@@ -13765,6 +13801,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4fde8d7d5198b049aa5ae8b52119fba, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Urinal (6)
@@ -13915,6 +13955,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (6)
@@ -13994,6 +14038,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (11)
@@ -14299,6 +14347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a755084945dde97409848a6e264add47, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e41659f294ae95345a3f0fb0a7399b5b, type: 2}
     - target: {fileID: 919132149155446097, guid: a755084945dde97409848a6e264add47, type: 3}
       propertyPath: m_Name
       value: SM_Bed_Box
@@ -14378,6 +14430,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02005927eca5bda44872a6a17e46cf4b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069aee824f65a94da4801c88ae80c3d, type: 2}
     - target: {fileID: 919132149155446097, guid: 02005927eca5bda44872a6a17e46cf4b, type: 3}
       propertyPath: m_Name
       value: SM_Dresser_Mirror
@@ -14528,6 +14584,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4be3e52af9b73eb4bbb2d1425f65d295, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b30689a139aa39a4791807a2ee3e796a, type: 2}
     - target: {fileID: 919132149155446097, guid: 4be3e52af9b73eb4bbb2d1425f65d295, type: 3}
       propertyPath: m_Name
       value: SM_Draws
@@ -14694,6 +14754,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42bb70548d4aa524c982cee19283aaca, type: 2}
     - target: {fileID: 919132149155446097, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
       propertyPath: m_Name
       value: SM_Toilet (7)
@@ -14773,6 +14837,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42bb70548d4aa524c982cee19283aaca, type: 2}
     - target: {fileID: 919132149155446097, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
       propertyPath: m_Name
       value: SM_Toilet (4)
@@ -14928,6 +14996,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: -7046689783973074932, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: 309463952820482923, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
       propertyPath: m_Name
       value: SM_Old_Closet
@@ -15096,6 +15176,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42bb70548d4aa524c982cee19283aaca, type: 2}
     - target: {fileID: 919132149155446097, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
       propertyPath: m_Name
       value: SM_Toilet (1)
@@ -15175,6 +15259,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (2)
@@ -15254,6 +15342,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (4)
@@ -15333,6 +15425,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 21b2b0d75e4939a41a4966dc6f077dca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ec1d5414ea17844e8febec7152824a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 21b2b0d75e4939a41a4966dc6f077dca, type: 3}
       propertyPath: m_Name
       value: SM_PC_Chair
@@ -15412,6 +15508,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (11)
@@ -17548,6 +17648,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c650a5f83e03e114e9bac302c9f04beb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ccd4af53f856c846a8626bacf0a2ff6, type: 2}
     - target: {fileID: 919132149155446097, guid: c650a5f83e03e114e9bac302c9f04beb, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_Stalls
@@ -17769,6 +17873,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2a91ade60bd29e14689e7955c07e95da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fc1c8b36147557f4ca26de739e9db635, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a91ade60bd29e14689e7955c07e95da, type: 3}
       propertyPath: m_Name
       value: SM_Lamp
@@ -18513,6 +18621,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: -7046689783973074932, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: 309463952820482923, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
       propertyPath: m_Name
       value: SM_Old_Closet (1)
@@ -18602,6 +18722,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (8)
@@ -18681,6 +18805,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42bb70548d4aa524c982cee19283aaca, type: 2}
     - target: {fileID: 919132149155446097, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
       propertyPath: m_Name
       value: SM_Toilet (6)
@@ -18911,6 +19039,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42bb70548d4aa524c982cee19283aaca, type: 2}
     - target: {fileID: 919132149155446097, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
       propertyPath: m_Name
       value: SM_Toilet
@@ -19061,6 +19193,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4fde8d7d5198b049aa5ae8b52119fba, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Urinal (5)
@@ -19211,6 +19347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4fde8d7d5198b049aa5ae8b52119fba, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Urinal (3)
@@ -19290,6 +19430,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4fde8d7d5198b049aa5ae8b52119fba, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Urinal (2)
@@ -19440,6 +19584,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (9)
@@ -19598,6 +19746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4fde8d7d5198b049aa5ae8b52119fba, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Urinal (4)
@@ -19753,6 +19905,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (4)
@@ -19832,6 +19988,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42bb70548d4aa524c982cee19283aaca, type: 2}
     - target: {fileID: 919132149155446097, guid: f930b097637d0b14c9f66771d329fa8b, type: 3}
       propertyPath: m_Name
       value: SM_Toilet (3)
@@ -19911,6 +20071,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (7)
@@ -20132,6 +20296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 168ad53c9071e8b4ca67561ac39f1ba8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e7092d092689484d8e5995d4bfe839a, type: 2}
     - target: {fileID: 919132149155446097, guid: 168ad53c9071e8b4ca67561ac39f1ba8, type: 3}
       propertyPath: m_Name
       value: SM_Bed
@@ -20211,6 +20379,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (1)
@@ -20732,6 +20904,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (1)
@@ -20894,6 +21070,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (2)
@@ -21044,6 +21224,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (5)
@@ -21123,6 +21307,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (10)
@@ -21273,6 +21461,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (3)
@@ -21577,6 +21769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae84a3c0fdf691544a0eb7e99722b2dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d30fec358edc8341acd5958d994aca5, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_mirror (6)
@@ -21727,6 +21923,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4fde8d7d5198b049aa5ae8b52119fba, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Urinal
@@ -21885,6 +22085,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink (7)
@@ -22106,6 +22310,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241e37bf39306f34a8b7239c0a468229, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cabc279a78c8b44cbe7d8545cc3537b, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_sink
@@ -22185,6 +22393,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4fde8d7d5198b049aa5ae8b52119fba, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a6f48acd4ac57949b73225b4763e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Urinal (1)
@@ -22264,6 +22476,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 859cfbc782e2aeb449fe96c3d33e10e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c97eecb0b4f0ee4458cdc501739b7040, type: 2}
     - target: {fileID: 919132149155446097, guid: 859cfbc782e2aeb449fe96c3d33e10e1, type: 3}
       propertyPath: m_Name
       value: SM_PC_Desk

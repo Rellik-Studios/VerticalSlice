@@ -8774,6 +8774,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: -7046689783973074932, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: 309463952820482923, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
       propertyPath: m_Name
       value: SM_Old_Closet
@@ -12232,6 +12244,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: -7046689783973074932, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: 309463952820482923, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
       propertyPath: m_Name
       value: SM_Old_Closet (1)
@@ -12328,7 +12352,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6d4e2d576ef14e64faf5c93db140581c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1b6da2842f6a5da4da77657bee304ae4, type: 2}
+      objectReference: {fileID: 2100000, guid: c822be0a8b413a345aafa57aa5d51e17, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d4e2d576ef14e64faf5c93db140581c, type: 3}
       propertyPath: m_Name
       value: SM_1870_Table_small
@@ -12947,6 +12971,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bf29ebb8251fadc4db15dd284ebc23e0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f84e05deb467004f9085453e92459a1, type: 2}
     - target: {fileID: 919132149155446097, guid: bf29ebb8251fadc4db15dd284ebc23e0, type: 3}
       propertyPath: m_Name
       value: SM_1870s_Bedroom_draw
@@ -14085,6 +14113,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84d3715cf7af80449a961e0d3d41cd09, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6e31f4e63ecf564e825e58634a94b93, type: 2}
     - target: {fileID: 919132149155446097, guid: 84d3715cf7af80449a961e0d3d41cd09, type: 3}
       propertyPath: m_Name
       value: SM_1870_Couch_Lounge
@@ -14298,6 +14330,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c8f8869532e06ae418fc3744642246a7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7a630e50ad24aa46b11024d6fb89bb8, type: 2}
     - target: {fileID: 919132149155446097, guid: c8f8869532e06ae418fc3744642246a7, type: 3}
       propertyPath: m_Name
       value: SM_1870_Chair_Lounge (1)
@@ -14453,6 +14489,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: -7046689783973074932, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
+    - target: {fileID: 309463952820482923, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b90416eab7e2d5546a8487b923fcc9d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f544cb11caa89a748818d3ef68c44451, type: 3}
       propertyPath: m_Name
       value: SM_Old_Closet (2)
@@ -14685,6 +14733,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c8f8869532e06ae418fc3744642246a7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7a630e50ad24aa46b11024d6fb89bb8, type: 2}
     - target: {fileID: 919132149155446097, guid: c8f8869532e06ae418fc3744642246a7, type: 3}
       propertyPath: m_Name
       value: SM_1870_Chair_Lounge

@@ -396,30 +396,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 391097131580475643, guid: 6ad817c8f5273e84485eeae92456a936, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7edd1f4d5da4d3c4ca764a7eb3988856, type: 2}
-    - target: {fileID: 1424781001467594326, guid: 6ad817c8f5273e84485eeae92456a936, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 03f5adb3cb7943e40aa47aab6d5a8adf, type: 2}
-    - target: {fileID: 3019654228361929051, guid: 6ad817c8f5273e84485eeae92456a936, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7edd1f4d5da4d3c4ca764a7eb3988856, type: 2}
-    - target: {fileID: 3918213160112065109, guid: 6ad817c8f5273e84485eeae92456a936, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f1f0f076db84de042b61ff71725e98dd, type: 2}
-    - target: {fileID: 7520570082426950096, guid: 6ad817c8f5273e84485eeae92456a936, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 03f5adb3cb7943e40aa47aab6d5a8adf, type: 2}
-    - target: {fileID: 7740267361507885005, guid: 6ad817c8f5273e84485eeae92456a936, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: dd986f574afb7a04098d5a732b42c816, type: 2}
     - target: {fileID: 9070450671361681457, guid: 6ad817c8f5273e84485eeae92456a936, type: 3}
       propertyPath: m_Name
       value: Prefab_MouthRoom
