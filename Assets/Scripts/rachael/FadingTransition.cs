@@ -7,6 +7,7 @@ public class FadingTransition : MonoBehaviour
     [SerializeField] GameObject doorframe;
     [SerializeField] GameObject door;
     [SerializeField] GameObject wall;
+    [SerializeField] Material materialDoor;
 
     private bool fadeOut = false;
     private bool fadeIn = false;
@@ -19,6 +20,8 @@ public class FadingTransition : MonoBehaviour
         wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, 0.0f);
 
         wall.GetComponent<Renderer>().material.color = wallColor;
+
+        
         //wall.SetActive(false);
 
     }
@@ -65,6 +68,7 @@ public class FadingTransition : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            this.doorframe.GetComponent<Renderer>().material = materialDoor;
             FadeOutObject();
             wall.SetActive(true);
         }
