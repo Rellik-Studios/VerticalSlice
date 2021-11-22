@@ -250,6 +250,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (12)
@@ -427,6 +431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (5)
@@ -770,6 +778,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (14)
@@ -1721,6 +1733,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (4)
@@ -2258,6 +2274,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (1)
@@ -2327,6 +2347,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (15)
@@ -2468,6 +2492,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (7)
@@ -2693,6 +2721,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand
@@ -3474,6 +3506,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (9)
@@ -3780,6 +3816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (2)
@@ -3879,6 +3919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (8)
@@ -5035,6 +5079,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (11)
@@ -5470,6 +5518,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (3)
@@ -7497,6 +7549,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (10)
@@ -8754,6 +8810,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (6)
@@ -9777,6 +9837,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178391464938823112, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
+      propertyPath: eraChanging
+      value: 
+      objectReference: {fileID: 2050008731}
     - target: {fileID: 6206333423421384293, guid: 6a593b936bc1f114b989c243ad2d7e7c, type: 3}
       propertyPath: m_Name
       value: bookstand (13)
