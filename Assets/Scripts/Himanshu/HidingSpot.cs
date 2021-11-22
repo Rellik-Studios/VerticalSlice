@@ -13,7 +13,7 @@ namespace Himanshu
         public bool m_cupboard;
 
         [SerializeField] private Shader m_shader;
-        private Animator m_animator;
+        [SerializeField] private Animator m_animator;
 
         private Renderer m_cubeRenderer;
 
@@ -47,7 +47,7 @@ namespace Himanshu
             get => m_animator.GetBool("close");
             set => m_animator.SetBool("close", value);
         }
-
+ 
         #endregion
         
 
@@ -111,7 +111,7 @@ namespace Himanshu
 
         private void Start()
         {
-            m_animator = GetComponent<Animator>();
+            //m_animator = GetComponent<Animator>();
             isActive = true;
             m_hidingSpots = new List<HidingLocation>();
 
@@ -234,7 +234,7 @@ namespace Himanshu
                     break;
                 index++;
             }
-            hidingIndex = index;
+            this.Invoke(() => hidingIndex = index, 1f);
         }
     }
 }
