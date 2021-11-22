@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7693652726698554234}
   - component: {fileID: 5557916025141708720}
   - component: {fileID: 1178391464938823112}
+  - component: {fileID: 693932084330112509}
   m_Layer: 0
   m_Name: bookstand
   m_TagString: Untagged
@@ -95,3 +96,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eraChanging: {fileID: 0}
+--- !u!64 &693932084330112509
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6206333423421384293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8321685774571456786, guid: 3b6f7c231cd860140ac99f588ac7f385, type: 3}
