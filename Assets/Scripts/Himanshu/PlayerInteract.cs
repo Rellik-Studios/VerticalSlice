@@ -329,7 +329,7 @@ namespace Himanshu
         {
             _hidingSpot.aOpen = true;
             _hidingSpot.aClose = false;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2.5f);
             _hidingSpot.aOpen = false;
             _hidingSpot.aClose = true;
             
