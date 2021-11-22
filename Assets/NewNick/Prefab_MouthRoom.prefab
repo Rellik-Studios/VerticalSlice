@@ -832,7 +832,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b6641cf47d28c8b43a359f5d51ff4d9a, type: 2}
+  - {fileID: 2100000, guid: 26b1becf6f0dc9f4ebfab88d604387c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13502,7 +13502,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: c8797e708f5a03e48ba3783b3b11d946, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7805d81d99b77a8449ac298d3e82bc8d, type: 2}
+      objectReference: {fileID: 2100000, guid: 6223c6bcb8c248346a6176564be247e5, type: 2}
     - target: {fileID: 919132149155446097, guid: c8797e708f5a03e48ba3783b3b11d946, type: 3}
       propertyPath: m_Name
       value: SM_Hospital_wall_3m_invisible
@@ -19278,7 +19278,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: fd2fe59d17534e54dbf24eee41f5147f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b6641cf47d28c8b43a359f5d51ff4d9a, type: 2}
+      objectReference: {fileID: 2100000, guid: 26b1becf6f0dc9f4ebfab88d604387c6, type: 2}
     - target: {fileID: 919132149155446097, guid: fd2fe59d17534e54dbf24eee41f5147f, type: 3}
       propertyPath: m_Name
       value: SM_appartment_wall_3m_invisible
@@ -24364,7 +24364,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a6625a19469383841ab521db58ed67b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6aab352b90862741a700442c2fa73cb, type: 2}
+      objectReference: {fileID: 2100000, guid: 71a39b56b35d0084a94b03e4d11cff7a, type: 2}
     - target: {fileID: 919132149155446097, guid: a6625a19469383841ab521db58ed67b2, type: 3}
       propertyPath: m_Name
       value: SM_Bathroom_wall_2m_invisible
