@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3058760317011374552, guid: 2f20d88d2f2c81e4d84f96c17fbf1c3a, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8276037aff9d87943a3fd0f17d5a2ea1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f20d88d2f2c81e4d84f96c17fbf1c3a, type: 3}
 --- !u!1001 &23238798
@@ -6319,8 +6323,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a06d728088306764da6ecad0a8e071fa, type: 2}
+  m_sharedMaterial: {fileID: 4440901632840678128, guid: a06d728088306764da6ecad0a8e071fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
