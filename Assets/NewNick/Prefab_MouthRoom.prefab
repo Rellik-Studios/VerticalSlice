@@ -30631,6 +30631,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e000841b442359940bdf5c36e5324262, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f90f266f9dec4ee41ac22135deb07741, type: 2}
     - target: {fileID: 919132149155446097, guid: e000841b442359940bdf5c36e5324262, type: 3}
       propertyPath: m_Name
       value: SM_Hallway_door_Invisable_Mouth (4)
@@ -34454,6 +34458,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e000841b442359940bdf5c36e5324262, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f90f266f9dec4ee41ac22135deb07741, type: 2}
     - target: {fileID: 919132149155446097, guid: e000841b442359940bdf5c36e5324262, type: 3}
       propertyPath: m_Name
       value: SM_Hallway_door_Invisable_Mouth (1)
@@ -36827,6 +36835,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e000841b442359940bdf5c36e5324262, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f90f266f9dec4ee41ac22135deb07741, type: 2}
     - target: {fileID: 919132149155446097, guid: e000841b442359940bdf5c36e5324262, type: 3}
       propertyPath: m_Name
       value: SM_Hallway_door_Invisable_Mouth (3)
@@ -37144,6 +37156,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e000841b442359940bdf5c36e5324262, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f90f266f9dec4ee41ac22135deb07741, type: 2}
     - target: {fileID: 919132149155446097, guid: e000841b442359940bdf5c36e5324262, type: 3}
       propertyPath: m_Name
       value: SM_Hallway_door_Invisable_Mouth (2)
@@ -39755,6 +39771,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e000841b442359940bdf5c36e5324262, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f90f266f9dec4ee41ac22135deb07741, type: 2}
     - target: {fileID: 919132149155446097, guid: e000841b442359940bdf5c36e5324262, type: 3}
       propertyPath: m_Name
       value: SM_Hallway_door_Invisable_Mouth
