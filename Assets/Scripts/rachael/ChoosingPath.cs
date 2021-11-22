@@ -45,7 +45,7 @@ public class ChoosingPath : MonoBehaviour
                 route = eraChanging.Index;
                 eraChanging.Rooms[route] = assignRoom;
                 //PlayerPrefs.SetInt(assignedName, route);
-                //assignDoor.GetComponent<DoorToWall>().TransformDoorToWall();
+                assignDoor.GetComponent<DoorToWall>().FadeHubWall();
                 Destroy(this);
             }
         }
