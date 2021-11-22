@@ -2441,6 +2441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_FaceRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 8494678703419665866, guid: ae0e99c34c2bbd344bf74ea634952a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.09
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae0e99c34c2bbd344bf74ea634952a19, type: 3}
 --- !u!1 &328248218 stripped
