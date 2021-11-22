@@ -47,6 +47,10 @@ public class DoorToWall : MonoBehaviour
     //{
     //    fadeOut = true;
     //}
+    public void FadeHubWall()
+    {
+        wall.SetActive(true);
+    }
     public void TransformDoorToWall()
     {
         door.SetActive(false);
