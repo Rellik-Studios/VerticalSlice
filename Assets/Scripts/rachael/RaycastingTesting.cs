@@ -103,6 +103,12 @@ public class RaycastingTesting : MonoBehaviour
                     m_indication.sprite = Resources.Load<Sprite>("Hide");
                 return;
             }
+            if (ObjectInFront.GetComponent<BookEntry>() != null)
+            {
+                if (m_indication != null)
+                    m_indication.sprite = Resources.Load<Sprite>("Save");
+                return;
+            }
             //if its a placing an item on clock
             if (ObjectInFront.GetComponent<GrandfatherClock>() != null)
             {
