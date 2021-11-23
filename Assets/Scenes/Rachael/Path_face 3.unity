@@ -967,6 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf8efa3f7950cb419815fa6109f7791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  savingProcess: {fileID: 0}
   changingManager: {fileID: 2050008731}
   playerInteract: {fileID: 230517578}
   LoopRoom: {fileID: 657364663}
