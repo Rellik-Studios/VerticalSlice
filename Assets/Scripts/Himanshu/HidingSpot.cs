@@ -13,23 +13,24 @@ namespace Himanshu
         public bool m_cupboard;
 
         [SerializeField] private Shader m_shader;
-        [SerializeField] private Animator m_animator;
+        [SerializeField] public Animator m_animator;
 
+        [SerializeField] private bool m_loop;
         private Renderer m_cubeRenderer;
 
         #region Properties
 
-        private bool aInfect
-        {
-            get => m_animator.GetBool("infect");
-            set => m_animator.SetBool("infect", value);
-        }
-        private bool aDisInfect
-        {
-            get => m_animator.GetBool("disinfect");
-            set => m_animator.SetBool("disinfect", value);
-        }
-        
+        // private bool aInfect
+        // {
+        //     get => m_animator.GetBool("infect");
+        //     set => m_animator.SetBool("infect", value);
+        // }
+        // private bool aDisInfect
+        // {
+        //     get => m_animator.GetBool("disinfect");
+        //     set => m_animator.SetBool("disinfect", value);
+        // }
+        //
         private float aSpeed
         {
             get => m_animator.GetFloat("speed");
@@ -41,12 +42,7 @@ namespace Himanshu
             get => m_animator.GetBool("open");
             set => m_animator.SetBool("open", value);
         }
-        
-        public bool aClose
-        {
-            get => m_animator.GetBool("close");
-            set => m_animator.SetBool("close", value);
-        }
+       
  
         #endregion
         
@@ -89,7 +85,7 @@ namespace Himanshu
             {
                 m_hidingIndex.TurnOff();
                
-                if(m_hidingSpots.Count < 4)
+                if(m_loop)
                     m_hidingIndex = m_hidingSpots[value < 0 ? 0 : value > m_hidingSpots.Count - 1 ? m_hidingSpots.Count - 1 : value];
                 else
                     m_hidingIndex = m_hidingSpots[value < 0 ? m_hidingSpots.Count - 1 : value > m_hidingSpots.Count - 1 ? 0 : value];
@@ -100,7 +96,7 @@ namespace Himanshu
                 {
                     Debug.Log("Hide");
                     //m_player.SetPositionAndRotation(m_hidingSpots[m_hidingIndex]);
-                    m_player.transform.position = new Vector3((m_hidingIndex.transform.position + m_hidingIndex.transform.forward * 3f).x, m_player.transform.position.y, (m_hidingIndex.transform.position + m_hidingIndex.transform.forward * 3f).z);
+                    m_player.transform.position = new Vector3((m_hidingIndex.transform.position + m_hidingIndex.actualForward * 3f).x, m_player.transform.position.y, (m_hidingIndex.transform.position + m_hidingIndex.actualForward * 3f).z);
                     m_player.transform.rotation = m_hidingIndex.transform.rotation;
                     m_player.GetComponent<CharacterController>().enabled = false;
                 }
@@ -134,16 +130,16 @@ namespace Himanshu
 
         
 
-        private void DisInfect(float _time)
-        {
-            infectStared = false;
-            
-            aDisInfect = true;
-            aInfect = false;
-            aSpeed = 1f / _time;
-            
-            StartCoroutine(eInfect(true, _time));
-        }
+        // private void DisInfect(float _time)
+        // {
+        //     infectStared = false;
+        //     
+        //     aDisInfect = true;
+        //     aInfect = false;
+        //     aSpeed = 1f / _time;
+        //     
+        //     StartCoroutine(eInfect(true, _time));
+        // }
 
         public void Disable()
         {
@@ -189,16 +185,16 @@ namespace Himanshu
             yield return null;
         }
 
-        public void Infect()
-        {
-            
-            aDisInfect = false;
-            aInfect = true;
-            aSpeed = 1f / 3f;
-
-            infectStared = true;
-            StartCoroutine(eInfect(false, 3f));
-        }
+        // public void Infect()
+        // {
+        //     
+        //     // aDisInfect = false;
+        //     // aInfect = true;
+        //     aSpeed = 1f / 3f;
+        //
+        //     infectStared = true;
+        //     StartCoroutine(eInfect(false, 3f));
+        // }
 
         IEnumerator eInfect(bool _state, float _time)
         {
