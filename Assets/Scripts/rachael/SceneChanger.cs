@@ -64,6 +64,7 @@ public class SceneChanger : MonoBehaviour
     public void DeleteFile()
     {
         PlayerPrefs.DeleteAll();
+        SaveSystem.DeleteNarrator();
     }
     //public void Continue()
     //{
