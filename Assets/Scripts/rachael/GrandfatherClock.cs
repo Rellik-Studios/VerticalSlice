@@ -12,10 +12,11 @@ public class GrandfatherClock : MonoBehaviour, IInteract
     [SerializeField] ChangeFurniture changingManager;
     [SerializeField] PlayerInteract playerInteract;
 
-    [Header("Images")]
+    [Header("objects")]
     [SerializeField] GameObject LoopRoom;
     [SerializeField] GameObject wall;
     [SerializeField] GameObject FinalRoom;
+    [SerializeField] GameObject bookstand;
 
     [Header("Clock pieces")]
     [SerializeField] GameObject Gears;
@@ -54,6 +55,7 @@ public class GrandfatherClock : MonoBehaviour, IInteract
                 LoopRoom.SetActive(false);
                 FinalRoom.SetActive(true);
                 wall.SetActive(false);
+                bookstand.SetActive(false);
             }
         }
         else
@@ -106,6 +108,7 @@ public class GrandfatherClock : MonoBehaviour, IInteract
             LoopRoom.SetActive(false);
             FinalRoom.SetActive(true);
             wall.SetActive(false);
+            bookstand.SetActive(false);
         }
         //switch (_player.m_numOfPieces)
         //{

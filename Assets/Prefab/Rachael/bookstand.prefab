@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Save_Lighteffects
       objectReference: {fileID: 0}
+    - target: {fileID: 4267689661170693813, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5729918528727336798, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -176,6 +180,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5729918528727336798, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003986662970953993, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7221854634747859567, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
