@@ -18,6 +18,7 @@ namespace Himanshu
         private bool m_spotted;
         public GameObject LoseScreen;
         public SceneChanger m_sceneManager;
+        public Animator SaveProcess;
 
         private List<EnemyController> m_enemies;
         public  IEnumerator FillBar(Image _fillImage, float _time, int _dir = 1, float _waitTime = 0f)
@@ -77,6 +78,7 @@ namespace Himanshu
         [Header("Images")] 
         public Image m_timeRewind;
         public Image m_timeStop;
+        public Image m_amulet;
         //public Image m_danger;
 
 
@@ -235,6 +237,8 @@ namespace Himanshu
             {
                 //m_raycastingTesting.ObjectInFront?.GetComponent<IEnemy>()?.Shoot(this);
             }
+
+            
 
             //if (dangerBarVal == 1f && !LoseScreen.activeInHierarchy)
             //{

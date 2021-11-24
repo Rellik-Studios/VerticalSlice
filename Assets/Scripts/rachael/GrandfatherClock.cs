@@ -98,6 +98,7 @@ public class GrandfatherClock : MonoBehaviour, IInteract
         _player.m_placedDown = false;
 
         FindObjectOfType<PlayerSave>().SavePlayer();
+        _player.SaveProcess.SetTrigger("Save");
 
 
         if (playerInteract.m_numOfPieces == 4)

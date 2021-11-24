@@ -182,6 +182,7 @@ namespace Himanshu
                 {
                     StartCoroutine(eQTE());
                     m_QTE.SetActive(true);
+                    player.enabled = false;
                 }
                 else
                     player.Death();
