@@ -365,13 +365,13 @@ namespace Himanshu
         }
         public void InfectUpdate()
         {
-            m_agent.stoppingDistance = 4;
-            m_agent.SetDestination(m_hidingSpotToInfect.gameObject.transform.position);
-            
-            if (m_agent.remainingDistance <= m_agent.stoppingDistance && !m_hidingSpotToInfect.infectStared)
-            {
-                m_hidingSpotToInfect.Infect();
-            }
+            // m_agent.stoppingDistance = 4;
+            // m_agent.SetDestination(m_hidingSpotToInfect.gameObject.transform.position);
+            //
+            // if (m_agent.remainingDistance <= m_agent.stoppingDistance && !m_hidingSpotToInfect.infectStared)
+            // {
+            //     //m_hidingSpotToInfect.Infect();
+            // }
         }
 
         public void QTE()
