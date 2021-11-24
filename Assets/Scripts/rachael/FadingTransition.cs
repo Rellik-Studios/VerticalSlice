@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Bolt;
 using UnityEngine;
 
 public class FadingTransition : MonoBehaviour
@@ -9,7 +10,7 @@ public class FadingTransition : MonoBehaviour
     [SerializeField] GameObject wall;
     [SerializeField] Material materialDoor;
     [SerializeField] Material materialWall;
-
+    
     private bool fadeOut = false;
     private bool fadeIn = false;
     public float fadeSpeed = 1.0f;
@@ -21,7 +22,7 @@ public class FadingTransition : MonoBehaviour
         wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, 0.0f);
 
         wall.GetComponent<Renderer>().material.color = wallColor;
-
+        
         
         //wall.SetActive(false);
 

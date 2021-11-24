@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Bolt;
 using UnityEngine;
 
 public class MyDoorAnimator : MonoBehaviour
@@ -7,6 +8,9 @@ public class MyDoorAnimator : MonoBehaviour
     private Animator doorAnim;
 
     private bool doorOpen = false;
+
+    [SerializeField] private List<GameObject> enemiesToEnable;
+
 
     private void Awake()
     {
@@ -31,6 +35,10 @@ public class MyDoorAnimator : MonoBehaviour
 
     public void OpenTheDoor()
     {
+        foreach (var enemy in enemiesToEnable)
+        {
+            enemy.GetComponent<StateMachine>().enabled = true;
+        }
         doorAnim.SetBool("IsOpening", true);
         doorOpen = true;
     }
