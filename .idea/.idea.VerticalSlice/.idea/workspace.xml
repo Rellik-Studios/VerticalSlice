@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/GameObject.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/GameObject.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Himanshu/Cube.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Himanshu/Cube.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HidingLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HidingLocation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewNick/Prefab_GearLoop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewNick/Prefab_GearLoop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_AnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_AnimController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_Idle.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rine/enemy/Enemy_Idle.FBX.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Commands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Commands.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +76,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -109,10 +105,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3856">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3856" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -148,6 +144,7 @@
       <workItem from="1637464867444" duration="8843000" />
       <workItem from="1637577223064" duration="1722000" />
       <workItem from="1637725384611" duration="4043000" />
+      <workItem from="1637757259446" duration="939000" />
     </task>
     <servers />
   </component>
@@ -199,19 +196,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs</url>
-          <line>404</line>
-          <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\EnemyController.cs" initialLine="399" containingFunctionPresentation="method 'eQTEHide'">
-            <startOffsets>
-              <option value="13525" />
-            </startOffsets>
-            <endOffsets>
-              <option value="13543" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

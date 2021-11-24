@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Bolt;
 using UnityEngine;
 
 public class FadingTransition : MonoBehaviour
@@ -9,7 +10,8 @@ public class FadingTransition : MonoBehaviour
     [SerializeField] GameObject wall;
     [SerializeField] Material materialDoor;
     [SerializeField] Material materialWall;
-
+    [SerializeField] private List<GameObject> enemiesToEnable;
+    
     private bool fadeOut = false;
     private bool fadeIn = false;
     public float fadeSpeed = 1.0f;
@@ -21,7 +23,7 @@ public class FadingTransition : MonoBehaviour
         wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, 0.0f);
 
         wall.GetComponent<Renderer>().material.color = wallColor;
-
+        
         
         //wall.SetActive(false);
 
@@ -43,6 +45,11 @@ public class FadingTransition : MonoBehaviour
             float fadeOutAmount = outDoorColor.a - (fadeSpeed * Time.deltaTime);
             float fadeInAmount = wallColor.a + (fadeSpeed * Time.deltaTime);
 
+            foreach (var enemy in enemiesToEnable)
+            {
+                enemy.GetComponent<StateMachine>().enabled = true;
+            }
+            
             outDoorColor = new Color(outDoorColor.r, outDoorColor.g, outDoorColor.b, fadeOutAmount);
             inDoorColor = new Color(inDoorColor.r, inDoorColor.g, inDoorColor.b, fadeOutAmount);
             wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, fadeInAmount);
