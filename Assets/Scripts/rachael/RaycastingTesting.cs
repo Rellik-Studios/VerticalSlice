@@ -114,7 +114,7 @@ public class RaycastingTesting : MonoBehaviour
             if (ObjectInFront.GetComponent<Amulet>() != null)
             {
                 if (m_indication != null)
-                    m_indication.sprite = Resources.Load<Sprite>("Amulet");
+                    m_indication.sprite = Resources.Load<Sprite>("Pickup");
                 return;
             }
             //if its a placing an item on clock
