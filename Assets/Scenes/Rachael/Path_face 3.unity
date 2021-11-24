@@ -967,7 +967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf8efa3f7950cb419815fa6109f7791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savingProcess: {fileID: 0}
   changingManager: {fileID: 2050008731}
   playerInteract: {fileID: 230517578}
   LoopRoom: {fileID: 657364663}
@@ -1003,19 +1002,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee3ce15f14e5396489f818856cff9a00, type: 3}
   m_PrefabInstance: {fileID: 685038722}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &140440568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140440566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e212274f5a24ca18b00ffa599cd78f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_pathName: Loop_Hand
 --- !u!64 &140440569
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1497,6 +1483,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0f1d8ecfe6afa8745a42ceba75194e9e, type: 3}
       propertyPath: m_Name
       value: Clock-New-gear
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f1d8ecfe6afa8745a42ceba75194e9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f1d8ecfe6afa8745a42ceba75194e9e, type: 3}
@@ -2397,19 +2387,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f1d8ecfe6afa8745a42ceba75194e9e, type: 3}
   m_PrefabInstance: {fileID: 201875439}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &328248220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328248218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e212274f5a24ca18b00ffa599cd78f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_pathName: Loop_Gear
 --- !u!64 &328248221
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4697,6 +4674,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ee3ce15f14e5396489f818856cff9a00, type: 3}
       propertyPath: m_Name
       value: Clock-New-hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee3ce15f14e5396489f818856cff9a00, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee3ce15f14e5396489f818856cff9a00, type: 3}
@@ -8838,6 +8819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clock-New-face
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1336b6a9bb8630646acc25e46c9538d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1336b6a9bb8630646acc25e46c9538d6, type: 3}
 --- !u!1 &1247485719 stripped
@@ -10232,19 +10217,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad85b0cc47cb5b14abb5866a5ab9e812, type: 3}
   m_PrefabInstance: {fileID: 2145200292}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1476776694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476776692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e212274f5a24ca18b00ffa599cd78f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_pathName: Loop_Mouth
 --- !u!64 &1476776695
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10969,19 +10941,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1336b6a9bb8630646acc25e46c9538d6, type: 3}
   m_PrefabInstance: {fileID: 1243642571}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1567635586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567635584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e212274f5a24ca18b00ffa599cd78f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_pathName: Loop_Face
 --- !u!64 &1567635587
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13718,7 +13677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2044961112
 Transform:
   m_ObjectHideFlags: 0
@@ -14010,7 +13969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2062494004
 Transform:
   m_ObjectHideFlags: 0
@@ -15130,6 +15089,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad85b0cc47cb5b14abb5866a5ab9e812, type: 3}
       propertyPath: m_Name
       value: Clock-New-gong
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad85b0cc47cb5b14abb5866a5ab9e812, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad85b0cc47cb5b14abb5866a5ab9e812, type: 3}
