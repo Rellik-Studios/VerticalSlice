@@ -89,26 +89,28 @@ public class GrandfatherClock : MonoBehaviour, IInteract
     //when the piece of the clock is being placed
     public void Execute(PlayerInteract _player)
     {
-
-        if(m_previousPieces == _player.m_numOfPieces)   return;
-        
-        
-        GetComponent<AudioSource>()?.PlayOneShot(m_pickUp);
-
-
-        DefineRoom(changingManager.Rooms[_player.m_numOfPieces-1].name);
-        _player.m_placedDown = false;
-
-        FindObjectOfType<PlayerSave>().SavePlayer();
-        _player.SaveProcess.SetTrigger("Save");
-
-
-        if (playerInteract.m_numOfPieces == 4)
+        if (playerInteract.m_placedDown)
         {
-            LoopRoom.SetActive(false);
-            FinalRoom.SetActive(true);
-            wall.SetActive(false);
-            bookstand.SetActive(false);
+            if (m_previousPieces == _player.m_numOfPieces) return;
+
+
+            GetComponent<AudioSource>()?.PlayOneShot(m_pickUp);
+
+
+            DefineRoom(changingManager.Rooms[_player.m_numOfPieces - 1].name);
+            _player.m_placedDown = false;
+
+            FindObjectOfType<PlayerSave>().SavePlayer();
+            _player.SaveProcess.SetTrigger("Save");
+
+
+            if (playerInteract.m_numOfPieces == 4)
+            {
+                LoopRoom.SetActive(false);
+                FinalRoom.SetActive(true);
+                wall.SetActive(false);
+                bookstand.SetActive(false);
+            }
         }
         //switch (_player.m_numOfPieces)
         //{
