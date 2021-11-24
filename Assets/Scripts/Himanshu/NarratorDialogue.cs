@@ -34,6 +34,17 @@ namespace Himanshu
         private List<string> m_hub2;
 
         private List<string> m_finish1;
+        
+        private List<string> m_spottedLines;
+        
+        private List<string> m_madeSound;
+        
+        private List<string> m_corridor;
+        
+        private List<string> m_breathing;
+
+
+
 
         public void SetValues(Narrator _narrator)
         {
@@ -51,6 +62,10 @@ namespace Himanshu
             m_hub1 = _narrator.m_hub1;
             m_hub2 = _narrator.m_hub2;
             m_finish1 = _narrator.m_finish1;
+            m_spottedLines = _narrator.m_spottedLines;
+            m_madeSound = _narrator.m_madeSound;
+            m_corridor = _narrator.m_corridor;
+            m_breathing = _narrator.m_breathing;
         }
 
         public void RetrieveValues(Narrator _narrator)
@@ -69,6 +84,10 @@ namespace Himanshu
             _narrator.m_hub1 = m_hub1;
             _narrator.m_hub2 = m_hub2;
             _narrator.m_finish1 = m_finish1;
+            _narrator.m_spottedLines = m_spottedLines;
+            _narrator.m_madeSound = m_madeSound;
+            _narrator.m_corridor = m_corridor;
+            _narrator.m_breathing = m_breathing;
         }
     }
 }

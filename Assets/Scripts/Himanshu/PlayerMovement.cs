@@ -24,6 +24,7 @@ namespace Himanshu
         private float m_sprintTimer;
         [SerializeField] private Image m_sprintImage;
 
+        private float m_sprintNarratorTimer = 40f;
         private AudioSource m_audioSource;
 
         private float sprintTimer
@@ -31,8 +32,19 @@ namespace Himanshu
             get => m_sprintTimer;
             set
             {
-                m_sprintTimer = value;
                 m_sprintImage.fillAmount = sprintTimer / m_maxSprintTimer;
+                if (value < m_maxSprintTimer / 10.0f && value > 0.1f && m_sprintTimer > value)
+                {
+                    if (m_sprintNarratorTimer < 0f)
+                    {
+                        m_sprintNarratorTimer = 40f;
+                        FindObjectOfType<Narrator>().breathing = true;
+                    }
+                    
+                    //m_audioSource.PlayOneShot(m_breathingClip);
+                }
+                m_sprintTimer = value;
+
             }
         }
         
@@ -55,6 +67,7 @@ namespace Himanshu
             m_isGrounded = Physics.Raycast(transform.position, -Vector3.up, m_groundDistance);
             Movement();
             Jump();
+            m_sprintNarratorTimer -= Time.deltaTime;
         }
 
         private void Jump()

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Bolt;
+using Cinemachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
