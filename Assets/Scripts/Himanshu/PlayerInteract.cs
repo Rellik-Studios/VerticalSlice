@@ -18,6 +18,7 @@ namespace Himanshu
         private bool m_spotted;
         public GameObject LoseScreen;
         public SceneChanger m_sceneManager;
+        public Animator SaveProcess;
 
         private List<EnemyController> m_enemies;
         public  IEnumerator FillBar(Image _fillImage, float _time, int _dir = 1, float _waitTime = 0f)
@@ -77,6 +78,7 @@ namespace Himanshu
         [Header("Images")] 
         public Image m_timeRewind;
         public Image m_timeStop;
+        public Image m_amulet;
         //public Image m_danger;
 
 
@@ -236,6 +238,8 @@ namespace Himanshu
                 //m_raycastingTesting.ObjectInFront?.GetComponent<IEnemy>()?.Shoot(this);
             }
 
+            
+
             //if (dangerBarVal == 1f && !LoseScreen.activeInHierarchy)
             //{
             //    LoseScreen.SetActive(true);
@@ -283,11 +287,11 @@ namespace Himanshu
         private IEnumerator eUnHide()
         {
             m_hidingSpot.aOpen = true;
-            m_hidingSpot.aClose = false;
+            //m_hidingSpot.aClose = false;
             yield return new WaitForSeconds(1f);
             //transform.Translate(m_playerFollow.transform.forward * 3f);
             m_hidingSpot.aOpen = false;
-            m_hidingSpot.aClose = true;
+            //m_hidingSpot.aClose = true;
             GetComponent<CharacterController>().enabled = true;
             GetComponent<CharacterController>().Move(m_playerFollow.transform.forward * 3f);
 
@@ -328,15 +332,16 @@ namespace Himanshu
         private IEnumerator eHide(HidingSpot _hidingSpot)
         {
             _hidingSpot.aOpen = true;
-            _hidingSpot.aClose = false;
+            //_hidingSpot.aClose = false;
             yield return new WaitForSeconds(2.5f);
             _hidingSpot.aOpen = false;
-            _hidingSpot.aClose = true;
-            
+            //_hidingSpot.aClose = true;
+
             m_hidingSpot = _hidingSpot;
             GetComponent<CharacterController>().enabled = false;
             Debug.Log("Hiding now");
-            m_hiding = true;            
+            m_hiding = true;      
+            
         }
 
         public void SetPositionAndRotation(Transform _transform, float _delay = 0)
