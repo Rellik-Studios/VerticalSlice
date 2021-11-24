@@ -18,6 +18,7 @@ namespace Himanshu
         private bool m_spotted;
         public GameObject LoseScreen;
         public SceneChanger m_sceneManager;
+        public Animator SaveProcess;
 
         private List<EnemyController> m_enemies;
         public  IEnumerator FillBar(Image _fillImage, float _time, int _dir = 1, float _waitTime = 0f)

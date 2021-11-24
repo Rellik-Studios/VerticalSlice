@@ -29,6 +29,7 @@ public class BookEntry : MonoBehaviour, IInteract
         {
             // saves the player data into the system
             temp_player.GetComponent<PlayerSave>().SavePlayer();
+            _player.SaveProcess.SetTrigger("Save");
             //Debug.Log(eraChanging.Rooms[eraChanging.Index].name);
             DefineRoom(eraChanging.Rooms[eraChanging.Index].name);
         }
