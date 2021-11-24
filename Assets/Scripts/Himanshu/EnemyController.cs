@@ -213,7 +213,6 @@ namespace Himanshu
             {
                 if (m_hits[i].collider != null && m_hits[i].collider.gameObject.CompareTag("Player") && m_hits[i].collider.GetComponentInParent<CharacterController>().enabled)
                 {
-                    m_spotted = true;
                     return;
                 }
             }
@@ -336,6 +335,7 @@ namespace Himanshu
 
             //StartCoroutine(eChaseEnter());
 
+            m_spotted = true;
             m_enemyHead.m_look = true;
             m_enemyHead.m_lookTarget = FindObjectOfType<PlayerFollow>().transform;
 
