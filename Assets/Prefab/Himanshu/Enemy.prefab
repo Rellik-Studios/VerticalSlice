@@ -289,6 +289,8 @@ MonoBehaviour:
       m_Calls: []
   m_frozen: 0
   m_noCommand: 1
+  m_isRandomPatrol: 0
+  m_QTE: {fileID: 0}
 --- !u!136 &9219255261566194672
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -448,6 +450,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9219255261566194675}
     m_Modifications:
+    - target: {fileID: -9074154463053029285, guid: c1ca3b1bd2b746c4ca7b3d0f6dae6d40, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e9581c2c43010614e8cda6e011941727, type: 2}
     - target: {fileID: -8679921383154817045, guid: c1ca3b1bd2b746c4ca7b3d0f6dae6d40, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -516,6 +522,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 96c4008a20958ad4da86b58c5af5a4b9, type: 2}
+    - target: {fileID: 5866666021909216657, guid: c1ca3b1bd2b746c4ca7b3d0f6dae6d40, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Base HumanRDigit12'\n\tTransform 'Base HumanLDigit23'\n\tTransform
+        'Base HumanLPalm'\n\tTransform 'Base HumanLDigit41'\n\tTransform 'Base HumanRUpperarm'\n\tTransform
+        'Base HumanRLeg4'\n\tTransform 'Base HumanRDigit43'\n\tTransform 'Base HumanRLeg1'\n\tTransform
+        'Base HumanRLeg5'\n\tTransform 'Base HumanLDigit33'\n\tand more ...\n\tFrom
+        animation clip 'Enemy_Idle'"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ca3b1bd2b746c4ca7b3d0f6dae6d40, type: 3}
 --- !u!1 &1843429195562372234 stripped
