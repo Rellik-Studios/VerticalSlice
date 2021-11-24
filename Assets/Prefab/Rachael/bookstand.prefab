@@ -118,6 +118,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6731337664942456031}
     m_Modifications:
+    - target: {fileID: 2486240241365538553, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2486240241658098790, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -172,6 +176,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5729918528727336798, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221854634747859567, guid: 40ef00a148e61b844b55665f3336cb59, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
