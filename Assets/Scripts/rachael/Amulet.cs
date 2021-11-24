@@ -22,6 +22,7 @@ public class Amulet : MonoBehaviour, IInteract
     {
 
         _player.m_hasAmulet = true;
+        _player.m_amulet.enabled = true;
         Destroy(gameObject);
 
 
