@@ -103,10 +103,18 @@ public class RaycastingTesting : MonoBehaviour
                     m_indication.sprite = Resources.Load<Sprite>("Hide");
                 return;
             }
+            //if its interacting with a book to save
             if (ObjectInFront.GetComponent<BookEntry>() != null)
             {
                 if (m_indication != null)
                     m_indication.sprite = Resources.Load<Sprite>("Save");
+                return;
+            }
+            //if its interacting with a 
+            if (ObjectInFront.GetComponent<Amulet>() != null)
+            {
+                if (m_indication != null)
+                    m_indication.sprite = Resources.Load<Sprite>("Amulet");
                 return;
             }
             //if its a placing an item on clock
@@ -127,11 +135,7 @@ public class RaycastingTesting : MonoBehaviour
                     return;
                 }
             }
-            //if its interacting with a book to save
-            if (ObjectInFront.GetComponent<BookEntry>() != null)
-            {
-                
-            }
+
 
         }
         else if (ObjectInFront.GetComponent<IEnemy>() != null)

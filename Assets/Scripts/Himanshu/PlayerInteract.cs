@@ -283,11 +283,11 @@ namespace Himanshu
         private IEnumerator eUnHide()
         {
             m_hidingSpot.aOpen = true;
-            m_hidingSpot.aClose = false;
+            //m_hidingSpot.aClose = false;
             yield return new WaitForSeconds(1f);
             //transform.Translate(m_playerFollow.transform.forward * 3f);
             m_hidingSpot.aOpen = false;
-            m_hidingSpot.aClose = true;
+            //m_hidingSpot.aClose = true;
             GetComponent<CharacterController>().enabled = true;
             GetComponent<CharacterController>().Move(m_playerFollow.transform.forward * 3f);
 
@@ -328,15 +328,16 @@ namespace Himanshu
         private IEnumerator eHide(HidingSpot _hidingSpot)
         {
             _hidingSpot.aOpen = true;
-            _hidingSpot.aClose = false;
+            //_hidingSpot.aClose = false;
             yield return new WaitForSeconds(2.5f);
             _hidingSpot.aOpen = false;
-            _hidingSpot.aClose = true;
-            
+            //_hidingSpot.aClose = true;
+
             m_hidingSpot = _hidingSpot;
             GetComponent<CharacterController>().enabled = false;
             Debug.Log("Hiding now");
-            m_hiding = true;            
+            m_hiding = true;      
+            
         }
 
         public void SetPositionAndRotation(Transform _transform, float _delay = 0)

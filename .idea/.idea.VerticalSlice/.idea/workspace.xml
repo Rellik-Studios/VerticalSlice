@@ -6,14 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Himanshu/ClosetOpen.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Himanshu/ClosetOpen.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/GameObject.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/GameObject.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/Himanshu/Cube.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Himanshu/Cube.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nick/Assets/Materials/M_Door_Frame.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nick/Assets/Materials/M_Door_Frame.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HidingLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HidingLocation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewNick/Prefab_GearLoop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewNick/Prefab_GearLoop.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Commands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Commands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,6 @@
       <option value="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" />
-      <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveCanvas.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" />
@@ -70,13 +71,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/QTE.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Commands.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" />
     </changedPaths>
   </component>
@@ -106,10 +109,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26124">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3856">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="26124" />
+      <option name="pid" value="3856" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -143,7 +146,8 @@
       <workItem from="1637111826533" duration="20119000" />
       <workItem from="1637300164567" duration="2000" />
       <workItem from="1637464867444" duration="8843000" />
-      <workItem from="1637577223064" duration="1084000" />
+      <workItem from="1637577223064" duration="1722000" />
+      <workItem from="1637725384611" duration="4043000" />
     </task>
     <servers />
   </component>
@@ -201,10 +205,10 @@
           <line>404</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\EnemyController.cs" initialLine="399" containingFunctionPresentation="method 'eQTEHide'">
             <startOffsets>
-              <option value="13503" />
+              <option value="13525" />
             </startOffsets>
             <endOffsets>
-              <option value="13521" />
+              <option value="13543" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
