@@ -7,6 +7,7 @@ public class Portal : MonoBehaviour
 {
     public PlayerInteract m_player;
     public ChangeFurniture changeFurniture;
+    public GameObject portalObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,16 @@ public class Portal : MonoBehaviour
         if(m_player.m_numOfPieces != changeFurniture.Index)
         {
             GetComponent<BoxCollider>().enabled = true;
-            GetComponent<MeshRenderer>().enabled = true;
+
+            if(portalObject != null)
+                portalObject.SetActive(true);
         }
         else
         {
             GetComponent<BoxCollider>().enabled = false;
-            GetComponent<MeshRenderer>().enabled = false;
+
+            if (portalObject != null)
+                portalObject.SetActive(false);
         }
     }
 
