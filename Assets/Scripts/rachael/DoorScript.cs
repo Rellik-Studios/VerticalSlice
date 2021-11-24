@@ -15,6 +15,10 @@ public class DoorScript : MonoBehaviour
     [SerializeField] private UnityEvent m_trigerredL2;
     [SerializeField] private UnityEvent m_trigerredL3;
     [SerializeField] private UnityEvent m_trigerredL4;
+    
+    [SerializeField] private List<GameObject> enemiesToEnable;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -97,6 +101,7 @@ public class DoorScript : MonoBehaviour
     {
         GetComponent<AudioSource>().Play();
         myDoor.SetBool("IsOpening", true);
+        
     }
     public void DoorClosing()
     {

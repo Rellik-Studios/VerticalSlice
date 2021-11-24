@@ -286,6 +286,22 @@ namespace Himanshu
             return false;
         }
 
+        public bool ChaseToPatrol()
+        {
+            Physics.Raycast(transform.position, Quaternion.AngleAxis(30f, transform.up) * transform.forward, out m_hits[0], 20f);
+            Physics.Raycast(transform.position, transform.forward, out m_hits[1], 20f);
+            Physics.Raycast(transform.position, Quaternion.AngleAxis(-30f, transform.up) * transform.forward, out m_hits[2], 20f);
+            
+            for (int i = 0; i <= 2; i++)
+            {
+                if (m_hits[i].collider != null && m_hits[i].collider.gameObject.CompareTag("EnemyBlocker"))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
         public bool PatrolToInfectTransition()
         {
 
