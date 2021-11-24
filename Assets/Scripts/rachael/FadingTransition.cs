@@ -8,6 +8,7 @@ public class FadingTransition : MonoBehaviour
     [SerializeField] GameObject door;
     [SerializeField] GameObject wall;
     [SerializeField] Material materialDoor;
+    [SerializeField] Material materialWall;
 
     private bool fadeOut = false;
     private bool fadeIn = false;
@@ -53,6 +54,7 @@ public class FadingTransition : MonoBehaviour
 
             if (outDoorColor.a <=0)
             {
+                this.wall.GetComponent<Renderer>().material = materialWall;
                 fadeOut = false;
                 door.SetActive(false);
                 Destroy(this);
