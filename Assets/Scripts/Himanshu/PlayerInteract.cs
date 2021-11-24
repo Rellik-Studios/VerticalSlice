@@ -78,6 +78,7 @@ namespace Himanshu
         [Header("Images")] 
         public Image m_timeRewind;
         public Image m_timeStop;
+        public Image m_amulet;
         //public Image m_danger;
 
 
@@ -236,6 +237,8 @@ namespace Himanshu
             {
                 //m_raycastingTesting.ObjectInFront?.GetComponent<IEnemy>()?.Shoot(this);
             }
+
+            
 
             //if (dangerBarVal == 1f && !LoseScreen.activeInHierarchy)
             //{
