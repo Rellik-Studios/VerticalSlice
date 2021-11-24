@@ -31,7 +31,7 @@ namespace Himanshu
                 yield return null;
             
             Debug.Log(agent.remainingDistance);
-            m_room1Table.Infect();
+            //m_room1Table.Infect();
             yield return new WaitForSeconds(3.5f);
             
             m_room1Camera.SetActive(false);
@@ -61,7 +61,7 @@ namespace Himanshu
             agent.SetDestination(m_room2Table.transform.position);
             yield return new WaitForEndOfFrame();
             yield return new WaitWhile(() => agent.remainingDistance >= agent.stoppingDistance);
-            m_room2Table.Infect();
+            //m_room2Table.Infect();
             yield return new WaitForSeconds(3.5f);
             
             agent.SetDestination(position);
@@ -96,7 +96,7 @@ namespace Himanshu
             agent.SetDestination(m_room3Table.transform.position);
             yield return new WaitForEndOfFrame();
             yield return new WaitWhile(() => agent.remainingDistance >= agent.stoppingDistance);
-            m_room3Table.Infect();
+            //m_room3Table.Infect();
             yield return new WaitForSeconds(3.5f);
             
             agent.SetDestination(position);
