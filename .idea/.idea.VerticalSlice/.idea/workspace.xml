@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/StateMachine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/StateMachine.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +31,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Himanshu/HandCorridor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/05/9de8e052/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FD824CFB-5500-4855-B9E6-D51B008C90E4/3f/bdb00cc8/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveCanvas.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,7 +61,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/ChangeFurniture.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerFollow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/IEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyHeadTurn.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/gameManager.cs" />
@@ -70,17 +68,19 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Commands.cs" />
       <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HandCorridor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -148,7 +148,7 @@
       <workItem from="1637464867444" duration="8843000" />
       <workItem from="1637577223064" duration="1722000" />
       <workItem from="1637725384611" duration="4043000" />
-      <workItem from="1637757259446" duration="5978000" />
+      <workItem from="1637757259446" duration="9461000" />
     </task>
     <servers />
   </component>
@@ -177,26 +177,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs</url>
-          <line>269</line>
+          <line>310</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\Narrator.cs" initialLine="248" containingFunctionPresentation="method 'SetText'">
             <startOffsets>
-              <option value="7069" />
+              <option value="8089" />
             </startOffsets>
             <endOffsets>
-              <option value="7165" />
+              <option value="8185" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs</url>
-          <line>393</line>
+          <line>434</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\Narrator.cs" initialLine="371" containingFunctionPresentation="method 'ConditionCheck'">
             <startOffsets>
-              <option value="11104" />
+              <option value="12124" />
             </startOffsets>
             <endOffsets>
-              <option value="11123" />
+              <option value="12143" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

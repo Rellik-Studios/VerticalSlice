@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Bolt;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -20,6 +21,7 @@ namespace Himanshu
         public SceneChanger m_sceneManager;
         public Animator SaveProcess;
 
+        private Narrator m_narrator;
         private List<EnemyController> m_enemies;
         public  IEnumerator FillBar(Image _fillImage, float _time, int _dir = 1, float _waitTime = 0f)
         {
@@ -71,6 +73,7 @@ namespace Himanshu
                     //    m_fillRoutine = StartCoroutine(FillBar(m_danger, 3f, -1));
                     //}
                     m_spotted = value;
+                    m_narrator.spottedLines = true;
                 }
             }
         }
@@ -202,6 +205,7 @@ namespace Himanshu
 
         private void Start()
         {
+            m_narrator = FindObjectOfType<Narrator>();
             m_kickRoutine = StartCoroutine(temp());
             m_fillRoutine = StartCoroutine(temp());
             m_playerFollow = GameObject.FindObjectOfType<PlayerFollow>();
@@ -249,7 +253,7 @@ namespace Himanshu
             //    Cursor.lockState = CursorLockMode.None;
             //    //SceneManager.LoadScene(1);
             //}
-            enemySpotNum = m_enemies.Count(_enemy => _enemy.m_spotted);
+            enemySpotNum = m_enemies.Count(_enemy => _enemy.m_spotted && _enemy.GetComponent<StateMachine>().enabled);
             
 //            Debug.Log(m_enemySpotNum);
 
@@ -316,6 +320,7 @@ namespace Himanshu
 
         public void Hide(HidingSpot _hidingSpot)
         {
+            m_narrator.hidingLines = true;
             if (_hidingSpot.m_cupboard)
             {
                 StartCoroutine(eHide(_hidingSpot));

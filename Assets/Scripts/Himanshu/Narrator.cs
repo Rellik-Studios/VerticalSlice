@@ -17,6 +17,47 @@ namespace Himanshu
         
         [SerializeField] private TMP_Text m_textBox;
         
+        
+        [TextArea(4, 6)]
+        [SerializeField] public List<string> m_hidingLines;
+        
+        public bool hidingLines
+        {
+            set => Play(m_hidingLines);
+        }
+        
+        
+        [TextArea(4, 6)]
+        [SerializeField] public List<string> m_spottedLines;
+        
+        public bool spottedLines
+        {
+            set => Play(m_spottedLines);
+        }
+        
+        [TextArea(4, 6)]
+        [SerializeField] public List<string> m_madeSound;
+        
+        public bool madeSound
+        {
+            set => Play(m_madeSound);
+        }
+        
+        [TextArea(4, 6)]
+        [SerializeField] public List<string> m_corridor;
+        
+        public bool corridor
+        {
+            set => Play(m_corridor, false);
+        }
+
+        [TextArea(4, 6)]
+        [SerializeField] public List<string> m_breathing;
+        
+        public bool breathing
+        {
+            set => Play(m_breathing);
+        }
         [TextArea(4, 6)]
         [SerializeField] public List<string> m_idleRoom;
         
@@ -177,13 +218,13 @@ namespace Himanshu
             m_idleTimer = Random.Range(90f, 120f);
         }
 
-        public void Play(List<string> _toPlay)
+        public void Play(List<string> _toPlay, bool _isRandom = true)
         {
             if (_toPlay.Count > 1 && !m_settingText)
             {
                 int rand = Random.Range(1, _toPlay.Count);
-                StartCoroutine(SetText(_toPlay[rand], m_textBox));
-                _toPlay.RemoveAt(rand);
+                StartCoroutine(SetText(_toPlay[_isRandom ? rand : 1], m_textBox));
+                _toPlay.RemoveAt(_isRandom ? rand : 1);
             }
             else if (!m_settingText)
             {
