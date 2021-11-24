@@ -281,6 +281,7 @@ namespace Himanshu
         {
             m_spotted = false;
 
+            GetComponent<AudioSource>().Stop();
            
             if(m_patrolPoints.Count > 0)
                 m_agent.SetDestination(m_patrolPoints[index].position);
@@ -394,6 +395,7 @@ namespace Himanshu
             //StartCoroutine(eChaseEnter());
 
             m_spotted = true;
+            GetComponent<AudioSource>().Play();
             m_enemyHead.m_look = true;
             m_enemyHead.m_lookTarget = FindObjectOfType<PlayerFollow>().transform;
 
