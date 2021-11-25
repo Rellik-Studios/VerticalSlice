@@ -26,19 +26,19 @@ public class RespawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            GetComponent<CharacterController>().enabled = false;
-            gameObject.transform.position = position;
-            if (cam != null)
-            {
-                cam.transform.rotation = rotation;
-                Debug.Log("Here");
-                cam.GetComponent<PlayerFollow>()?.ResetMouse(rotation.eulerAngles.y, rotation.eulerAngles.x);
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    GetComponent<CharacterController>().enabled = false;
+        //    gameObject.transform.position = position;
+        //    if (cam != null)
+        //    {
+        //        cam.transform.rotation = rotation;
+        //        Debug.Log("Here");
+        //        cam.GetComponent<PlayerFollow>()?.ResetMouse(rotation.eulerAngles.y, rotation.eulerAngles.x);
 
-            }
-            GetComponent<CharacterController>().enabled = true;
-        }
+        //    }
+        //    GetComponent<CharacterController>().enabled = true;
+        //}
     }
 
     public void Respawn()

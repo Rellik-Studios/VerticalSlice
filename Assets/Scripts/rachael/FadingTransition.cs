@@ -31,10 +31,7 @@ public class FadingTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.J))
-        {
-            FadeOutObject();
-        }
+
         if(fadeOut)
         {
             Color outDoorColor = this.doorframe.GetComponent<Renderer>().material.color;
@@ -55,6 +52,7 @@ public class FadingTransition : MonoBehaviour
 
             if (outDoorColor.a <=0)
             {
+                //transforming the transparent material to opaque material
                 this.wall.GetComponent<Renderer>().material = materialWall;
                 fadeOut = false;
                 door.SetActive(false);
@@ -71,6 +69,7 @@ public class FadingTransition : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            //transforming the opaque material to transparent material
             this.doorframe.GetComponent<Renderer>().material = materialDoor;
             FadeOutObject();
             wall.SetActive(true);

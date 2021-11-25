@@ -40,23 +40,19 @@ public class PlayerSave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //press key number 0
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            SavePlayer();
-        }
-        //press key number 9
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            LoadPlayer();
-        }
+        ////press key number 0
+        //if (Input.GetKeyDown(KeyCode.Alpha0))
+        //{
+        //    SavePlayer();
+        //}
+        ////press key number 9
+        //if (Input.GetKeyDown(KeyCode.Alpha9))
+        //{
+        //    LoadPlayer();
+        //}
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             PlayerPrefs.DeleteAll();
-        }
-        if(Input.GetKeyDown(KeyCode.H))
-        {
-            player.Death();
         }
 
     }
