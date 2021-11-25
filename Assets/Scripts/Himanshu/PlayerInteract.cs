@@ -254,7 +254,7 @@ namespace Himanshu
             //    //SceneManager.LoadScene(1);
             //}
             enemySpotNum = m_enemies.Count(_enemy => _enemy.m_spotted && _enemy.GetComponent<StateMachine>().enabled);
-            
+            //Debug.Log($"{enemySpotNum} enemies spotted you");
 //            Debug.Log(m_enemySpotNum);
 
             
