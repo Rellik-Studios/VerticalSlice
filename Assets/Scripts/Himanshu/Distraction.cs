@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Himanshu
 {
@@ -6,6 +7,7 @@ namespace Himanshu
     {
         private AudioSource m_audioSource;
         public bool m_playing;
+        
         public bool playing
         {
             get => m_playing;
@@ -33,6 +35,18 @@ namespace Himanshu
                 //m_audioSource.Play();
                 playing = true;
                 this.Invoke(() => playing = false, m_audioSource.clip.length);
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!m_audioSource.isPlaying && other.CompareTag("Player"))
+            {
+                
+                //m_audioSource.Play();
+                playing = true;
+                this.Invoke(() => playing = false, m_audioSource.clip.length);
+                Destroy(this);
             }
         }
     }

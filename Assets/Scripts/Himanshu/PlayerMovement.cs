@@ -41,7 +41,7 @@ namespace Himanshu
                         FindObjectOfType<Narrator>().breathing = true;
                     }
                     
-                    //m_audioSource.PlayOneShot(m_breathingClip);
+                    m_audioSource.PlayOneShot(m_breathingClip);
                 }
                 m_sprintTimer = value;
 
@@ -55,6 +55,7 @@ namespace Himanshu
 
         private void Start()
         {
+            m_audioSource = GetComponent<AudioSource>();
             sprintTimer = m_maxSprintTimer;
             m_playerInput = GetComponent<PlayerInput>();
             m_rigidbody = transform.Find("GFX").gameObject.GetComponent<Rigidbody>();
