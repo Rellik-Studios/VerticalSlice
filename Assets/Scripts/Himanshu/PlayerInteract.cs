@@ -217,13 +217,13 @@ namespace Himanshu
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 StopCoroutine(m_fillRoutine);
                 m_fillRoutine = StartCoroutine(m_timeRewind.FillBar(5));
             }
 
-            if (Input.GetKeyUp(KeyCode.Return))
+            if (Input.GetKeyUp(KeyCode.R))
             {
                 StopCoroutine(m_fillRoutine);
                 m_fillRoutine = StartCoroutine(m_timeRewind.FillBar(5, -1));
