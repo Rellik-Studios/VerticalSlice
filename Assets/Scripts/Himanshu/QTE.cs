@@ -87,6 +87,7 @@ namespace Himanshu
                 m_result = true;
                 Time.timeScale = 1f;
                 Cursor.lockState = CursorLockMode.Locked;
+                FindObjectOfType<PlayerInteract>().enabled = true;
                 gameObject.SetActive(false);
             }
 
