@@ -4686,6 +4686,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 8284853118719015511, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100.3576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284853118719015511, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.07425
+      objectReference: {fileID: 0}
     - target: {fileID: 8813067260155870429, guid: b98b8054a1c0de94e814b4b18f626cf8, type: 3}
       propertyPath: m_SizeDelta.x
       value: 257.0183
@@ -82896,7 +82904,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-893002
+  m_Name: pb_Mesh-17228
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
