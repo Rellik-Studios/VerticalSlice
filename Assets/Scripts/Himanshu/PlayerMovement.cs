@@ -26,6 +26,7 @@ namespace Himanshu
 
         private float m_sprintNarratorTimer = 40f;
         private AudioSource m_audioSource;
+        [SerializeField] private LayerMask m_groundMask;
 
         private float sprintTimer
         {
@@ -65,7 +66,7 @@ namespace Himanshu
 
         private void Update()
         {
-            m_isGrounded = Physics.Raycast(transform.position, -Vector3.up, m_groundDistance);
+            m_isGrounded = Physics.Raycast(transform.position, -Vector3.up, m_groundDistance, m_groundMask, QueryTriggerInteraction.Ignore);
             Movement();
             Jump();
             m_sprintNarratorTimer -= Time.deltaTime;
