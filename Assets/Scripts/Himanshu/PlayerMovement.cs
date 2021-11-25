@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace Himanshu
 {
+
     public class PlayerMovement : MonoBehaviour
     {
         private CharacterController m_characterController;
@@ -33,7 +34,7 @@ namespace Himanshu
             get => m_sprintTimer;
             set
             {
-                m_sprintImage.fillAmount = sprintTimer / m_maxSprintTimer;
+                
                 if (value < m_maxSprintTimer / 10.0f && value > 0.1f && m_sprintTimer > value)
                 {
                     if (m_sprintNarratorTimer < 0f)
@@ -45,7 +46,7 @@ namespace Himanshu
                     m_audioSource.PlayOneShot(m_breathingClip);
                 }
                 m_sprintTimer = value;
-
+                m_sprintImage.fillAmount = m_sprintTimer / m_maxSprintTimer;
             }
         }
         

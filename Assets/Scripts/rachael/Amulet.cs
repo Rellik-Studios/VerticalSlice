@@ -15,7 +15,7 @@ public class Amulet : MonoBehaviour, IInteract
     // Update is called once per frame
     void Update()
     {
-        
+       transform.Rotate(Vector3.right, Time.deltaTime * 50f); 
     }
 
     public void Execute(PlayerInteract _player)
