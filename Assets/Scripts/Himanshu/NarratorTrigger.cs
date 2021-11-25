@@ -31,6 +31,14 @@ namespace Himanshu
         private void OnTriggerEnter(Collider _collider)
         {
             //m_waitTimer = Random.Range(25f, 40f);
+            if(GetComponent<AudioSource>() != null)
+                GetComponent<AudioSource>()?.Play();
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if(GetComponent<AudioSource>() != null)
+                GetComponent<AudioSource>()?.Stop();
         }
 
         private void OnTriggerStay(Collider _collider)

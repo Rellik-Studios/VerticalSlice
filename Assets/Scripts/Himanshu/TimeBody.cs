@@ -20,9 +20,9 @@ namespace Himanshu
 
         void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Return))
+            if(Input.GetKeyDown(KeyCode.R))
                 m_isRewinding = true;
-            if (Input.GetKeyUp(KeyCode.Return))
+            if (Input.GetKeyUp(KeyCode.R))
                 m_isRewinding = false;
         }
 
