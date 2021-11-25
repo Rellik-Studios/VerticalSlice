@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Himanshu
 {
@@ -7,6 +8,10 @@ namespace Himanshu
     {
         private AudioSource m_audioSource;
         public bool m_playing;
+
+        public bool m_DestroyAfterUse;
+
+        public UnityEvent m_onExecute;
         
         public bool playing
         {
@@ -18,8 +23,11 @@ namespace Himanshu
                     m_audioSource.Play();
                 else
                 {
+                    if(m_DestroyAfterUse)
+                        Destroy(this);
                     m_audioSource.Stop();
                 }
+                
             }
         }
 
@@ -33,6 +41,7 @@ namespace Himanshu
             if (!m_audioSource.isPlaying)
             {
                 //m_audioSource.Play();
+                m_onExecute?.Invoke();
                 playing = true;
                 this.Invoke(() => playing = false, m_audioSource.clip.length);
             }
@@ -42,11 +51,11 @@ namespace Himanshu
         {
             if (!m_audioSource.isPlaying && other.CompareTag("Player"))
             {
-                
+                m_onExecute?.Invoke();
                 //m_audioSource.Play();
                 playing = true;
-                this.Invoke(() => playing = false, m_audioSource.clip.length);
-                Destroy(this);
+                //this.Invoke(() => playing = false, m_audioSource.clip.length);
+                
             }
         }
     }
