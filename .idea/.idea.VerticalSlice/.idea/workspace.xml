@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HidingLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HidingLocation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ink/ExampleAssets/Materials/Plastic_Transparent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/ExampleAssets/Materials/Plastic_Transparent.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/StateMachine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/StateMachine.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +70,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Commands.cs" />
-      <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs" />
@@ -82,10 +77,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HandCorridor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
+      <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />

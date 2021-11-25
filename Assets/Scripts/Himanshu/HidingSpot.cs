@@ -230,7 +230,7 @@ namespace Himanshu
                     break;
                 index++;
             }
-            this.Invoke(() => hidingIndex = index, 1f);
+            hidingIndex = index;
         }
     }
 }

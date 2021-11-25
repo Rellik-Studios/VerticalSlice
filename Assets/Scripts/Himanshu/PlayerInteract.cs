@@ -336,6 +336,7 @@ namespace Himanshu
 
         private IEnumerator eHide(HidingSpot _hidingSpot)
         {
+            m_hiding = true;
             _hidingSpot.aOpen = true;
             //_hidingSpot.aClose = false;
             yield return new WaitForSeconds(2.5f);
@@ -345,7 +346,6 @@ namespace Himanshu
             m_hidingSpot = _hidingSpot;
             GetComponent<CharacterController>().enabled = false;
             Debug.Log("Hiding now");
-            m_hiding = true;      
             
         }
 
