@@ -40,12 +40,12 @@ namespace Himanshu
                 if (counter < 1)
                 {
                     counter++;
-                    m_waitTimer = Random.Range(5f, 10f);
+                    m_waitTimer = Random.Range(30f, 45f);
                     m_event?.Invoke();
                 }
                 else
                 {
-                    m_waitTimer = Random.Range(5f, 10f);
+                    m_waitTimer = Random.Range(30f, 45f);
                     if (!m_isHospital)
                         m_idleEvent?.Invoke();
                     else
