@@ -42,8 +42,10 @@ namespace Himanshu
                         m_sprintNarratorTimer = 40f;
                         FindObjectOfType<Narrator>().breathing = true;
                     }
+
+                    //m_audioSource.volume = 0.5f;
+                    m_audioSource.PlayOneShot(m_breathingClip, 0.2f);
                     
-                    m_audioSource.PlayOneShot(m_breathingClip);
                 }
                 m_sprintTimer = value;
                 m_sprintImage.fillAmount = m_sprintTimer / m_maxSprintTimer;
@@ -88,12 +90,12 @@ namespace Himanshu
             m_characterController.Move(movement * (m_speed * (crouching ? 0.5f : 1f) * ((m_playerInput.sprint && sprintTimer > 0f && !crouching) ? 2.5f : 1.0f)  * Time.deltaTime));
 
             if (m_playerInput.sprint && sprintTimer > 0f && m_playerInput.movement.magnitude > 0f && !crouching)
-            {
+            { 
                 sprintTimer -= Time.deltaTime;
             }
             else if (sprintTimer < m_maxSprintTimer)
             {
-                sprintTimer += Time.deltaTime;
+                sprintTimer += Time.deltaTime / 4f;
             }
         }
     }

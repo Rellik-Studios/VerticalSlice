@@ -25,7 +25,7 @@ public class GrandfatherClock : MonoBehaviour, IInteract
     [SerializeField] GameObject Hands;
 
     private int m_previousPieces = 0;
-    [SerializeField] private AudioClip clip;
+    [FormerlySerializedAs("clip")] [SerializeField] private AudioClip m_placedDown;
 
     [SerializeField] private AudioClip m_pickUp;
 
@@ -94,7 +94,7 @@ public class GrandfatherClock : MonoBehaviour, IInteract
             if (m_previousPieces == _player.m_numOfPieces) return;
 
 
-            GetComponent<AudioSource>()?.PlayOneShot(m_pickUp);
+            GetComponent<AudioSource>()?.PlayOneShot(m_placedDown);
 
 
             DefineRoom(changingManager.Rooms[_player.m_numOfPieces - 1].name);
