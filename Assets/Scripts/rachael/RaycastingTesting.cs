@@ -110,11 +110,18 @@ public class RaycastingTesting : MonoBehaviour
                     m_indication.sprite = Resources.Load<Sprite>("Save");
                 return;
             }
-            //if its interacting with a 
+            //if its interacting with a amulet
             if (ObjectInFront.GetComponent<Amulet>() != null)
             {
                 if (m_indication != null)
                     m_indication.sprite = Resources.Load<Sprite>("Pickup");
+                return;
+            }
+            //if its interacting with a distracting item
+            if (ObjectInFront.GetComponent<Distraction>() != null)
+            {
+                if (m_indication != null)
+                    m_indication.sprite = Resources.Load<Sprite>("Interact");
                 return;
             }
             //if its a placing an item on clock
