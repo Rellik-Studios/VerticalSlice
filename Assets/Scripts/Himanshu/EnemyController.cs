@@ -18,7 +18,9 @@ namespace Himanshu
     {
         [SerializeField] private GameObject m_distortion;
 
+        public Distraction currentDistraction { get; set; }
         public bool qteHideResult => m_QTEHide.GetComponent<QTERing>().m_result;
+        
         public bool qteResult => m_QTE.GetComponent<QTE>().m_result;
 
         [SerializeField] private float m_hearingRadius = 5f;
@@ -40,6 +42,9 @@ namespace Himanshu
         [SerializeField] private Transform m_headBone;
         [SerializeField] private Transform m_neck1Bone;
         [SerializeField] private Transform m_neck2Bone;
+        [SerializeField] private List<Distraction> m_distractions;
+        
+        
         public float lookAngle
         {
             get => m_lookAngle;
@@ -195,6 +200,59 @@ namespace Himanshu
         private void Update()
         {
             aSpeed = m_agent.velocity.magnitude;
+        }
+
+
+        public bool PatrolToDistraction()
+        {
+            if (m_distractions.Any(t => t.m_playing))
+            {
+                currentDistraction = m_distractions.First(t => t.m_playing);
+                return true;
+            }
+
+            return false;
+        }
+
+        public void DistractionStart()
+        {
+            
+            m_agent.stoppingDistance = 4f;
+            m_agent.SetDestination(currentDistraction.transform.position);
+
+            if ((m_agent.transform.position - currentDistraction.transform.position).magnitude < m_agent.stoppingDistance)
+            {
+                currentDistraction.playing = false;
+                m_agent.stoppingDistance = 0f;
+                currentDistraction = null;
+            }
+            
+        }
+
+        private IEnumerator eDistractionUpdate()
+        {
+            if (currentDistraction != null)
+            {
+               
+                // yield return new WaitForSeconds(2f);
+                //yield return new WaitUntil(() => m_agent.hasPath);
+            }
+            //
+            // while (true)
+            // {
+            //     
+            //     if (m_agent.remainingDistance < 3f)
+            //     {
+            //         currentDistraction.playing = false;
+            //         m_agent.stoppingDistance = 0f;
+            //         currentDistraction = null;
+            //         break;
+            //     }
+            //     
+            //     yield return null;
+            // }
+
+            yield return null;
         }
 
         //Called through the Visual Script
@@ -435,5 +493,4 @@ namespace Himanshu
         }
         
     }
-    
 }
