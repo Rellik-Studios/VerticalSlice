@@ -280,6 +280,7 @@ MonoBehaviour:
   m_headBone: {fileID: 3143951116246667855}
   m_neck1Bone: {fileID: 3913606981454615451}
   m_neck2Bone: {fileID: 8296178529921322354}
+  m_distractions: []
   m_spotted: 0
   m_attackTimer: 3
   m_defaultPatrolWaitTime: 1
@@ -316,10 +317,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0ff6290b6c0de8146a2aff1ebbfe596c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -524,13 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 96c4008a20958ad4da86b58c5af5a4b9, type: 2}
     - target: {fileID: 5866666021909216657, guid: c1ca3b1bd2b746c4ca7b3d0f6dae6d40, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Base HumanRDigit12'\n\tTransform 'Base HumanLDigit23'\n\tTransform
-        'Base HumanLPalm'\n\tTransform 'Base HumanLDigit41'\n\tTransform 'Base HumanRUpperarm'\n\tTransform
-        'Base HumanRLeg4'\n\tTransform 'Base HumanRDigit43'\n\tTransform 'Base HumanRLeg1'\n\tTransform
-        'Base HumanRLeg5'\n\tTransform 'Base HumanLDigit33'\n\tand more ...\n\tFrom
-        animation clip 'Enemy_Idle'"
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ca3b1bd2b746c4ca7b3d0f6dae6d40, type: 3}

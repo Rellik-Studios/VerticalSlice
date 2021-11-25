@@ -86,6 +86,7 @@ namespace Himanshu
                 Debug.Log("QTE Successful");
                 m_result = true;
                 Time.timeScale = 1f;
+                Cursor.lockState = CursorLockMode.Locked;
                 gameObject.SetActive(false);
             }
 
@@ -93,6 +94,7 @@ namespace Himanshu
             {
                 m_result = false;
                 Debug.Log("QTE Fail");
+                Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1f;
                 gameObject.SetActive(false);
             }

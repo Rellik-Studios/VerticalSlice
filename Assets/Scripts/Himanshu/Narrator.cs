@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Himanshu
@@ -182,7 +183,8 @@ namespace Himanshu
         
         private Coroutine m_waitPlay;
         private bool m_settingText = false;
-        
+        [SerializeField] private GameObject m_textBackdrop;
+
         private void Start()
         {
             var tempNarr = SaveSystem.LoadNarrator();
@@ -191,6 +193,7 @@ namespace Himanshu
             
             m_waitPlay = StartCoroutine(SetText("", m_textBox));
             m_idleTimer = Random.Range(90f, 120f);
+            
         }
 
 
@@ -209,7 +212,17 @@ namespace Himanshu
             #if UNITY_EDITOR
             if(Input.GetKeyDown(KeyCode.Alpha0))
                 SaveSystem.DeleteNarrator();
-#endif
+            #endif
+
+            if (m_textBox.text != "" && !m_textBackdrop.activeSelf)
+            {
+                m_textBackdrop.SetActive(true);
+            }
+            
+            else if (m_textBox.text == "" && m_textBackdrop.activeSelf)
+            {
+                m_textBackdrop.SetActive(false);
+            }
         }
 
         //Call this function when a door dissapears.
