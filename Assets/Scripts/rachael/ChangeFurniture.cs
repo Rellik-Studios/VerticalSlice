@@ -73,7 +73,8 @@ public class ChangeFurniture : MonoBehaviour
         if (other.GetComponentInParent<PlayerSave>() != null)
         {
             //saves the player data into the system
-            //other.GetComponentInParent<PlayerSave>().SavePlayer(true);
+            //other.GetComponentInParent<PlayerSave>().
+            //(true);
         }
         yield return null;
     }
