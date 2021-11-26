@@ -9,7 +9,7 @@ namespace Himanshu
         public void Execute(PlayerInteract _player)
         {
             Debug.Log("Collect");
-            //GetComponent<AudioSource>()?.Play();
+            GetComponent<AudioSource>()?.Play();
             _player.Collect();
             //GetComponent<MeshCollider>().enabled = false;
             

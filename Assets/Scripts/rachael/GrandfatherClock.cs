@@ -110,6 +110,7 @@ public class GrandfatherClock : MonoBehaviour, IInteract
                 FinalRoom.SetActive(true);
                 wall.SetActive(false);
                 bookstand.SetActive(false);
+                GetComponent<AudioSource>()?.Play();
             }
         }
         //switch (_player.m_numOfPieces)
