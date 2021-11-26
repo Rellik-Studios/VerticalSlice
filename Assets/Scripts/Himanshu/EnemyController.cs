@@ -491,7 +491,9 @@ namespace Himanshu
                 FindObjectOfType<PlayerInteract>().Death();
 
             m_coroutinePlaying = false;
-            yield return null;
+            yield return new WaitForSeconds(6f);
+                        
+            FindObjectOfType<PlayerInteract>().m_canQTEHide = true;
         }
         
     }
