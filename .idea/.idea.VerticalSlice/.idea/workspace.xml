@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Breathing/Breathing 1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Breathing/Breathing 1.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo.unitypackage.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +68,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HandCorridor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
       <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/Amulet.cs" />
@@ -86,6 +77,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -167,6 +160,7 @@
       <workItem from="1637782026518" duration="5644000" />
       <workItem from="1637841572928" duration="713000" />
       <workItem from="1637876086895" duration="3548000" />
+      <workItem from="1637881490794" duration="805000" />
     </task>
     <servers />
   </component>
