@@ -1459,31 +1459,33 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Controls
 
-    WASD button to move
+    WASD buttons to move
 
     Mouse to look around
 
     Ctrl
     button to crouch
 
-    Shift to Run
+    Shift button to Run
 
-    Click on enemy to stop its time
+    R button To rewind time
 
     Click
-    on furniture if the ''HIDE'' icon appears to hide
+    on enemy to stop its time
 
-    Click on item if the ''PICK
-    Up'' icon appears to pick it up
+    Click on furniture if the ''HIDE'' icon appears
+    to hide
 
-    You can interact and make distractions by
-    left clicking
+    Click on item if the ''PICK Up'' icon appears to pick it up
 
-    For Quick time Ring, you need Press P at the right time in
-    the ring area.
+    You
+    can interact and make distractions by left clicking
 
-    For Quick time Clicker you need to click on the middle of
-    the rings.
+    For Quick time Ring,
+    you need Press P at the right time in the ring area.
+
+    For Quick time Clicker
+    you need to click on the middle of the rings.
 
 '
 --- !u!222 &870631081
