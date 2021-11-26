@@ -219,12 +219,14 @@ namespace Himanshu
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
+                GetComponent<CharacterController>().enabled = false;
                 StopCoroutine(m_fillRoutine);
                 m_fillRoutine = StartCoroutine(m_timeRewind.FillBar(5));
             }
 
             if (Input.GetKeyUp(KeyCode.R))
             {
+                GetComponent<CharacterController>().enabled = true;
                 StopCoroutine(m_fillRoutine);
                 m_fillRoutine = StartCoroutine(m_timeRewind.FillBar(5, -1));
             }
