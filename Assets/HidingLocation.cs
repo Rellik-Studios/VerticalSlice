@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using Cinemachine;
 using Himanshu;
+using rachael;
 using UnityEngine;
 
 public class HidingLocation : MonoBehaviour, IInteract
@@ -28,9 +29,12 @@ public class HidingLocation : MonoBehaviour, IInteract
         Debug.Log("Hiding is begining");
 
     }
-    
-    
 
+    public void CanExecute(Raycast _raycast)
+    {
+        if (_raycast.m_indication != null)
+            _raycast.m_indication.sprite = Resources.Load<Sprite>("Hide");
+    }
 
 
     public void TurnOn()

@@ -1,131 +1,133 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
 using Himanshu;
+using UnityEngine;
+using UnityEngine.Serialization;
 
-public class PlayerSave : MonoBehaviour
+namespace rachael.SaveSystem
 {
-    public ChangeFurniture eraChanging;
-    public RespawnManager respawnManager;
-    public PlayerInteract player;
-    //public SavingGame saveFile;
-
-
-    public int numOfPieces; //number of clock pieces
-    public int Index; //the number which index for each time era (for change furniture)
-    //public int Death;
-    public bool hasPiece;
-
-    // Start is called before the first frame update
-    void Awake()
+    public class PlayerSave : MonoBehaviour
     {
-        Debug.Log(Application.persistentDataPath);
-        if (PlayerPrefs.HasKey("SaveFile") && !gameManager.Instance.m_isSafeRoom)
-        {
-            LoadPlayer();
-        }
-        else if (PlayerPrefs.HasKey("SaveFile"))
-        {
-            LoadPlayer(true);
-            gameManager.Instance.m_isSafeRoom = false;
-        }
-        else
-        {
-            SavePlayer();
-            PlayerPrefs.SetInt("Death", 0);
-            PlayerPrefs.SetInt("SaveFile", 1);
-        }
-    }
+        [FormerlySerializedAs("eraChanging")] public ChangeFurniture m_eraChanging;
+        [FormerlySerializedAs("respawnManager")] public RespawnManager m_respawnManager;
+        [FormerlySerializedAs("player")] public PlayerInteract m_player;
+        //public SavingGame saveFile;
 
-    // Update is called once per frame
-    void Update()
-    {
-        ////press key number 0
-        //if (Input.GetKeyDown(KeyCode.Alpha0))
-        //{
-        //    SavePlayer();
-        //}
-        ////press key number 9
-        //if (Input.GetKeyDown(KeyCode.Alpha9))
-        //{
-        //    LoadPlayer();
-        //}
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+
+        public Dictionary<CollectableObject, Wrapper<int>> m_inventory;
+        [FormerlySerializedAs("Index")] public int m_index; //the number which index for each time era (for change furniture)
+        //public int Death;
+
+        // Start is called before the first frame update
+        void Awake()
         {
-            PlayerPrefs.DeleteAll();
+            m_inventory = new Dictionary<CollectableObject, Wrapper<int>>();
+            Debug.Log(Application.persistentDataPath);
+            if (PlayerPrefs.HasKey("SaveFile") && !gameManager.Instance.m_isSafeRoom)
+            {
+                LoadPlayer();
+            }
+            else if (PlayerPrefs.HasKey("SaveFile"))
+            {
+                LoadPlayer(true);
+                gameManager.Instance.m_isSafeRoom = false;
+            }
+            else
+            {
+                SavePlayer();
+                PlayerPrefs.SetInt("Death", 0);
+                PlayerPrefs.SetInt("SaveFile", 1);
+            }
         }
 
-    }
-
-    public void SavePlayer(bool _isSafeRoom = false)
-    {
-        //saveFile.SavePoint();
-        SavingValues();
-        SaveSystem.SavePlayer(this, _isSafeRoom);
-    }
-
-
-    public void SavingValues()
-    {
-        Index = eraChanging.Index;
-        numOfPieces = player.m_numOfPieces;
-        //Death = player.m_deathCount;
-        hasPiece= player.m_placedDown;
-    }
-    public void LoadingValues()
-    {
-        //making a transfer of data from the file to the scripts in gameplay
-        eraChanging.SaveIndex(Index);
-        player.m_numOfPieces = numOfPieces;
-        player.m_deathCount = PlayerPrefs.GetInt("Death");
-        player.m_placedDown = hasPiece;
-
-
-    }
-    public void LoadPlayer(bool _isSafeRoom = false)
-    {
-
-        PlayerData data = SaveSystem.LoadPlayer(_isSafeRoom);
-
-        if (data != null)
+        // Update is called once per frame
+        void Update()
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            GetComponent<CharacterController>().enabled = false;
+            ////press key number 0
+            //if (Input.GetKeyDown(KeyCode.Alpha0))
+            //{
+            //    SavePlayer();
+            //}
+            ////press key number 9
+            //if (Input.GetKeyDown(KeyCode.Alpha9))
+            //{
+            //    LoadPlayer();
+            //}
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                PlayerPrefs.DeleteAll();
+            }
 
-            numOfPieces = data.numOfPieces;
-            Index = data.Index;
-            //Death = data.Death;
-            hasPiece = data.hasPiece;
+        }
 
-            LoadingValues();
+        public void SavePlayer(bool _isSafeRoom = false)
+        {
+            //saveFile.SavePoint();
+            SavingValues();
+            SaveSystem.SavePlayer(this, _isSafeRoom);
+        }
 
-            eraChanging.LoadTimeEra();
 
-            Vector3 position = new Vector3(0, 0, 0);
-            position.x = data.position[0];
-            position.y = data.position[1];
-            position.z = data.position[2];
+        public void SavingValues()
+        {
+            m_index = m_eraChanging.index;
+            m_inventory = m_player.m_inventory;
 
-            Transform playerTransform = gameObject.transform;
-            playerTransform.position = new Vector3(position.x, position.y, position.z);
+        }
+        public void LoadingValues()
+        {
+            //making a transfer of data from the file to the scripts in gameplay
+            m_eraChanging.SaveIndex(m_index);
+            m_player.m_deathCount = PlayerPrefs.GetInt("Death");
+            m_player.m_inventory = m_inventory;
+            //m_player.m_testInventory = m_inventory.Keys.ToList();
+
+
+        }
+        public void LoadPlayer(bool _isSafeRoom = false)
+        {
+
+            PlayerData data = SaveSystem.LoadPlayer(_isSafeRoom);
+
+            if (data != null)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                GetComponent<CharacterController>().enabled = false;
+
+                m_inventory = data.m_inventory;
+                m_index = data.m_index;
+                //Death = data.Death;
+
+                LoadingValues();
+
+                m_eraChanging.LoadTimeEra();
+
+                Vector3 position = new Vector3(0, 0, 0);
+                position.x = data.m_position[0];
+                position.y = data.m_position[1];
+                position.z = data.m_position[2];
+
+                Transform playerTransform = gameObject.transform;
+                playerTransform.position = new Vector3(position.x, position.y, position.z);
             
             
-            Vector3 rotation = new Vector3(0, 0, 0);
-            rotation.x = data.rotation[0];
-            rotation.y = data.rotation[1];
-            rotation.z = data.rotation[2];
+                Vector3 rotation = new Vector3(0, 0, 0);
+                rotation.x = data.m_rotation[0];
+                rotation.y = data.m_rotation[1];
+                rotation.z = data.m_rotation[2];
 
-            Quaternion newrot = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
+                Quaternion newrot = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
 
-            playerTransform.rotation = new Quaternion(newrot.x, newrot.y, newrot.z, newrot.w);
+                playerTransform.rotation = new Quaternion(newrot.x, newrot.y, newrot.z, newrot.w);
 
-            GetComponent<RespawnManager>().SetPosition(playerTransform);
-            GetComponent<RespawnManager>().Respawn();
+                GetComponent<RespawnManager>().SetPosition(playerTransform);
+                GetComponent<RespawnManager>().Respawn();
 
 
 
-            GetComponent<CharacterController>().enabled = true;
+                GetComponent<CharacterController>().enabled = true;
+            }
         }
-    }
  
+    }
 }

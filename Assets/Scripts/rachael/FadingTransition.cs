@@ -1,78 +1,79 @@
-using System.Collections;
-using System.Collections.Generic;
-using Bolt;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class FadingTransition : MonoBehaviour
+namespace rachael
 {
-    [SerializeField] GameObject doorframe;
-    [SerializeField] GameObject door;
-    [SerializeField] GameObject wall;
-    [SerializeField] Material materialDoor;
-    [SerializeField] Material materialWall;
+    public class FadingTransition : MonoBehaviour
+    {
+        [FormerlySerializedAs("doorframe")] [SerializeField] GameObject m_doorframe;
+        [FormerlySerializedAs("door")] [SerializeField] GameObject m_door;
+        [FormerlySerializedAs("wall")] [SerializeField] GameObject m_wall;
+        [FormerlySerializedAs("materialDoor")] [SerializeField] Material m_materialDoor;
+        [FormerlySerializedAs("materialWall")] [SerializeField] Material m_materialWall;
     
-    private bool fadeOut = false;
-    private bool fadeIn = false;
-    public float fadeSpeed = 1.0f;
+        private bool m_fadeOut = false;
+        private bool m_fadeIn = false;
+        [FormerlySerializedAs("fadeSpeed")] public float m_fadeSpeed = 1.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Color wallColor = this.wall.GetComponent<Renderer>().material.color;
-        wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, 0.0f);
-
-        wall.GetComponent<Renderer>().material.color = wallColor;
-        
-        
-        //wall.SetActive(false);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if(fadeOut)
+        // Start is called before the first frame update
+        void Start()
         {
-            Color outDoorColor = this.doorframe.GetComponent<Renderer>().material.color;
-            Color inDoorColor = this.door.GetComponent<Renderer>().material.color;
-            Color wallColor = this.wall.GetComponent<Renderer>().material.color;
+            Color wallColor = this.m_wall.GetComponent<Renderer>().material.color;
+            wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, 0.0f);
 
-            float fadeOutAmount = outDoorColor.a - (fadeSpeed * Time.deltaTime);
-            float fadeInAmount = wallColor.a + (fadeSpeed * Time.deltaTime);
+            m_wall.GetComponent<Renderer>().material.color = wallColor;
+        
+        
+            //wall.SetActive(false);
 
-            outDoorColor = new Color(outDoorColor.r, outDoorColor.g, outDoorColor.b, fadeOutAmount);
-            inDoorColor = new Color(inDoorColor.r, inDoorColor.g, inDoorColor.b, fadeOutAmount);
-            wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, fadeInAmount);
+        }
 
+        // Update is called once per frame
+        void Update()
+        {
 
-            doorframe.GetComponent<Renderer>().material.color = outDoorColor;
-            door.GetComponent<Renderer>().material.color = inDoorColor;
-            wall.GetComponent<Renderer>().material.color = wallColor;
-
-            if (outDoorColor.a <=0)
+            if(m_fadeOut)
             {
-                //transforming the transparent material to opaque material
-                this.wall.GetComponent<Renderer>().material = materialWall;
-                fadeOut = false;
-                door.SetActive(false);
-                Destroy(this);
+                Color outDoorColor = this.m_doorframe.GetComponent<Renderer>().material.color;
+                Color inDoorColor = this.m_door.GetComponent<Renderer>().material.color;
+                Color wallColor = this.m_wall.GetComponent<Renderer>().material.color;
+
+                float fadeOutAmount = outDoorColor.a - (m_fadeSpeed * Time.deltaTime);
+                float fadeInAmount = wallColor.a + (m_fadeSpeed * Time.deltaTime);
+
+                outDoorColor = new Color(outDoorColor.r, outDoorColor.g, outDoorColor.b, fadeOutAmount);
+                inDoorColor = new Color(inDoorColor.r, inDoorColor.g, inDoorColor.b, fadeOutAmount);
+                wallColor = new Color(wallColor.r, wallColor.g, wallColor.b, fadeInAmount);
+
+
+                m_doorframe.GetComponent<Renderer>().material.color = outDoorColor;
+                m_door.GetComponent<Renderer>().material.color = inDoorColor;
+                m_wall.GetComponent<Renderer>().material.color = wallColor;
+
+                if (outDoorColor.a <=0)
+                {
+                    //transforming the transparent material to opaque material
+                    this.m_wall.GetComponent<Renderer>().material = m_materialWall;
+                    m_fadeOut = false;
+                    m_door.SetActive(false);
+                    Destroy(this);
+                }
             }
         }
-    }
-    public void FadeOutObject()
-    {
-        fadeOut = true;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        public void FadeOutObject()
         {
-            //transforming the opaque material to transparent material
-            this.doorframe.GetComponent<Renderer>().material = materialDoor;
-            FadeOutObject();
-            wall.SetActive(true);
+            m_fadeOut = true;
+        }
+
+        private void OnTriggerEnter(Collider _other)
+        {
+            if (_other.CompareTag("Player"))
+            {
+                //transforming the opaque material to transparent material
+                this.m_doorframe.GetComponent<Renderer>().material = m_materialDoor;
+                FadeOutObject();
+                m_wall.SetActive(true);
+            }
         }
     }
 }

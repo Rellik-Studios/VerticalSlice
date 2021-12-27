@@ -1,52 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Himanshu;
+using UnityEngine.Serialization;
 
-public class ChoosingPath : MonoBehaviour
+namespace rachael
 {
-    public GameObject m_player;
-    public GameObject assignRoom;
-    public GameObject assignDoor;
-    public ChangeFurniture eraChanging;
-    public string assignedName;
-
-    [SerializeField] private int route;
-    // Start is called before the first frame update
-    void Awake()
+    public class ChoosingPath : MonoBehaviour
     {
-      
-        if (PlayerPrefs.HasKey(assignedName))
-        {
-            //
-            //PlayerPrefs.SetInt(assignedName, 1);
-            route = PlayerPrefs.GetInt(assignedName);
-            eraChanging.Rooms[route] = assignRoom;
-            assignDoor.GetComponent<DoorToWall>().TransformDoorToWall();
+        public GameObject m_player;
+        [FormerlySerializedAs("assignRoom")] public GameObject m_assignRoom;
+        [FormerlySerializedAs("assignDoor")] public GameObject m_assignDoor;
+        [FormerlySerializedAs("eraChanging")] public ChangeFurniture m_eraChanging;
+        [FormerlySerializedAs("assignedName")] public string m_assignedName;
 
-            Destroy(this);
-        }
+        [FormerlySerializedAs("route")] [SerializeField] private int m_route;
+        // Start is called before the first frame update
+        void Awake()
+        {
+      
+            if (PlayerPrefs.HasKey(m_assignedName))
+            {
+                //
+                //PlayerPrefs.SetInt(assignedName, 1);
+                m_route = PlayerPrefs.GetInt(m_assignedName);
+                m_eraChanging.m_rooms[m_route] = m_assignRoom;
+                m_assignDoor.GetComponent<DoorToWall>().TransformDoorToWall();
+
+                Destroy(this);
+            }
         
             
-    }
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Contact");
-        if (other.CompareTag("Player"))
+        // Update is called once per frame
+        void Update()
         {
-            if (eraChanging != null)
+        
+        }
+        private void OnTriggerEnter(Collider _other)
+        {
+            Debug.Log("Contact");
+            if (_other.CompareTag("Player"))
             {
-                route = eraChanging.Index;
-                eraChanging.Rooms[route] = assignRoom;
-                //PlayerPrefs.SetInt(assignedName, route);
-                assignDoor.GetComponent<DoorToWall>().FadeHubWall();
-                Destroy(this);
+                if (m_eraChanging != null)
+                {
+                    m_route = m_eraChanging.index;
+                    m_eraChanging.m_rooms[m_route] = m_assignRoom;
+                    //PlayerPrefs.SetInt(assignedName, route);
+                    m_assignDoor.GetComponent<DoorToWall>().FadeHubWall();
+                    Destroy(this);
+                }
             }
         }
     }

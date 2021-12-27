@@ -1,4 +1,5 @@
 ﻿using System;
+using rachael;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,6 +13,7 @@ namespace Himanshu
         public bool m_DestroyAfterUse;
 
         public UnityEvent m_onExecute;
+        
         
         public bool playing
         {
@@ -46,6 +48,15 @@ namespace Himanshu
                 this.Invoke(() => playing = false, m_audioSource.clip.length);
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_raycast"></param>
+        public void CanExecute(Raycast _raycast)
+        {
+            if (_raycast.m_indication != null)
+                _raycast.m_indication.sprite = Resources.Load<Sprite>("Interact");        }
 
         private void OnTriggerEnter(Collider other)
         {

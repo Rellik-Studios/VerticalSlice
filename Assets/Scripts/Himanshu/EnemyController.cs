@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Bolt;
 using Cinemachine;
+using rachael.qte;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
@@ -19,7 +20,7 @@ namespace Himanshu
         [SerializeField] private GameObject m_distortion;
 
         public Distraction currentDistraction { get; set; }
-        public bool qteHideResult => m_QTEHide.GetComponent<QTERing>().m_result;
+        public bool qteHideResult => m_QTEHide.GetComponent<QteRing>().m_result;
         
         public bool qteResult => m_QTE.GetComponent<QTE>().m_result;
 
@@ -110,7 +111,8 @@ namespace Himanshu
         private void Awake()
         {
             m_QTE = FindObjectOfType<QTE>(true).gameObject;
-            m_QTEHide = FindObjectOfType<QTERing>(true).gameObject;
+
+            m_QTEHide = FindObjectOfType<QteRing>(true).gameObject;
         }
 
         private int index

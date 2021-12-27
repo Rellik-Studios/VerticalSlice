@@ -1,102 +1,105 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class qteSystem : MonoBehaviour
+namespace rachael.qte
 {
-
-    public GameObject DisplayBox;
-    public GameObject PassBox;
-    public int QTEGen;
-    public int WaitingForKey;
-    public int CorrectKey;
-    public int CountingDown;
-
-
-    // Update is called once per frame
-    void Update()
+    public class QteSystem : MonoBehaviour
     {
-        if (WaitingForKey == 0)
-        {
-            QTEGen = Random.Range(1, 4);
-            CountingDown = 1;
-            //StartCoroutine(CountDown());
-            if (QTEGen == 1)
-            {
-                WaitingForKey = 1;
-                DisplayBox.GetComponent<Text>().text = "[P]";
-            }
-        }
 
-        if (QTEGen == 1)
+        [FormerlySerializedAs("DisplayBox")] public GameObject m_displayBox;
+        [FormerlySerializedAs("PassBox")] public GameObject m_passBox;
+        [FormerlySerializedAs("QTEGen")] public int m_qteGen;
+        [FormerlySerializedAs("WaitingForKey")] public int m_waitingForKey;
+        [FormerlySerializedAs("CorrectKey")] public int m_correctKey;
+        [FormerlySerializedAs("CountingDown")] public int m_countingDown;
+
+
+        // Update is called once per frame
+        void Update()
         {
-            if(Input.anyKeyDown)
+            if (m_waitingForKey == 0)
             {
-                if(Input.GetKeyDown(KeyCode.P))
+                m_qteGen = Random.Range(1, 4);
+                m_countingDown = 1;
+                //StartCoroutine(CountDown());
+                if (m_qteGen == 1)
                 {
-                    CorrectKey = 1;
-                    StartCoroutine(KeyPressing());
-                }
-                else
-                {
-                    CorrectKey = 2;
-                    StartCoroutine(KeyPressing());
+                    m_waitingForKey = 1;
+                    m_displayBox.GetComponent<Text>().text = "[P]";
                 }
             }
-        }
+
+            if (m_qteGen == 1)
+            {
+                if(Input.anyKeyDown)
+                {
+                    if(Input.GetKeyDown(KeyCode.P))
+                    {
+                        m_correctKey = 1;
+                        StartCoroutine(KeyPressing());
+                    }
+                    else
+                    {
+                        m_correctKey = 2;
+                        StartCoroutine(KeyPressing());
+                    }
+                }
+            }
 
             
-    }
-
-    IEnumerator KeyPressing()
-    {
-        QTEGen = 4;
-        if(CorrectKey ==1)
-        {
-            CountingDown = 2;
-            PassBox.GetComponent<Text>().text = "Pass!";
-            yield return new WaitForSeconds(1.5f);
-            CorrectKey = 0;
-            PassBox.GetComponent<Text>().text = "";
-            DisplayBox.GetComponent<Text>().text = "";
-            yield return new WaitForSeconds(1.5f);
-            WaitingForKey = 0;
-            CountingDown = 1;
-
         }
-        if (CorrectKey == 2)
-        {
-            CountingDown = 2;
-            PassBox.GetComponent<Text>().text = "Fail!";
-            yield return new WaitForSeconds(1.5f);
-            CorrectKey = 0;
-            PassBox.GetComponent<Text>().text = "";
-            DisplayBox.GetComponent<Text>().text = "";
-            yield return new WaitForSeconds(1.5f);
-            WaitingForKey = 0;
-            CountingDown = 1;
 
-        }
-    }
-    IEnumerator CountDown()
-    {
-        yield return new WaitForSeconds(3.5f);
-        if(CountingDown == 1)
+        IEnumerator KeyPressing()
         {
-            QTEGen = 4;
-            CountingDown = 2;
-            PassBox.GetComponent<Text>().text = "Too slow";
-            yield return new WaitForSeconds(1.5f);
-            CorrectKey = 0;
-            PassBox.GetComponent<Text>().text = "";
-            DisplayBox.GetComponent<Text>().text = "";
-            yield return new WaitForSeconds(1.5f);
-            WaitingForKey = 0;
-            CountingDown = 1;
-        }
-    }
+            m_qteGen = 4;
+            if(m_correctKey ==1)
+            {
+                m_countingDown = 2;
+                m_passBox.GetComponent<Text>().text = "Pass!";
+                yield return new WaitForSeconds(1.5f);
+                m_correctKey = 0;
+                m_passBox.GetComponent<Text>().text = "";
+                m_displayBox.GetComponent<Text>().text = "";
+                yield return new WaitForSeconds(1.5f);
+                m_waitingForKey = 0;
+                m_countingDown = 1;
 
+            }
+            if (m_correctKey == 2)
+            {
+                m_countingDown = 2;
+                m_passBox.GetComponent<Text>().text = "Fail!";
+                yield return new WaitForSeconds(1.5f);
+                m_correctKey = 0;
+                m_passBox.GetComponent<Text>().text = "";
+                m_displayBox.GetComponent<Text>().text = "";
+                yield return new WaitForSeconds(1.5f);
+                m_waitingForKey = 0;
+                m_countingDown = 1;
+
+            }
+        }
+        IEnumerator CountDown()
+        {
+            yield return new WaitForSeconds(3.5f);
+            if(m_countingDown == 1)
+            {
+                m_qteGen = 4;
+                m_countingDown = 2;
+                m_passBox.GetComponent<Text>().text = "Too slow";
+                yield return new WaitForSeconds(1.5f);
+                m_correctKey = 0;
+                m_passBox.GetComponent<Text>().text = "";
+                m_displayBox.GetComponent<Text>().text = "";
+                yield return new WaitForSeconds(1.5f);
+                m_waitingForKey = 0;
+                m_countingDown = 1;
+            }
+        }
+
+    }
 }
 
 

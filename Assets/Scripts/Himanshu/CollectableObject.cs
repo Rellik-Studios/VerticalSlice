@@ -2,18 +2,9 @@
 
 namespace Himanshu
 {
-    public class CollectableObject : MonoBehaviour, IInteract
+    [CreateAssetMenu(menuName = "ScrictableObjects/Collectable", fileName = "CollectableObject")]
+    public class CollectableObject : ScriptableObject
     {
-        public string m_pathName;
-        
-        public void Execute(PlayerInteract _player)
-        {
-            Debug.Log("Collect");
-            GetComponent<AudioSource>()?.Play();
-            _player.Collect();
-            //GetComponent<MeshCollider>().enabled = false;
-            
-            this.Invoke(()=> { Destroy(this.gameObject); }, 0.1f);
-        }
+        public string m_objectName;
     }
 }

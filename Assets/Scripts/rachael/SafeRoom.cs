@@ -1,38 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
+using rachael.SaveSystem;
 using UnityEngine;
 
-public class SafeRoom : MonoBehaviour
+namespace rachael
 {
-    //temporary value until we fixed this on player
-    bool IsSafe = false;
-    
-    //when they enter safe room
-    private void OnTriggerEnter(Collider other)
+    public class SafeRoom : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        //temporary value until we fixed this on player
+        bool m_isSafe = false;
+    
+        //when they enter safe room
+        private void OnTriggerEnter(Collider _other)
         {
-            IsSafe = true;
-            if (other.GetComponentInParent<RespawnManager>() != null)
+            if (_other.CompareTag("Player"))
             {
-                other.GetComponentInParent<RespawnManager>().SetPosition(this.transform);
-                Debug.Log("You have entered the safe room");
+                m_isSafe = true;
+                if (_other.GetComponentInParent<RespawnManager>() != null)
+                {
+                    _other.GetComponentInParent<RespawnManager>().SetPosition(this.transform);
+                    Debug.Log("You have entered the safe room");
 
-            }
-            if (other.GetComponentInParent<PlayerSave>() != null)
-            {
-                //saves the player data into the system
-                other.GetComponentInParent<PlayerSave>().SavePlayer(true);
+                }
+                if (_other.GetComponentInParent<PlayerSave>() != null)
+                {
+                    //saves the player data into the system
+                    _other.GetComponentInParent<PlayerSave>().SavePlayer(true);
+                }
             }
         }
-    }
-    //when they exit safe room
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        //when they exit safe room
+        private void OnTriggerExit(Collider _other)
         {
-            IsSafe = false;
-            Debug.Log("You have exited the safe room");
+            if (_other.CompareTag("Player"))
+            {
+                m_isSafe = false;
+                Debug.Log("You have exited the safe room");
+            }
         }
     }
 }
