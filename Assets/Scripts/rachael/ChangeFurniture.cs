@@ -85,6 +85,7 @@ namespace rachael
         void Update()
         {
             transform.Rotate(Vector3.forward, Time.deltaTime * 200f);
+
         }
         private void OnTriggerEnter(Collider _other)
         {
