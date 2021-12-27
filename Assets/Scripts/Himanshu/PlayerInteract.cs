@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Bolt;
+using rachael;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -13,8 +14,7 @@ using UnityEngine.Video;
 
 namespace Himanshu
 {
-
-    public class PlayerInteract : MonoBehaviour
+         public class PlayerInteract : MonoBehaviour
     {
         private bool m_spotted;
         public GameObject LoseScreen;
@@ -82,14 +82,8 @@ namespace Himanshu
         public Image m_timeRewind;
         public Image m_timeStop;
         public Image m_amulet;
-        //public Image m_danger;
-
-
-        //public float dangerBarVal
-        //{
-        //    get => m_danger.fillAmount;
-        //    set => m_danger.fillAmount = value;
-        //}
+        
+        
         public bool interactHold => m_playerInput.interactHold;
 
         private int m_bulletCount = 1;
@@ -183,20 +177,22 @@ namespace Himanshu
 
         [Header("General")]
         public bool m_hiding;
-        public int m_numOfPieces = 0;
         public int m_deathCount = 0;
-        public bool m_placedDown = false;
 
         [Header("Audio")]
         [SerializeField] private AudioClip m_rewindAudio;
         [SerializeField] private AudioClip m_timeStopAudio;
         public PlayerInput m_playerInput;
-        private RaycastingTesting m_raycastingTesting;
+        private Raycast m_raycast;
         private HidingSpot m_hidingSpot;
         private PlayerFollow m_playerFollow;
         private Coroutine m_kickRoutine;
         public bool m_canQTEHide = true;
         public bool m_hasAmulet = true;
+
+        public Dictionary<CollectableObject, Wrapper<int>> m_inventory;
+
+        public List<CollectableObject> m_testInventory;
         private void OnEnable()
         {
             m_enemies = GameObject.FindObjectsOfType<EnemyController>().ToList();
@@ -205,11 +201,13 @@ namespace Himanshu
 
         private void Start()
         {
+            m_testInventory = new List<CollectableObject>();
+            m_inventory = new Dictionary<CollectableObject, Wrapper<int>>();
             m_narrator = FindObjectOfType<Narrator>();
             m_kickRoutine = StartCoroutine(temp());
             m_fillRoutine = StartCoroutine(temp());
             m_playerFollow = GameObject.FindObjectOfType<PlayerFollow>();
-            m_raycastingTesting = FindObjectOfType<RaycastingTesting>();
+            m_raycast = FindObjectOfType<Raycast>();
             m_playerInput = GetComponent<PlayerInput>();
             timeReverse = true;
 
@@ -232,7 +230,7 @@ namespace Himanshu
             }
             if (m_playerInput.interact && !m_hiding)
             {
-                m_raycastingTesting.ObjectInFront?.GetComponent<IInteract>()?.Execute(this);
+                m_raycast.objectInFront?.GetComponent<IInteract>()?.Execute(this);
             }
             else if(m_playerInput.interact && Time.timeScale > 0)
             {
@@ -375,11 +373,18 @@ namespace Himanshu
             //GetComponent<CharacterController>().enabled = true;
         }
 
-        public void Collect()
+        public void Collect(CollectableObject _collectableObject)
         {
             Debug.Log("Object Collected?");
-            m_placedDown = true;
-            m_numOfPieces++;
+            if (m_inventory.TryGetValue(_collectableObject, out Wrapper<int> _count))
+            {
+                _count.value++;
+            }
+            else
+            {
+                m_inventory.Add(_collectableObject, new Wrapper<int>(1));
+                m_testInventory = m_inventory.Keys.ToList();
+            }
         }
 
         public void Shoot()
@@ -419,7 +424,7 @@ namespace Himanshu
             m_deathCount++;
             PlayerPrefs.SetInt("Death", m_deathCount);
 
-            m_sceneManager.loseScreen();
+            m_sceneManager.LoseScreen();
             gameManager.Instance.m_isSafeRoom = true;
             
             //MUST REDO

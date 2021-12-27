@@ -1,41 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Himanshu;
+using UnityEngine;
+using UnityEngine.Serialization;
 
-public class SaveCanvas : MonoBehaviour
+namespace rachael.SaveSystem
 {
-    [SerializeField] GameObject saveCanvas;
-    [SerializeField] GameObject playerObject;
-    [SerializeField] GameObject camObject;
-
-    // Start is called before the first frame update
-    void Start()
+    public class SaveCanvas : MonoBehaviour
     {
-        
-    }
+        [FormerlySerializedAs("saveCanvas")] [SerializeField] GameObject m_saveCanvas;
+        [FormerlySerializedAs("playerObject")] [SerializeField] GameObject m_playerObject;
+        [FormerlySerializedAs("camObject")] [SerializeField] GameObject m_camObject;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        // Start is called before the first frame update
+        void Start()
         {
-            
-            saveCanvas.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            DisbleMovement();
+        
         }
-    }
-    public void DisbleMovement()
-    {
-        playerObject.GetComponent<CharacterController>().enabled = false;
-        camObject.GetComponent<PlayerFollow>().enabled = false;
-    }
-    public void EnableMovement()
-    {
-        playerObject.GetComponent<CharacterController>().enabled = true;
-        camObject.GetComponent<PlayerFollow>().enabled = true;
+
+        // Update is called once per frame
+        void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.Alpha1))
+            {
+            
+                m_saveCanvas.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                DisbleMovement();
+            }
+        }
+        public void DisbleMovement()
+        {
+            m_playerObject.GetComponent<CharacterController>().enabled = false;
+            m_camObject.GetComponent<PlayerFollow>().enabled = false;
+        }
+        public void EnableMovement()
+        {
+            m_playerObject.GetComponent<CharacterController>().enabled = true;
+            m_camObject.GetComponent<PlayerFollow>().enabled = true;
+
+        }
 
     }
-
 }

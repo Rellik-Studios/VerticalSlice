@@ -1,69 +1,70 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class ChangEnviroment : MonoBehaviour
+namespace rachael
 {
-    public GameObject[] EnvirObject;
-    public GameObject[] LocationObject;
-    public GameObject DoorTrigger;
+    public class ChangEnviroment : MonoBehaviour
+    {
+        [FormerlySerializedAs("EnvirObject")] public GameObject[] m_envirObject;
+        [FormerlySerializedAs("LocationObject")] public GameObject[] m_locationObject;
+        [FormerlySerializedAs("DoorTrigger")] public GameObject m_doorTrigger;
 
-    public int Index
-    {
-        get;
-        private set;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        foreach(GameObject obj in EnvirObject)
+        public int index
         {
-            obj.SetActive(false);
+            get;
+            private set;
         }
-        if(EnvirObject.Length !=0)
+        // Start is called before the first frame update
+        void Start()
         {
-            EnvirObject[0].SetActive(true);
-        }
+            foreach(GameObject obj in m_envirObject)
+            {
+                obj.SetActive(false);
+            }
+            if(m_envirObject.Length !=0)
+            {
+                m_envirObject[0].SetActive(true);
+            }
         
-    }
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(Vector3.forward, Time.deltaTime * 200f);
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Contact");
-        if (other.CompareTag("Player"))
+        // Update is called once per frame
+        void Update()
         {
-            if (other.GetComponentInParent<RespawnManager>() != null)
+            transform.Rotate(Vector3.forward, Time.deltaTime * 200f);
+        }
+        private void OnTriggerEnter(Collider _other)
+        {
+            Debug.Log("Contact");
+            if (_other.CompareTag("Player"))
             {
-                other.GetComponentInParent<RespawnManager>().Teleport(LocationObject[Index].transform);
-                Debug.Log("You have moved to a new location");
-            }
-            if (Index <= (EnvirObject.Length - 2))
-            {
-                //disable the object
-                EnvirObject[Index].SetActive(false);
-                
-                Index++;
-
-                //Setting the new location for the player after they go through the hole
-                
-
-                //setting the trigger to disable so a certain door doesnt open
-                //NOTE: this door is the main room door with the clock
-                if(DoorTrigger !=null)
+                if (_other.GetComponentInParent<RespawnManager>() != null)
                 {
-                    DoorTrigger.SetActive(false);
+                    _other.GetComponentInParent<RespawnManager>().Teleport(m_locationObject[index].transform);
+                    Debug.Log("You have moved to a new location");
                 }
-                //after raising the index by one
-                EnvirObject[Index].SetActive(true);
-            }
+                if (index <= (m_envirObject.Length - 2))
+                {
+                    //disable the object
+                    m_envirObject[index].SetActive(false);
+                
+                    index++;
 
-            Debug.Log("Environment has changed");
+                    //Setting the new location for the player after they go through the hole
+                
+
+                    //setting the trigger to disable so a certain door doesnt open
+                    //NOTE: this door is the main room door with the clock
+                    if(m_doorTrigger !=null)
+                    {
+                        m_doorTrigger.SetActive(false);
+                    }
+                    //after raising the index by one
+                    m_envirObject[index].SetActive(true);
+                }
+
+                Debug.Log("Environment has changed");
+            }
         }
     }
 }

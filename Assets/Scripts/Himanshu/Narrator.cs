@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using rachael;
+using rachael.SaveSystem;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -427,13 +429,13 @@ namespace Himanshu
             switch (_command)
             {
                 case "userName":
-                    return "%" + NarratorScript.m_userName;
+                    return "%" + NarratorScript.UserName;
                 case "timeCategory":
                     return "%" + NarratorScript.timeCategory;
                 case "day":
-                    return "%" + NarratorScript.m_weekDay;
+                    return "%" + NarratorScript.WeekDay;
                 case "time":
-                    return "%" + NarratorScript.m_time;
+                    return "%" + NarratorScript.Time;
                 case "activity":
                     return "%" + NarratorScript.activity;
                 default:

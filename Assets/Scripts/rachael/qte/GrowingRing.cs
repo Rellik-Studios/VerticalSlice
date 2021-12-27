@@ -1,76 +1,78 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class GrowingRing : MonoBehaviour
+namespace rachael.qte
 {
-    Image playerRing;
-
-    GameObject GameRing;
-
-    bool isInRing = false;
-
-    public float speed = 1.0f;
-
-    public float lowestRing = 1350.0f;
-    public float highestRing = 1550.0f;
-
-    float RingSize;
-
-    float betweenValues; 
-
-    // Start is called before the first frame update
-    void Start()
+    public class GrowingRing : MonoBehaviour
     {
-        playerRing = GetComponent<Image>();
-        if(FindObjectOfType<QTERing>() != null)
-            GameRing = FindObjectOfType<QTERing>().gameObject;
-        betweenValues = highestRing - lowestRing;
-        RingSize = GameRing.GetComponent<Image>().rectTransform.sizeDelta.x;
-    }
+        Image m_playerRing;
 
-    // Update is called once per frame
-    void Update()
-    {
-        playerRing.rectTransform.sizeDelta = new Vector2(playerRing.rectTransform.sizeDelta.x + (speed), playerRing.rectTransform.sizeDelta.y + (speed));
-        if (OuterRing() && InnerRing())
+        GameObject m_gameRing;
+
+        bool m_isInRing = false;
+
+        [FormerlySerializedAs("speed")] public float m_speed = 1.0f;
+
+        [FormerlySerializedAs("lowestRing")] public float m_lowestRing = 1350.0f;
+        [FormerlySerializedAs("highestRing")] public float m_highestRing = 1550.0f;
+
+        float m_ringSize;
+
+        float m_betweenValues; 
+
+        // Start is called before the first frame update
+        void Start()
         {
-            isInRing = true;
+            m_playerRing = GetComponent<Image>();
+            if(FindObjectOfType<QteRing>() != null)
+                m_gameRing = FindObjectOfType<QteRing>().gameObject;
+            m_betweenValues = m_highestRing - m_lowestRing;
+            m_ringSize = m_gameRing.GetComponent<Image>().rectTransform.sizeDelta.x;
         }
-        else
+
+        // Update is called once per frame
+        void Update()
         {
-            isInRing = false;
+            m_playerRing.rectTransform.sizeDelta = new Vector2(m_playerRing.rectTransform.sizeDelta.x + (m_speed), m_playerRing.rectTransform.sizeDelta.y + (m_speed));
+            if (OuterRing() && InnerRing())
+            {
+                m_isInRing = true;
+            }
+            else
+            {
+                m_isInRing = false;
+            }
+            if(m_playerRing.rectTransform.sizeDelta.x >= 2000.0f || m_playerRing.rectTransform.sizeDelta.y >= 2000.0f)
+            {
+                m_gameRing.GetComponent<QteRing>().LateRing();
+                Destroy(gameObject);
+            }
         }
-        if(playerRing.rectTransform.sizeDelta.x >= 2000.0f || playerRing.rectTransform.sizeDelta.y >= 2000.0f)
+        public bool IsRingInisde()
         {
-            GameRing.GetComponent<QTERing>().LateRing();
-            Destroy(gameObject);
+            return m_isInRing;
         }
-    }
-    public bool IsRingInisde()
-    {
-        return isInRing;
-    }
-    //public bool OuterRing()
-    //{
-    //    return (playerRing.rectTransform.sizeDelta.x >= lowestRing && playerRing.rectTransform.sizeDelta.y >= lowestRing);
+        //public bool OuterRing()
+        //{
+        //    return (playerRing.rectTransform.sizeDelta.x >= lowestRing && playerRing.rectTransform.sizeDelta.y >= lowestRing);
 
-    //}
-    //public bool InnerRing()
-    //{
-    //    return (playerRing.rectTransform.sizeDelta.x <= highestRing && playerRing.rectTransform.sizeDelta.y <= highestRing);
+        //}
+        //public bool InnerRing()
+        //{
+        //    return (playerRing.rectTransform.sizeDelta.x <= highestRing && playerRing.rectTransform.sizeDelta.y <= highestRing);
 
-    //}
+        //}
 
-    public bool OuterRing()
-    {
-        return (playerRing.rectTransform.sizeDelta.x >= (RingSize -betweenValues) && playerRing.rectTransform.sizeDelta.y >= (RingSize - betweenValues));
+        public bool OuterRing()
+        {
+            return (m_playerRing.rectTransform.sizeDelta.x >= (m_ringSize -m_betweenValues) && m_playerRing.rectTransform.sizeDelta.y >= (m_ringSize - m_betweenValues));
 
-    }
-    public bool InnerRing()
-    {
-        return (playerRing.rectTransform.sizeDelta.x <= (RingSize + betweenValues) && playerRing.rectTransform.sizeDelta.y <= (RingSize + betweenValues));
+        }
+        public bool InnerRing()
+        {
+            return (m_playerRing.rectTransform.sizeDelta.x <= (m_ringSize + m_betweenValues) && m_playerRing.rectTransform.sizeDelta.y <= (m_ringSize + m_betweenValues));
 
+        }
     }
 }

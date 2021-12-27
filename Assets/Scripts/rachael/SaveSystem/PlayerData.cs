@@ -1,35 +1,41 @@
-﻿[System.Serializable]
-public class PlayerData
+﻿using System.Collections.Generic;
+using Himanshu;
+using UnityEngine.Serialization;
+
+namespace rachael.SaveSystem
 {
-    public int numOfPieces; //number of clock pieces
-    public int Index; //the number which index for each time era (for change furniture)
-    //public int Death;
-
-    public bool hasPiece;
-
-    public float[] position;
-
-    public float[] rotation;
-    //public string[] Loopnames;
-
-    public PlayerData(PlayerSave player)
+    [System.Serializable]
+    public class PlayerData
     {
-        Index = player.Index;
-        //Death = player.Death;
-        numOfPieces = player.numOfPieces;
+        public Dictionary<CollectableObject, Wrapper<int>> m_inventory;
+        
+        [FormerlySerializedAs("Index")] public int m_index; //the number which index for each time era (for change furniture)
+        //public int Death;
 
-        hasPiece = player.hasPiece;
+        [FormerlySerializedAs("hasPiece")] public bool m_hasPiece;
 
-        position = new float[3];
-        rotation = new float[3];
+        [FormerlySerializedAs("position")] public float[] m_position;
 
-        position[0] = player.transform.position.x;
-        position[1] = player.transform.position.y;
-        position[2] = player.transform.position.z;
+        [FormerlySerializedAs("rotation")] public float[] m_rotation;
+        //public string[] Loopnames;
+
+        public PlayerData(PlayerSave _player)
+        {
+            m_index = _player.m_index;
+            //Death = player.Death;
+            m_inventory = _player.m_inventory;
+            
+            m_position = new float[3];
+            m_rotation = new float[3];
+
+            m_position[0] = _player.transform.position.x;
+            m_position[1] = _player.transform.position.y;
+            m_position[2] = _player.transform.position.z;
 
 
-        rotation[0] = player.transform.rotation.eulerAngles.x;
-        rotation[1] = player.transform.rotation.eulerAngles.y;
-        rotation[2] = player.transform.rotation.eulerAngles.z;
+            m_rotation[0] = _player.transform.rotation.eulerAngles.x;
+            m_rotation[1] = _player.transform.rotation.eulerAngles.y;
+            m_rotation[2] = _player.transform.rotation.eulerAngles.z;
+        }
     }
 }

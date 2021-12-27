@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using Ink.Runtime;
+using rachael;
 
 public class BasicInkExample : MonoBehaviour 
 {
@@ -19,8 +20,8 @@ public class BasicInkExample : MonoBehaviour
     private void Awake()
     {
 	    story = new Story (inkJSONAsset.text);
-	    story.EvaluateFunction($"SetUserName({NarratorScript.m_userName})");
-	    story.EvaluateFunction($"SetDeviceName({NarratorScript.m_deviceName})");
+	    story.EvaluateFunction($"SetUserName({NarratorScript.UserName})");
+	    story.EvaluateFunction($"SetDeviceName({NarratorScript.DeviceName})");
     }
 
     void StartStory ()
@@ -49,7 +50,7 @@ public class BasicInkExample : MonoBehaviour
 	public void Play(string _option)
 	{
 		story.EvaluateFunction("Start", _option);
-		story.EvaluateFunction($"SetTime({NarratorScript.m_time})");
-		story.EvaluateFunction($"SetDate({NarratorScript.m_date})");
+		story.EvaluateFunction($"SetTime({NarratorScript.Time})");
+		story.EvaluateFunction($"SetDate({NarratorScript.Date})");
 	}
 }

@@ -5,9 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Collectable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Collectable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Test.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Test.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Door.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Raycast.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HidingLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HidingLocation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/IInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/IInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Amulet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Amulet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/BookEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/BookEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangEnviroment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangEnviroment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangeFurniture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangeFurniture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangingMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangingMaterial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/ChoosingPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/ChoosingPath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorToWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorToWall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Gauge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Gauge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Goal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Goal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Door.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Narrator/NarratorDialogueScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Narrator/NarratorDialogueScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Portal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Raycast.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/RespawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/RespawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SafeRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SafeRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerSave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SceneChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/TrapDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/TrapDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/GrowingRing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/GrowingRing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,41 +95,49 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/PlayGames.cs" />
       <option value="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveCanvas.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SafeRoom.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerSave.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/ChoosingPath.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/ChangeFurniture.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerFollow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/IEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyHeadTurn.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/gameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Commands.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorDialogue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HandCorridor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/HidingSpot.cs" />
-      <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/Amulet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/QTE.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/NarratorTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/TimeBody.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/IInteract.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/Amulet.cs" />
+      <option value="$PROJECT_DIR$/Assets/HidingLocation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/BookEntry.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/Raycast.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Test.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/Portal.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/TrapDoor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerSave.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/Door.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Collectable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -89,7 +146,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35300487" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35319847" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -163,6 +220,11 @@
       <workItem from="1637841572928" duration="713000" />
       <workItem from="1637876086895" duration="3548000" />
       <workItem from="1637881490794" duration="6800000" />
+      <workItem from="1638846233159" duration="2061000" />
+      <workItem from="1639451960749" duration="6234000" />
+      <workItem from="1640101263803" duration="3781000" />
+      <workItem from="1640573716597" duration="129000" />
+      <workItem from="1640573926728" duration="5805000" />
     </task>
     <servers />
   </component>
@@ -192,26 +254,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs</url>
-          <line>323</line>
+          <line>325</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\Narrator.cs" initialLine="248" containingFunctionPresentation="method 'SetText'">
             <startOffsets>
-              <option value="8495" />
+              <option value="8536" />
             </startOffsets>
             <endOffsets>
-              <option value="8591" />
+              <option value="8632" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs</url>
-          <line>447</line>
+          <line>449</line>
           <properties documentPath="D:\Repos\VerticalSlice\Assets\Scripts\Himanshu\Narrator.cs" initialLine="371" containingFunctionPresentation="method 'ConditionCheck'">
             <startOffsets>
-              <option value="12530" />
+              <option value="12565" />
             </startOffsets>
             <endOffsets>
-              <option value="12549" />
+              <option value="12584" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

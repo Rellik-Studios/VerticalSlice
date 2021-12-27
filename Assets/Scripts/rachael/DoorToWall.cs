@@ -1,73 +1,75 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class DoorToWall : MonoBehaviour
+namespace rachael
 {
-    [SerializeField] GameObject door;
-    [SerializeField] GameObject wall;
-
-    //private bool fadeOut = false;
-    //public float fadeSpeed = 1.0f;
-
-    // Start is called before the first frame update
-    void Start()
+    public class DoorToWall : MonoBehaviour
     {
+        [FormerlySerializedAs("door")] [SerializeField] GameObject m_door;
+        [FormerlySerializedAs("wall")] [SerializeField] GameObject m_wall;
+
+        //private bool fadeOut = false;
+        //public float fadeSpeed = 1.0f;
+
+        // Start is called before the first frame update
+        void Start()
+        {
         
-    }
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if(Input.GetKeyDown(KeyCode.A))
-        //{
-        //    FadeOutObject();
-        //}
-        //if(fadeOut)
-        //{
-        //    Color outDoorColor = this.GetComponent<Renderer>().material.color;
-        //    //Color inDoorColor = GetComponentInChildren<Renderer>().material.color;
-        //    float fadeAmount = outDoorColor.a - (fadeSpeed * Time.deltaTime);
+        // Update is called once per frame
+        void Update()
+        {
+            //if(Input.GetKeyDown(KeyCode.A))
+            //{
+            //    FadeOutObject();
+            //}
+            //if(fadeOut)
+            //{
+            //    Color outDoorColor = this.GetComponent<Renderer>().material.color;
+            //    //Color inDoorColor = GetComponentInChildren<Renderer>().material.color;
+            //    float fadeAmount = outDoorColor.a - (fadeSpeed * Time.deltaTime);
 
-        //    outDoorColor = new Color(outDoorColor.r, outDoorColor.g, outDoorColor.b, fadeAmount);
-        //   // inDoorColor = new Color(inDoorColor.r, inDoorColor.g, inDoorColor.b, fadeAmount);
+            //    outDoorColor = new Color(outDoorColor.r, outDoorColor.g, outDoorColor.b, fadeAmount);
+            //   // inDoorColor = new Color(inDoorColor.r, inDoorColor.g, inDoorColor.b, fadeAmount);
             
 
-        //    this.GetComponent<Renderer>().material.color = outDoorColor;
-        //    //GetComponentInChildren<Renderer>().material.color = inDoorColor;
+            //    this.GetComponent<Renderer>().material.color = outDoorColor;
+            //    //GetComponentInChildren<Renderer>().material.color = inDoorColor;
 
-        //    if(outDoorColor.a <=0)
-        //    {
-        //        fadeOut = false;
-        //    }
+            //    if(outDoorColor.a <=0)
+            //    {
+            //        fadeOut = false;
+            //    }
+            //}
+        }
+
+        //public void FadeOutObject()
+        //{
+        //    fadeOut = true;
         //}
-    }
-
-    //public void FadeOutObject()
-    //{
-    //    fadeOut = true;
-    //}
-    public void FadeHubWall()
-    {
-        wall.SetActive(true);
-    }
-    public void TransformDoorToWall()
-    {
-        door.SetActive(false);
-        wall.SetActive(true);
-    }
-    public void TransformWallToDoor()
-    {
-        door.SetActive(true);
-        wall.SetActive(false);
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        public void FadeHubWall()
         {
-            door.SetActive(false);
-            wall.SetActive(true);
-            Destroy(gameObject);
+            m_wall.SetActive(true);
+        }
+        public void TransformDoorToWall()
+        {
+            m_door.SetActive(false);
+            m_wall.SetActive(true);
+        }
+        public void TransformWallToDoor()
+        {
+            m_door.SetActive(true);
+            m_wall.SetActive(false);
+        }
+        private void OnTriggerEnter(Collider _other)
+        {
+            if (_other.CompareTag("Player"))
+            {
+                m_door.SetActive(false);
+                m_wall.SetActive(true);
+                Destroy(gameObject);
+            }
         }
     }
 }

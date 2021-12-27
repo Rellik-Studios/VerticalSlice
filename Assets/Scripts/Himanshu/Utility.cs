@@ -52,4 +52,12 @@ namespace Himanshu
             return _this[rand];
         }
     }
+    
+    
+    public class Wrapper<T>
+    {
+        public T value;
+        
+        public Wrapper(T _value) => value = _value;
+    }
 }
