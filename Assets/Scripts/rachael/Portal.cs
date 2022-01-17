@@ -9,6 +9,8 @@ namespace rachael
         public PlayerInteract m_player;
         [FormerlySerializedAs("changeFurniture")] public ChangeFurniture m_changeFurniture;
         [FormerlySerializedAs("portalObject")] public GameObject m_portalObject;
+
+        public GameObject m_requiredCollectable;
         // Start is called before the first frame update
         void Start()
         {
@@ -19,7 +21,7 @@ namespace rachael
         void Update()
         {
             // if(m_player.m_numOfPieces != m_changeFurniture.index)
-            if(true)
+            if(m_requiredCollectable == null)
             {
                 GetComponent<BoxCollider>().enabled = true;
 

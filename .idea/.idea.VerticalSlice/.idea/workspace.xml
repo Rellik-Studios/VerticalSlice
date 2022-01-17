@@ -5,58 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca25d5-99f5-405e-b312-f1e6c5189400" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Collectable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Collectable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Test.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Test.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Door.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Raycast.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HidingLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HidingLocation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rachael/Path_face 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/IInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/IInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Narrator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Amulet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Amulet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/BookEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/BookEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangEnviroment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangEnviroment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangeFurniture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangeFurniture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangingMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/ChangingMaterial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/ChoosingPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/ChoosingPath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorToWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/DoorToWall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/FadingTransition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Gauge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Gauge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Goal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Goal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/GrandfatherClock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/MyDoorAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Door.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Narrator/NarratorDialogueScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Narrator/NarratorDialogueScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/NarratorScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Portal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/RaycastingTesting.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/Raycast.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/RespawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/RespawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SafeRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SafeRoom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerSave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/SaveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/SceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/SceneChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/TrapDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/TrapDoor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/GrowingRing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/GrowingRing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/QTERing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/rachael/qte/qteSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +78,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Test.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SaveSystem/PlayerData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/Portal.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/SavingGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/rachael/TrapDoor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/EnemyController.cs" />
@@ -138,6 +88,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Collectable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/Distraction.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Himanshu/CollectableObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/rachael/Portal.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zJT2YVJ4vwqzoceTlbs7rWuRVy" />
@@ -224,7 +175,8 @@
       <workItem from="1639451960749" duration="6234000" />
       <workItem from="1640101263803" duration="3781000" />
       <workItem from="1640573716597" duration="129000" />
-      <workItem from="1640573926728" duration="5805000" />
+      <workItem from="1640573926728" duration="6382000" />
+      <workItem from="1641901989094" duration="2419000" />
     </task>
     <servers />
   </component>
