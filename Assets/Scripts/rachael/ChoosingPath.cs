@@ -6,24 +6,22 @@ namespace rachael
     public class ChoosingPath : MonoBehaviour
     {
         public GameObject m_player;
-        [FormerlySerializedAs("assignRoom")] public GameObject m_assignRoom;
+        // [FormerlySerializedAs("assignRoom")] public GameObject m_assignRoom;
         [FormerlySerializedAs("assignDoor")] public GameObject m_assignDoor;
-        [FormerlySerializedAs("eraChanging")] public ChangeFurniture m_eraChanging;
-        [FormerlySerializedAs("assignedName")] public string m_assignedName;
+        // [FormerlySerializedAs("eraChanging")] public ChangeFurniture m_eraChanging;
+        // [FormerlySerializedAs("assignedName")] public string m_assignedName;
+        //
+        // [FormerlySerializedAs("route")] [SerializeField] private int m_route;
 
-        [FormerlySerializedAs("route")] [SerializeField] private int m_route;
+        [SerializeField] private GameObject m_assignedObject;
+
         // Start is called before the first frame update
-        void Awake()
+        void Start()
         {
       
-            if (PlayerPrefs.HasKey(m_assignedName))
+            if (!m_assignedObject.activeSelf)
             {
-                //
-                //PlayerPrefs.SetInt(assignedName, 1);
-                m_route = PlayerPrefs.GetInt(m_assignedName);
-                m_eraChanging.m_rooms[m_route] = m_assignRoom;
                 m_assignDoor.GetComponent<DoorToWall>().TransformDoorToWall();
-
                 Destroy(this);
             }
         
@@ -40,14 +38,8 @@ namespace rachael
             Debug.Log("Contact");
             if (_other.CompareTag("Player"))
             {
-                if (m_eraChanging != null)
-                {
-                    m_route = m_eraChanging.index;
-                    m_eraChanging.m_rooms[m_route] = m_assignRoom;
-                    //PlayerPrefs.SetInt(assignedName, route);
-                    m_assignDoor.GetComponent<DoorToWall>().FadeHubWall();
+                m_assignDoor.GetComponent<DoorToWall>().FadeHubWall();
                     Destroy(this);
-                }
             }
         }
     }

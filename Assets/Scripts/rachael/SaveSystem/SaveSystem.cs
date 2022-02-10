@@ -9,12 +9,19 @@ namespace rachael.SaveSystem
     {
         public static void SavePlayer(PlayerSave _player, bool _isSafeRoom = false)
         {
+            
+            if(!Directory.Exists(Application.persistentDataPath + "/player/"))
+            {    
+                //if it doesn't, create it
+                Directory.CreateDirectory(Application.persistentDataPath + "/player/");
+            }
+            
             BinaryFormatter formatter = new BinaryFormatter();
             string path = "";
             if (!_isSafeRoom)
-                path = Application.persistentDataPath + "/player.default";
+                path = Application.persistentDataPath + "/player/player.default";
             else
-                path = Application.persistentDataPath + "/player.safeRoom";
+                path = Application.persistentDataPath + "/player/player.safeRoom";
             FileStream stream = new FileStream(path, FileMode.Create);
 
             PlayerData data = new PlayerData(_player);
@@ -52,6 +59,17 @@ namespace rachael.SaveSystem
             directory.Delete(true);
             Directory.CreateDirectory(path);
         
+        }
+
+        public static void DeletePlayer()
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            string path = "";
+            path = Application.persistentDataPath + "/player/";
+            DirectoryInfo directory = new DirectoryInfo(path);
+            directory.Delete(true);
+            Directory.CreateDirectory(path);
+
         }
 
         public static NarratorDialogue LoadNarrator()
@@ -92,7 +110,7 @@ namespace rachael.SaveSystem
         public static PlayerData LoadPlayer(bool _isSafeRoom = false)
         {
         
-            string path = Application.persistentDataPath + (_isSafeRoom ? "/player.safeRoom" : "/player.default");
+            string path = Application.persistentDataPath + "/player/player" + (_isSafeRoom ? ".safeRoom" : ".default");
 
             if(File.Exists(path))
             {

@@ -65,6 +65,8 @@ namespace rachael
         {
             PlayerPrefs.DeleteAll();
             SaveSystem.SaveSystem.DeleteNarrator();
+            SaveSystem.SaveSystem.DeletePlayer();
+            
         }
         //public void Continue()
         //{

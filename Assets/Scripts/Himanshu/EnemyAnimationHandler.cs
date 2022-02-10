@@ -2,6 +2,10 @@
 
 namespace Himanshu
 {
+    
+    /// <summary>
+    /// Enemy Animation Handler : Stores a reference to and provides easy to access properties for enemy animations
+    /// </summary>
     [RequireComponent(typeof(Animator))]
     public class EnemyAnimationHandler : MonoBehaviour
     {

@@ -15,6 +15,10 @@ using Random = UnityEngine.Random;
 
 namespace Himanshu
 {
+    
+    /// <summary>
+    /// EnemyController : Works alongside the Visual State Machine to provide functionality and store variables
+    /// </summary>
     public class EnemyController : MonoBehaviour, IEnemy
     {
         [SerializeField] private GameObject m_distortion;
@@ -52,14 +56,13 @@ namespace Himanshu
             set
             {
                 m_lookAngle = value;
-                
-                
                 //m_headBone.gameObject.SetActive(false);
                 m_headBone.transform.localRotation = Quaternion.Euler(value/ 2f, m_headBone.transform.localRotation.eulerAngles.y, m_headBone.transform.localRotation.eulerAngles.z);
                 m_neck1Bone.transform.localRotation = Quaternion.Euler(value/ 4f, m_neck1Bone.transform.localRotation.eulerAngles.y,m_neck1Bone.transform.localRotation.eulerAngles.z);
                 m_neck2Bone.transform.localRotation = Quaternion.Euler(value/ 4f, m_neck2Bone.transform.localRotation.eulerAngles.y,m_neck2Bone.transform.localRotation.eulerAngles.z);
             }
         }
+        
         public bool toPatrol
         {
             get => m_toPatrol;
@@ -104,15 +107,15 @@ namespace Himanshu
         private Animator m_animator;
         public bool m_isRandomPatrol;
         public GameObject m_QTE;
-        private GameObject m_QTEHide;
+        [SerializeField] private GameObject m_QTEHide;
         private bool m_coroutinePlaying;
 
 
         private void Awake()
         {
-            m_QTE = FindObjectOfType<QTE>(true).gameObject;
-
-            m_QTEHide = FindObjectOfType<QteRing>(true).gameObject;
+            // m_QTE = FindObjectOfType<QTE>(true).gameObject;
+            //
+            // m_QTEHide = FindObjectOfType<QteRing>(true).gameObject;
         }
 
         private int index

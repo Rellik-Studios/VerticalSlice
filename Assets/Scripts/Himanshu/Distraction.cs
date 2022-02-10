@@ -5,6 +5,10 @@ using UnityEngine.Events;
 
 namespace Himanshu
 {
+    /// <summary>
+    /// Used for Distracting the enemies
+    /// Implements IInteract interface
+    /// </summary>
     public class Distraction : MonoBehaviour, IInteract
     {
         private AudioSource m_audioSource;
@@ -14,7 +18,10 @@ namespace Himanshu
 
         public UnityEvent m_onExecute;
         
-        
+        /// <summary>
+        /// playing : Stores if the distraction is used.
+        /// Plays the audiocue when trigerred
+        /// </summary>
         public bool playing
         {
             get => m_playing;
@@ -33,11 +40,19 @@ namespace Himanshu
             }
         }
 
+        /// <summary>
+        /// Unity Event Function
+        /// </summary>
         private void Start()
         {
             m_audioSource = GetComponent<AudioSource>();
         }
 
+        
+        /// <summary>
+        /// Execute : Interface function, Plays the audioclip and distracts enemies
+        /// </summary>
+        /// <param name="_player">Reference to PlayerInteract instance</param>
         public void Execute(PlayerInteract _player)
         {
             if (!m_audioSource.isPlaying)
@@ -50,14 +65,21 @@ namespace Himanshu
         }
 
         /// <summary>
-        /// 
+        /// Interface Function, Used to change the sprite of interaction
         /// </summary>
-        /// <param name="_raycast"></param>
+        /// <param name="_raycast">Reference to Raycast script from the MainCamera</param>
         public void CanExecute(Raycast _raycast)
         {
             if (_raycast.m_indication != null)
-                _raycast.m_indication.sprite = Resources.Load<Sprite>("Interact");        }
-
+                _raycast.m_indication.sprite = Resources.Load<Sprite>("Interact");        
+            
+        }
+        
+        /// <summary>
+        /// Unity Event Function,
+        /// Plays the audiocue when player collides
+        /// </summary>
+        /// <param name="other"></param>
         private void OnTriggerEnter(Collider other)
         {
             if (!m_audioSource.isPlaying && other.CompareTag("Player"))
