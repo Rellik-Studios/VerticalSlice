@@ -201,8 +201,8 @@ namespace Himanshu
 
         private void Start()
         {
-            m_testInventory = new List<CollectableObject>();
-            m_inventory = new Dictionary<CollectableObject, Wrapper<int>>();
+            //m_testInventory = new List<CollectableObject>();
+            //m_inventory = new Dictionary<CollectableObject, Wrapper<int>>();
             m_narrator = FindObjectOfType<Narrator>();
             m_kickRoutine = StartCoroutine(temp());
             m_fillRoutine = StartCoroutine(temp());
@@ -452,5 +452,22 @@ namespace Himanshu
         //     if (other.GetComponent<EnemyController>() != null)
         //         Death();
         // }
+        public void Load(List<CollectableObjectWrapper> _inventory)
+        {
+            m_inventory = new Dictionary<CollectableObject, Wrapper<int>>();
+            var collectables = GameObject.FindObjectsOfType<Collectable>();
+            //collectables = collectables.Where(t => t.m_collectableObject.m_objectName.Contains("Clock_")).ToArray();
+            foreach (var piece in _inventory)
+            {
+                    var objToAdd = collectables.FirstOrDefault(t => t.m_collectableObject.m_objectName.Equals(piece.m_objectName));
+                    if (objToAdd == null) throw new Exception("object cannot be located");
+                    
+                    m_inventory.Add(objToAdd.m_collectableObject, new Wrapper<int>(1));
+                    objToAdd.gameObject.SetActive(false);
+                
+            }
+
+            m_testInventory = m_inventory.Keys.ToList();
+        }
     }
 }

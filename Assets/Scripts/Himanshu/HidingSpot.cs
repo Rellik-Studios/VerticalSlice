@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 namespace Himanshu
 {
+    
+    /// <summary>
+    /// Hiding Spot : 
+    /// </summary>
     public class HidingSpot : MonoBehaviour
     {
         private List<HidingLocation> m_hidingSpots;

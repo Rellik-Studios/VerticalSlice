@@ -3,6 +3,7 @@ using System.Linq;
 using Himanshu;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace rachael.SaveSystem
 {
@@ -11,9 +12,14 @@ namespace rachael.SaveSystem
         [FormerlySerializedAs("eraChanging")] public ChangeFurniture m_eraChanging;
         [FormerlySerializedAs("respawnManager")] public RespawnManager m_respawnManager;
         [FormerlySerializedAs("player")] public PlayerInteract m_player;
+
+        public GrandfatherClock m_grandfatherClock;
         //public SavingGame saveFile;
 
+        public List<CollectableObject> m_depositedToTheClock;
 
+        public List<CollectableObject> m_dep;
+        
         public Dictionary<CollectableObject, Wrapper<int>> m_inventory;
         [FormerlySerializedAs("Index")] public int m_index; //the number which index for each time era (for change furniture)
         //public int Death;
@@ -21,6 +27,7 @@ namespace rachael.SaveSystem
         // Start is called before the first frame update
         void Awake()
         {
+            m_depositedToTheClock = new List<CollectableObject>();
             m_inventory = new Dictionary<CollectableObject, Wrapper<int>>();
             Debug.Log(Application.persistentDataPath);
             if (PlayerPrefs.HasKey("SaveFile") && !gameManager.Instance.m_isSafeRoom)
@@ -38,6 +45,8 @@ namespace rachael.SaveSystem
                 PlayerPrefs.SetInt("Death", 0);
                 PlayerPrefs.SetInt("SaveFile", 1);
             }
+
+            //m_dep = m_depositedToTheClock.Keys.ToList();
         }
 
         // Update is called once per frame
@@ -72,14 +81,21 @@ namespace rachael.SaveSystem
         {
             m_index = m_eraChanging.index;
             m_inventory = m_player.m_inventory;
+            Debug.Log(m_depositedToTheClock);
+            m_depositedToTheClock = m_grandfatherClock.m_depositedObjects;
+
 
         }
-        public void LoadingValues()
+        public void LoadingValues(List<CollectableObjectWrapper> _depositedObjects, List<CollectableObjectWrapper> _inventory)
         {
             //making a transfer of data from the file to the scripts in gameplay
             m_eraChanging.SaveIndex(m_index);
             m_player.m_deathCount = PlayerPrefs.GetInt("Death");
-            m_player.m_inventory = m_inventory;
+            m_player.Load(_inventory);
+            //m_player.m_inventory = m_inventory;
+            //m_grandfatherClock.m_depositedObjects = m_depositedToTheClock.Keys.ToList();
+            m_grandfatherClock.Load(_depositedObjects);
+
             //m_player.m_testInventory = m_inventory.Keys.ToList();
 
 
@@ -94,11 +110,12 @@ namespace rachael.SaveSystem
                 Cursor.lockState = CursorLockMode.Locked;
                 GetComponent<CharacterController>().enabled = false;
 
-                m_inventory = data.m_inventory;
+                //m_inventory = data.m_inventory;
                 m_index = data.m_index;
+                //m_depositedToTheClock = data.m_depositedToTheClock;
                 //Death = data.Death;
 
-                LoadingValues();
+                LoadingValues(data.m_depositedToTheClock, data.m_inventory);
 
                 m_eraChanging.LoadTimeEra();
 

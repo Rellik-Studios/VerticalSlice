@@ -21,19 +21,19 @@ namespace rachael
         void Update()
         {
             // if(m_player.m_numOfPieces != m_changeFurniture.index)
-            if(m_requiredCollectable == null)
-            {
-                GetComponent<BoxCollider>().enabled = true;
-
-                if(m_portalObject != null)
-                    m_portalObject.SetActive(true);
-            }
-            else
+            if(m_requiredCollectable != null && m_requiredCollectable.gameObject.activeSelf)
             {
                 GetComponent<BoxCollider>().enabled = false;
 
                 if (m_portalObject != null)
                     m_portalObject.SetActive(false);
+            }
+            else
+            {
+                GetComponent<BoxCollider>().enabled = true;
+
+                if(m_portalObject != null)
+                    m_portalObject.SetActive(true);
             }
         }
 
